@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :customers, only: [:create]
+
+      # Customer login
+      post 'customer_login', to: 'sessions#customer_login'
     end
   end
 end
