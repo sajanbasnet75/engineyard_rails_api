@@ -5,6 +5,7 @@ class DeviseCreateCustomers < ActiveRecord::Migration[6.1]
     create_table :customers do |t|
       t.string :first_name, null: false, default: ''
       t.string :last_name, null: false, default: ''
+      t.string :title
       t.string :phone
       t.date :dob
       t.string :gender

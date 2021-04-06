@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_04_06_145725) do
   create_table "customers", force: :cascade do |t|
     t.string "first_name", default: "", null: false
     t.string "last_name", default: "", null: false
+    t.string "title"
     t.string "phone"
     t.date "dob"
     t.string "gender"
