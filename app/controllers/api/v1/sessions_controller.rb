@@ -9,10 +9,9 @@ module Api
       def customer_login
         customer = Customer.find_for_authentication(email: login_params[:email])
         if customer.present? && customer.valid_password?(login_params[:password])
-          render json: customer,
-                 status: :ok, code: '200'
+          render jsonapi: customer, status: :ok, code: '200'
         else
-          render json: [{ title: 'Invalid Email or Password' }],
+          render jsonapi_errors: [{ title: 'Invalid Username or Password' }],
                  code: '401', status: :unauthorized
         end
       end
@@ -20,7 +19,7 @@ module Api
       private
 
       def login_params
-        params.require(:user).permit(:email, :password)
+        params.require(:customer).permit(:email, :password)
       end
 
     end
