@@ -1,6 +1,6 @@
 FROM ruby:3.0.1-alpine3.13
 
-ARG RAILS_ROOT=/opt/sandcastle_api
+ARG RAILS_ROOT=/opt/sandcastle
 ARG BUILD_PACKAGES="build-base git"
 ARG DEV_PACKAGES="postgresql-dev postgresql-client imagemagick"
 ARG RUBY_PACKAGES="tzdata"
