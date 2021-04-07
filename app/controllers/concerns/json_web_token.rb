@@ -6,7 +6,7 @@ class JsonWebToken
 
   class << self
     def encode(payload)
-      expiration = 60.minutes.from_now.to_i
+      expiration = 7.days.from_now.to_i
       JWT.encode(payload.merge(exp: expiration), JWT_SECRET_KEY, 'HS256')
     end
 

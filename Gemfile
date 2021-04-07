@@ -39,6 +39,8 @@ gem 'jsonapi-serializer'
 gem 'jwt'
 
 group :development, :test do
+  # for viewing attributes of a model
+  gem 'annotate'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # linter
