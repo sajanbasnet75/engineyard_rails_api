@@ -1,0 +1,86 @@
+Customer successfully logs in
+-----------------------------
+
+Parameters:
+  * email - Customers email 
+  * password - Customers password
+
+Request:
+  POST /api/v1/customer_login
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"customer":{"email":"sajan@gurzu.com","password":"password"}}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 318
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"527295eeb20a4d669713f4c3cf617889"
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: db0bef3f-adde-4ec6-b4ec-96595de2fd93
+  X-Runtime: 0.010522
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": {
+      "id": "13",
+      "type": "customer",
+      "attributes": {
+        "first_name": "Sajan",
+        "last_name": "Basnet",
+        "email": "sajan@gurzu.com",
+        "phone": null,
+        "gender": "Male",
+        "dob": "2000-09-09",
+        "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTMsInBhc3N3b3JkIjpudWxsLCJleHAiOjE2MTgzNzgwODF9.qyeOktL-qe6AXrVhrWe95TXym02gkXwOw9C5qOYuuAE"
+      }
+    }
+  }
+
+
+Customer cant login with invalid credentials
+--------------------------------------------
+
+Parameters:
+  * email - Customers email 
+  * password - Customers password
+
+Request:
+  POST /api/v1/customer_login
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"customer":{"email":"sajan@gurzu.com","password":"123"}}
+
+Response:
+  Status: 401 Unauthorized
+  Cache-Control: no-cache
+  Content-Length: 95
+  Content-Type: application/vnd.api+json; charset=utf-8
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: 58632a63-983b-4158-84c1-7b3871d71144
+  X-Runtime: 0.003922
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "errors": [
+      {
+        "status": null,
+        "source": null,
+        "title": "Invalid Username or Password",
+        "detail": null
+      }
+    ]
+  }
