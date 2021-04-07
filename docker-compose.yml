@@ -1,0 +1,26 @@
+version: '3.5'
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    ports: 
+      - 5432:5432
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment: 
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: sandcastle_api_staging
+
+  api:
+    build: .
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/sandcastle_api
+    depends_on:
+      - db
+    environment: 
+      POSTGRES_URL_DEVELOPMENT: "postgresql://postgres:password@db:5432/sandcastle_api_staging" 
+volumes:
+  db_data:
