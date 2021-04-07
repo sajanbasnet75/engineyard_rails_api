@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # API routes
+  devise_for :customers, path: 'customers', controllers: {
+    sessions: 'customers/sessions'
+  }
+  namespace :api do
+    namespace :v1 do
+      resources :customers, only: [:create]
+
+      # Customer login
+      post 'customer_login', to: 'sessions#customer_login'
+    end
+  end
 end

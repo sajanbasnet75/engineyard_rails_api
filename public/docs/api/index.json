@@ -1,0 +1,24 @@
+{
+  "resources": [
+    {
+      "name": "Login for Customers",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Customer cant login with invalid credentials",
+          "link": "login_for_customers/customer_cant_login_with_invalid_credentials.json",
+          "groups": "all",
+          "route": "/api/v1/customer_login",
+          "method": "post"
+        },
+        {
+          "description": "Customer successfully logs in",
+          "link": "login_for_customers/customer_successfully_logs_in.json",
+          "groups": "all",
+          "route": "/api/v1/customer_login",
+          "method": "post"
+        }
+      ]
+    }
+  ]
+}
