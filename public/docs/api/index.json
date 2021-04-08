@@ -1,6 +1,19 @@
 {
   "resources": [
     {
+      "name": "Create new Room for a hotel",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Creates a new room for the hotel successfully",
+          "link": "create_new_room_for_a_hotel/creates_a_new_room_for_the_hotel_successfully.json",
+          "groups": "all",
+          "route": "/api/v1/rooms",
+          "method": "post"
+        }
+      ]
+    },
+    {
       "name": "Create new customer",
       "explanation": null,
       "examples": [
@@ -31,26 +44,6 @@
           "groups": "all",
           "route": "/api/v1/hotels",
           "method": "post"
-        },
-        {
-          "description": "Creates a new room for the hotel successfully",
-          "link": "create_new_customer/creates_a_new_room_for_the_hotel_successfully.json",
-          "groups": "all",
-          "route": "/api/v1/rooms",
-          "method": "post"
-        }
-      ]
-    },
-    {
-      "name": "Get all the list of rooms",
-      "explanation": null,
-      "examples": [
-        {
-          "description": "Gets all the list of rooms",
-          "link": "get_all_the_list_of_rooms/gets_all_the_list_of_rooms.json",
-          "groups": "all",
-          "route": "/api/v1/rooms",
-          "method": "get"
         }
       ]
     },
@@ -71,6 +64,32 @@
           "groups": "all",
           "route": "/api/v1/customer_login",
           "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Room Details",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "gets the details of a room",
+          "link": "room_details/gets_the_details_of_a_room.json",
+          "groups": "all",
+          "route": "/api/v1/rooms/:id",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Rooms list",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Gets all the list of rooms",
+          "link": "rooms_list/gets_all_the_list_of_rooms.json",
+          "groups": "all",
+          "route": "/api/v1/rooms",
+          "method": "get"
         }
       ]
     }

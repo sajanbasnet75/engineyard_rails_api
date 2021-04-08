@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :amenity do
-    name { "MyString" }
-    description { "MyString" }
-    is_available { false }
+    name { "Towel" }
+    description { "Towel to wipe your" }
+    is_available { true }
   end
 end
