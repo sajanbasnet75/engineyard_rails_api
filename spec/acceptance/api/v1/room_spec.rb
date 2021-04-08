@@ -7,8 +7,9 @@ require 'rspec_api_documentation/dsl'
 RSpec.describe Api::V1::RoomsController, type: :api do
   let!(:hotel) { FactoryBot.create(:hotel) }
   let!(:customer) { FactoryBot.create(:customer) }
+  let!(:room) { FactoryBot.create(:room, hotel: hotel) }
 
-  resource 'Get all the list of rooms' do 
+  resource 'Rooms list' do 
     header 'Content-Type', 'application/json'
     get '/api/v1/rooms' do
       context 'Customer views the room list' do 
@@ -22,7 +23,21 @@ RSpec.describe Api::V1::RoomsController, type: :api do
     end
   end
 
-  resource 'Create new customer' do
+  resource 'Room Details' do 
+    header 'Content-Type', 'application/json'
+    get '/api/v1/rooms/:id' do
+      context 'Customer views the details of room' do 
+        example 'gets the details of a room' do
+          token = JsonWebToken.encode(customer_id: customer.id, password: customer.password)
+          header 'Authorization', token
+          do_request(id: room.id, hotel_id: hotel.id)
+          expect(status).to eq(200)
+        end
+      end
+    end
+  end
+
+  resource 'Create new Room for a hotel' do
     header 'Content-Type', 'application/json'
     post '/api/v1/rooms' do
       parameter :hotel_id, 'Hotel id for which the room is added', required: true

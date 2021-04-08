@@ -8,10 +8,24 @@ module Api
 
       # GET /api/v1/rooms
       def index
+        # TODO give list according to searched date, no.of guest, no. of rooms
         hotel = Hotel.find(params[:hotel_id])
         return unless hotel.present?
 
-        render jsonapi: hotel.rooms, code: '200', status: :ok
+        render jsonapi: hotel.rooms,
+               include: %i[amenities room_rates],
+               code: '200', status: :ok
+      end
+
+      # GET /api/v1/rooms/:id
+      def show
+        hotel = Hotel.find(params[:hotel_id])
+        return unless hotel.present?
+
+        room = hotel.rooms.find(params[:id])
+        render jsonapi: room, 
+               include: %i[amenities room_rates],
+               code: '200', status: :ok
       end
 
       # POST /api/v1/rooms
