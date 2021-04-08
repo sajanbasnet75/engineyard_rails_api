@@ -14,4 +14,5 @@
 #  updated_at     :datetime         not null
 #
 class Room < ApplicationRecord
+  belongs_to :hotel
 end
