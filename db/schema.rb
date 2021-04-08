@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 2021_04_08_043133) do
     t.string "description"
     t.integer "room_type"
     t.integer "room_class"
-    t.integer "total_quantity"
-    t.integer "available_quantiy"
+    t.integer "total_quantity", default: 0
+    t.integer "total_booked", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["hotel_id"], name: "index_rooms_on_hotel_id"
