@@ -1,6 +1,60 @@
 {
   "resources": [
     {
+      "name": "Create new customer",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Cant create customer without email",
+          "link": "create_new_customer/cant_create_customer_without_email.json",
+          "groups": "all",
+          "route": "/api/v1/customers",
+          "method": "post"
+        },
+        {
+          "description": "Cant create hotel without name",
+          "link": "create_new_customer/cant_create_hotel_without_name.json",
+          "groups": "all",
+          "route": "/api/v1/hotels",
+          "method": "post"
+        },
+        {
+          "description": "Creates a new customer successfully",
+          "link": "create_new_customer/creates_a_new_customer_successfully.json",
+          "groups": "all",
+          "route": "/api/v1/customers",
+          "method": "post"
+        },
+        {
+          "description": "Creates a new hotel successfully",
+          "link": "create_new_customer/creates_a_new_hotel_successfully.json",
+          "groups": "all",
+          "route": "/api/v1/hotels",
+          "method": "post"
+        },
+        {
+          "description": "Creates a new room for the hotel successfully",
+          "link": "create_new_customer/creates_a_new_room_for_the_hotel_successfully.json",
+          "groups": "all",
+          "route": "/api/v1/rooms",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Get all the list of rooms",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Gets all the list of rooms",
+          "link": "get_all_the_list_of_rooms/gets_all_the_list_of_rooms.json",
+          "groups": "all",
+          "route": "/api/v1/rooms",
+          "method": "get"
+        }
+      ]
+    },
+    {
       "name": "Login for Customers",
       "explanation": null,
       "examples": [

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Login for Customers API</title>
+    <title>Create new customer API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,11 +106,11 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Login for Customers API</h1>
+      <h1>Create new customer API</h1>
 
       <div class="article">
-        <h2>Customer cant login with invalid credentials</h2>
-        <h3>POST /api/v1/customer_login</h3>
+        <h2>Cant create customer without email</h2>
+        <h3>POST /api/v1/customers</h3>
 
           <h3>Parameters</h3>
           <table class="parameters table table-striped table-bordered table-condensed">
@@ -123,10 +123,34 @@ table th, table td {
             <tbody>
               <tr>
                 <td class="required">
+                    <span class="name">first_name</span>
+                </td>
+                <td>
+                  <span class="description">First name of customer</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="required">
+                    <span class="name">last_name</span>
+                </td>
+                <td>
+                  <span class="description">Last name of customer</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="required">
+                    <span class="name">title</span>
+                </td>
+                <td>
+                  <span class="description">Mr, Mrs</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="required">
                     <span class="name">email</span>
                 </td>
                 <td>
-                  <span class="description">Customers email </span>
+                  <span class="description"> email</span>
                 </td>
               </tr>
               <tr>
@@ -134,7 +158,31 @@ table th, table td {
                     <span class="name">password</span>
                 </td>
                 <td>
-                  <span class="description">Customers password</span>
+                  <span class="description"> password</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="required">
+                    <span class="name">phone</span>
+                </td>
+                <td>
+                  <span class="description">countrycode-number</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="required">
+                    <span class="name">dob</span>
+                </td>
+                <td>
+                  <span class="description">Date of birth</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="required">
+                    <span class="name">gender</span>
+                </td>
+                <td>
+                  <span class="description">male, female, other</span>
                 </td>
               </tr>
             </tbody>
@@ -149,11 +197,11 @@ Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">POST /api/v1/customer_login</pre>
+          <pre class="request route highlight">POST /api/v1/customers</pre>
 
 
             <h4>Body</h4>
-            <pre class="request body">{"customer":{"email":"sajan@gurzu.com","password":"123"}}</pre>
+            <pre class="request body">{"customer":{"first_name":"Sajan","last_name":"Sajan","dob":"2021-04-08","gender":"Male","type":"Customer","password":"password"}}</pre>
 
 
             <h3>Response</h3>
@@ -166,19 +214,22 @@ X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/vnd.api+json; charset=utf-8
 Cache-Control: no-cache
-X-Request-Id: 58661111-4d9a-47ca-ae9d-807c6ef68731
-X-Runtime: 0.004667
-Content-Length: 95</pre>
+X-Request-Id: 5cb045e5-e84f-4893-986f-db8e0dd4ef98
+X-Runtime: 0.017260
+Content-Length: 153</pre>
             <h4>Status</h4>
-            <pre class="response status">401 Unauthorized</pre>
+            <pre class="response status">422 Unprocessable Entity</pre>
               <h4>Body</h4>
               <pre class="response body">{
   &quot;errors&quot;: [
     {
-      &quot;status&quot;: null,
-      &quot;source&quot;: null,
-      &quot;title&quot;: &quot;Invalid Username or Password&quot;,
-      &quot;detail&quot;: null
+      &quot;status&quot;: &quot;422&quot;,
+      &quot;source&quot;: {
+        &quot;pointer&quot;: &quot;/data/attributes/email&quot;
+      },
+      &quot;title&quot;: &quot;Unprocessable Entity&quot;,
+      &quot;detail&quot;: &quot;Email can&#39;t be blank&quot;,
+      &quot;code&quot;: &quot;blank&quot;
     }
   ]
 }</pre>

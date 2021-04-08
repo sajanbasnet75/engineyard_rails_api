@@ -1,0 +1,222 @@
+Creates a new customer successfully
+-----------------------------------
+
+Parameters:
+  * first_name - First name of customer
+  * last_name - Last name of customer
+  * title - Mr, Mrs
+  * email -  email
+  * password -  password
+  * phone - countrycode-number
+  * dob - Date of birth
+  * gender - male, female, other
+
+Request:
+  POST /api/v1/customers
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"customer":{"first_name":"Sajan","last_name":"Basnet","title":"Mr","email":"saja@gurzu.com","phone":"977-9843773129","password":"password","dob":"2021-04-08","gender":"Male"}}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 11
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"8fe32e407a1038ee38753b70e5374b3a"
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: 3fdb5c15-9e02-4ba8-91cb-203971179dc6
+  X-Runtime: 0.013702
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": [
+  
+    ]
+  }
+
+
+Cant create customer without email
+----------------------------------
+
+Parameters:
+  * first_name - First name of customer
+  * last_name - Last name of customer
+  * title - Mr, Mrs
+  * email -  email
+  * password -  password
+  * phone - countrycode-number
+  * dob - Date of birth
+  * gender - male, female, other
+
+Request:
+  POST /api/v1/customers
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"customer":{"first_name":"Sajan","last_name":"Sajan","dob":"2021-04-08","gender":"Male","type":"Customer","password":"password"}}
+
+Response:
+  Status: 422 Unprocessable Entity
+  Cache-Control: no-cache
+  Content-Length: 153
+  Content-Type: application/vnd.api+json; charset=utf-8
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: 5cb045e5-e84f-4893-986f-db8e0dd4ef98
+  X-Runtime: 0.017260
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "errors": [
+      {
+        "status": "422",
+        "source": {
+          "pointer": "/data/attributes/email"
+        },
+        "title": "Unprocessable Entity",
+        "detail": "Email can't be blank",
+        "code": "blank"
+      }
+    ]
+  }
+
+
+Creates a new hotel successfully
+--------------------------------
+
+Parameters:
+  * name - Name of hotel
+  * description - Description of hotel
+
+Request:
+  POST /api/v1/hotels
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"hotel":{"name":"Sunseeker Resort","description":"this is an awesome place"}}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 11
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"8fe32e407a1038ee38753b70e5374b3a"
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: e3e0259b-3ef7-4f41-b9a9-70636396c56e
+  X-Runtime: 0.009256
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": [
+  
+    ]
+  }
+
+
+Cant create hotel without name
+------------------------------
+
+Parameters:
+  * name - Name of hotel
+  * description - Description of hotel
+
+Request:
+  POST /api/v1/hotels
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"hotel":{"description":"this is awesome place"}}
+
+Response:
+  Status: 422 Unprocessable Entity
+  Cache-Control: no-cache
+  Content-Length: 151
+  Content-Type: application/vnd.api+json; charset=utf-8
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: 5df22673-b9ff-4fb3-b24b-cc159ff46da4
+  X-Runtime: 0.003844
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "errors": [
+      {
+        "status": "422",
+        "source": {
+          "pointer": "/data/attributes/name"
+        },
+        "title": "Unprocessable Entity",
+        "detail": "Name can't be blank",
+        "code": "blank"
+      }
+    ]
+  }
+
+
+Creates a new room for the hotel successfully
+---------------------------------------------
+
+Parameters:
+  * hotel_id - Hotel id for which the room is added
+  * name - name of room
+  * description - Description of room
+  * room_type - can be Single Double Deluxe Guest
+  * room_class - can be High Low
+  * total_quantity - greater than 1
+  * name - Amenities name
+  * description - Amenities description
+  * is_available - Amenities available? true or false
+  * rate_type - can be standart rate, premium rate
+  * min_price - min price of room
+  * max_price - max price of room
+  * is_active - rate active or not? can be true or false
+
+Request:
+  POST /api/v1/rooms
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"hotel_id":33,"room":{"name":"Room 101","description":"description of room","room_type":1,"room_class":2,"total_quantity":10,"amenities_attributes":{"0":{"name":"Towel","description":"Soft towel for wiping your","is_available":true},"1":{"name":"TV","description":"Netflix and chill","is_available":true}},"room_rates_attributes":{"0":{"rate_type":1,"max_price":30000,"min_price":20000,"is_active":true},"1":{"rate_type":2,"max_price":50000,"min_price":30000,"is_active":true}}}}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 11
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"8fe32e407a1038ee38753b70e5374b3a"
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: 2434dc26-5393-454b-a356-f9cd3796f1a2
+  X-Runtime: 0.045620
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": [
+  
+    ]
+  }
+
+
