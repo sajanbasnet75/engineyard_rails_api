@@ -8,12 +8,16 @@ RSpec.describe Api::V1::RoomsController, type: :api do
   let!(:hotel) { FactoryBot.create(:hotel) }
   let!(:customer) { FactoryBot.create(:customer) }
   let!(:room) { FactoryBot.create(:room, hotel: hotel) }
+  let!(:amenity) { FactoryBot.create(:amenity, room: room) }
+  let!(:room_rate) { FactoryBot.create(:room_rate, room: room) }
 
   resource 'Rooms list' do 
     header 'Content-Type', 'application/json'
     get '/api/v1/rooms' do
       context 'Customer views the room list' do 
         example 'Gets all the list of rooms' do
+          room.amenities << amenity
+          room.room_rates << room_rate
           token = JsonWebToken.encode(customer_id: customer.id, password: customer.password)
           header 'Authorization', token
           do_request(hotel_id: hotel.id)

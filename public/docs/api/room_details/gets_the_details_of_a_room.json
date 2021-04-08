@@ -1,0 +1,50 @@
+{
+  "resource": "Room Details",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/api/v1/rooms/:id",
+  "description": "gets the details of a room",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/rooms/54?hotel_id=70",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6OTksInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTg0ODY5NTl9.bHrtDAYxb2Xq17vCa0kQ2fjWiS9JtPqhAlhYHwarO80",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "hotel_id": "70"
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"54\",\n    \"type\": \"room\",\n    \"attributes\": {\n      \"name\": \"Room101\",\n      \"description\": \"guest room,  awesome room\",\n      \"room_type\": \"single\",\n      \"room_class\": \"high_class\",\n      \"total_quantity\": 1\n    },\n    \"relationships\": {\n      \"amenities\": {\n        \"data\": [\n          {\n            \"id\": \"58\",\n            \"type\": \"amenity\"\n          }\n        ]\n      },\n      \"room_rates\": {\n        \"data\": [\n          {\n            \"id\": \"58\",\n            \"type\": \"room_rate\"\n          }\n        ]\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"58\",\n      \"type\": \"amenity\",\n      \"attributes\": {\n        \"name\": \"Towel\",\n        \"description\": \"Towel to wipe your\",\n        \"is_available\": true\n      }\n    },\n    {\n      \"id\": \"58\",\n      \"type\": \"room_rate\",\n      \"attributes\": {\n        \"rate_type\": \"standard\",\n        \"min_price\": 10000.0,\n        \"max_price\": 1000.0,\n        \"is_active\": true\n      }\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Type": "application/vnd.api+json; charset=utf-8",
+        "ETag": "W/\"107e06b113f2a88522b129cdd5f1f0ab\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "b1452080-c89d-4748-901a-695355d6e792",
+        "X-Runtime": "0.008980",
+        "Content-Length": "551"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
