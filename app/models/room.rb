@@ -15,4 +15,8 @@
 #
 class Room < ApplicationRecord
   belongs_to :hotel
+  has_many :amenities, dependent: :destroy
+  has_many :room_rates, dependent: :destroy
+  accepts_nested_attributes_for :amenities, allow_destroy: true, update_only: true
+  accepts_nested_attributes_for :room_rates, allow_destroy: true, update_only: true
 end

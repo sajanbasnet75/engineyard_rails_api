@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Login for Customers API</title>
+    <title>Get all the list of rooms API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,54 +106,28 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Login for Customers API</h1>
+      <h1>Get all the list of rooms API</h1>
 
       <div class="article">
-        <h2>Customer cant login with invalid credentials</h2>
-        <h3>POST /api/v1/customer_login</h3>
+        <h2>Gets all the list of rooms</h2>
+        <h3>GET /api/v1/rooms</h3>
 
-          <h3>Parameters</h3>
-          <table class="parameters table table-striped table-bordered table-condensed">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="required">
-                    <span class="name">email</span>
-                </td>
-                <td>
-                  <span class="description">Customers email </span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">password</span>
-                </td>
-                <td>
-                  <span class="description">Customers password</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
 
 
           <h3>Request</h3>
 
             <h4>Headers</h4>
             <pre class="request headers">Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6NDEsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTg0ODQ4MDl9.q41JCURGjtvIkYJPFZXI4HWXs-xDNaXZPi3Zd-FLce4
 Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">POST /api/v1/customer_login</pre>
+          <pre class="request route highlight">GET /api/v1/rooms?hotel_id=32</pre>
 
+            <h4>Query Parameters</h4>
+            <pre class="request query_parameters highlight">hotel_id: 32</pre>
 
-            <h4>Body</h4>
-            <pre class="request body">{"customer":{"email":"sajan@gurzu.com","password":"123"}}</pre>
 
 
             <h3>Response</h3>
@@ -165,21 +139,17 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/vnd.api+json; charset=utf-8
-Cache-Control: no-cache
-X-Request-Id: 58661111-4d9a-47ca-ae9d-807c6ef68731
-X-Runtime: 0.004667
-Content-Length: 95</pre>
+ETag: W/&quot;8fe32e407a1038ee38753b70e5374b3a&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 3ae4e6a8-ed61-4fca-b4ff-402b8e436a74
+X-Runtime: 0.014948
+Content-Length: 11</pre>
             <h4>Status</h4>
-            <pre class="response status">401 Unauthorized</pre>
+            <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
-  &quot;errors&quot;: [
-    {
-      &quot;status&quot;: null,
-      &quot;source&quot;: null,
-      &quot;title&quot;: &quot;Invalid Username or Password&quot;,
-      &quot;detail&quot;: null
-    }
+  &quot;data&quot;: [
+
   ]
 }</pre>
       </div>

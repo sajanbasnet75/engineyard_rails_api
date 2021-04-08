@@ -1,20 +1,20 @@
 {
-  "resource": "Login for Customers",
+  "resource": "Create new customer",
   "resource_explanation": null,
   "http_method": "POST",
-  "route": "/api/v1/customer_login",
-  "description": "Customer cant login with invalid credentials",
+  "route": "/api/v1/hotels",
+  "description": "Cant create hotel without name",
   "explanation": null,
   "parameters": [
     {
       "required": true,
-      "name": "email",
-      "description": "Customers email "
+      "name": "name",
+      "description": "Name of hotel"
     },
     {
       "required": true,
-      "name": "password",
-      "description": "Customers password"
+      "name": "description",
+      "description": "Description of hotel"
     }
   ],
   "response_fields": [
@@ -23,8 +23,8 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/customer_login",
-      "request_body": "{\"customer\":{\"email\":\"sajan@gurzu.com\",\"password\":\"123\"}}",
+      "request_path": "/api/v1/hotels",
+      "request_body": "{\"hotel\":{\"description\":\"this is awesome place\"}}",
       "request_headers": {
         "Content-Type": "application/json",
         "Host": "example.org",
@@ -33,9 +33,9 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 401,
-      "response_status_text": "Unauthorized",
-      "response_body": "{\n  \"errors\": [\n    {\n      \"status\": null,\n      \"source\": null,\n      \"title\": \"Invalid Username or Password\",\n      \"detail\": null\n    }\n  ]\n}",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"errors\": [\n    {\n      \"status\": \"422\",\n      \"source\": {\n        \"pointer\": \"/data/attributes/name\"\n      },\n      \"title\": \"Unprocessable Entity\",\n      \"detail\": \"Name can't be blank\",\n      \"code\": \"blank\"\n    }\n  ]\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -45,9 +45,9 @@
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/vnd.api+json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "58661111-4d9a-47ca-ae9d-807c6ef68731",
-        "X-Runtime": "0.004667",
-        "Content-Length": "95"
+        "X-Request-Id": "5df22673-b9ff-4fb3-b24b-cc159ff46da4",
+        "X-Runtime": "0.003844",
+        "Content-Length": "151"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",
       "curl": null

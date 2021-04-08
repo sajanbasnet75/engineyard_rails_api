@@ -47,12 +47,14 @@ ActiveRecord::Schema.define(version: 2021_04_08_044426) do
   end
 
   create_table "room_rates", force: :cascade do |t|
+    t.integer "room_id"
     t.integer "rate_type"
     t.float "min_price", default: 0.0
     t.float "max_price", default: 0.0
     t.boolean "is_active", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["room_id"], name: "index_room_rates_on_room_id"
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -63,6 +65,7 @@ ActiveRecord::Schema.define(version: 2021_04_08_044426) do
     t.integer "room_class"
     t.integer "total_quantity", default: 0
     t.integer "total_booked", default: 0
+    t.integer "capacity", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["hotel_id"], name: "index_rooms_on_hotel_id"
