@@ -4,7 +4,15 @@ module Api
   module V1
     # Room Class
     class RoomsController < Api::V1::BaseController
-      # before_action :authorize_admin!
+      before_action :authorize_request!, except: %i[create]
+
+      # GET /api/v1/rooms
+      def index
+        hotel = Hotel.find(params[:hotel_id])
+        return unless hotel.present?
+
+        render jsonapi: hotel.rooms, code: '200', status: :ok
+      end
 
       # POST /api/v1/rooms
       def create

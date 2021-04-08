@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       resources :hotels, only: [:create]
 
       #rooms
-      resources :rooms, only: [:create]
+      resources :rooms, only: [:create,  :index]
     end
   end
 end

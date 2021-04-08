@@ -6,6 +6,21 @@ require 'rspec_api_documentation/dsl'
 
 RSpec.describe Api::V1::RoomsController, type: :api do
   let!(:hotel) { FactoryBot.create(:hotel) }
+  let!(:customer) { FactoryBot.create(:customer) }
+
+  resource 'Get all the list of rooms' do 
+    header 'Content-Type', 'application/json'
+    get '/api/v1/rooms' do
+      context 'Customer views the room list' do 
+        example 'Gets all the list of rooms' do
+          token = JsonWebToken.encode(customer_id: customer.id, password: customer.password)
+          header 'Authorization', token
+          do_request(hotel_id: hotel.id)
+          expect(status).to eq(200)
+        end
+      end
+    end
+  end
 
   resource 'Create new customer' do
     header 'Content-Type', 'application/json'
