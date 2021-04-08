@@ -8,6 +8,7 @@ class CreateRooms < ActiveRecord::Migration[6.1]
       t.integer :room_class
       t.integer :total_quantity, default: 0
       t.integer :total_booked, default: 0
+      t.integer :capacity, default: 0
 
       t.timestamps
     end

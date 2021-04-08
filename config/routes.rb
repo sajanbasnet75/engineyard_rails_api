@@ -9,6 +9,12 @@ Rails.application.routes.draw do
 
       # Customer login
       post 'customer_login', to: 'sessions#customer_login'
+
+      # hotels
+      resources :hotels, only: [:create]
+
+      #rooms
+      resources :rooms, only: [:create]
     end
   end
 end

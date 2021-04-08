@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :hotel do
-    name { "MyString" }
-    description { "MyString" }
+    name { 'Sunseeker Resort' }
+    description { 'Awesome place' }
   end
 end

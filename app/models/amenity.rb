@@ -11,4 +11,5 @@
 #  updated_at   :datetime         not null
 #
 class Amenity < ApplicationRecord
+  belongs_to :room
 end

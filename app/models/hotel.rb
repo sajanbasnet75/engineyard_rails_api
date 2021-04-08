@@ -9,5 +9,6 @@
 #  updated_at  :datetime         not null
 #
 class Hotel < ApplicationRecord
+  validates :name, :description, presence: true
   has_many :rooms, dependent: :destroy
 end
