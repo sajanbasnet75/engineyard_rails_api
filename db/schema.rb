@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_06_145725) do
+ActiveRecord::Schema.define(version: 2021_04_08_044426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "amenities", force: :cascade do |t|
+    t.integer "room_id"
+    t.string "name"
+    t.string "description"
+    t.boolean "is_available", default: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["room_id"], name: "index_amenities_on_room_id"
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string "first_name", default: "", null: false
@@ -27,6 +37,35 @@ ActiveRecord::Schema.define(version: 2021_04_06_145725) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_customers_on_email", unique: true
+  end
+
+  create_table "hotels", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "room_rates", force: :cascade do |t|
+    t.integer "rate_type"
+    t.float "min_price", default: 0.0
+    t.float "max_price", default: 0.0
+    t.boolean "is_active", default: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.integer "hotel_id"
+    t.string "name"
+    t.string "description"
+    t.integer "room_type"
+    t.integer "room_class"
+    t.integer "total_quantity", default: 0
+    t.integer "total_booked", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["hotel_id"], name: "index_rooms_on_hotel_id"
   end
 
 end
