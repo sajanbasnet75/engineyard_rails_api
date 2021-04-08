@@ -12,4 +12,9 @@
 #
 class RoomRate < ApplicationRecord
   belongs_to :room
+  
+    # TODO Decide Room rates
+    enum rate_type: {standard: 1,
+                     premium: 2
+                    }
 end
