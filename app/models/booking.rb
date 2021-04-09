@@ -25,11 +25,12 @@ class Booking < ApplicationRecord
   belongs_to :customer
   belongs_to :room
   belongs_to :room_rate
-  has_one :total_payment
-  accepts_nested_attributes_for :payment, update_only: true, reject_id: :all_blank
+  has_one :payment
+  accepts_nested_attributes_for :payment, update_only: true, reject_if: :all_blank
   validates :booked_check_in, 
             :booked_check_out,
             :no_of_adults,
+            :no_of_rooms,
             presence: true
 
   # TODO: Decide Book types

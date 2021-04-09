@@ -8,13 +8,15 @@ module Api
       def create
         room = Room.find(booking_params[:room_id])
 
-        # TODO: check if room is available
+        # TODO: check if room is available & exception handler
         return unless room.present?
 
         @booking = @current_customer.bookings.new(booking_params)
         if @booking.save
           # TODO: decrese the room quantity
+          # TODO: generate booking code and invoice id
           # TODO make room unavailabe for particular datetime
+          # TODO payment related task
           render jsonapi: [], status: :ok, code: '200'
         else
           render jsonapi_errors: @booking.errors,
