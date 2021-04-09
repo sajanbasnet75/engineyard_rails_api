@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_09_041144) do
+ActiveRecord::Schema.define(version: 2021_04_09_080302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2021_04_09_041144) do
     t.integer "no_of_child", default: 0
     t.integer "reservation_type"
     t.integer "book_status"
+    t.string "booking_code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["customer_id"], name: "index_bookings_on_customer_id"
@@ -66,6 +67,25 @@ ActiveRecord::Schema.define(version: 2021_04_09_041144) do
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.integer "booking_id"
+    t.float "total_amt"
+    t.float "deposit_amt"
+    t.string "card_number"
+    t.date "card_exp_date"
+    t.string "invoice_id"
+    t.integer "type"
+    t.integer "pay_status"
+    t.string "billing_name"
+    t.string "billing_street"
+    t.string "billing_country"
+    t.string "billing_state"
+    t.string "billing_city"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["booking_id"], name: "index_payments_on_booking_id"
   end
 
   create_table "room_rates", force: :cascade do |t|

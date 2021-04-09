@@ -14,6 +14,7 @@ class CreateBookings < ActiveRecord::Migration[6.1]
       t.integer :no_of_child, default: 0
       t.integer :reservation_type
       t.integer :book_status
+      t.string :booking_code
 
       t.timestamps
     end

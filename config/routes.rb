@@ -15,6 +15,9 @@ Rails.application.routes.draw do
 
       # rooms
       resources :rooms
+
+      #bookings
+      resources :bookings
     end
   end
 end
