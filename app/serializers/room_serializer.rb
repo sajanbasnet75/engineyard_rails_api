@@ -7,4 +7,3 @@ class RoomSerializer
   has_many :amenities
   has_many :room_rates
 end
-

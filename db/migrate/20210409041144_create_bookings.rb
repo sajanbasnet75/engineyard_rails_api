@@ -12,7 +12,7 @@ class CreateBookings < ActiveRecord::Migration[6.1]
       t.integer :no_of_child
       t.integer :reservation_type
       t.integer :book_status
-      t.float :total_rate 
+      t.float :total_rate
 
       t.timestamps
     end

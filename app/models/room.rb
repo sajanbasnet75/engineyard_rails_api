@@ -21,12 +21,10 @@ class Room < ApplicationRecord
   accepts_nested_attributes_for :amenities, allow_destroy: true, update_only: true
   accepts_nested_attributes_for :room_rates, allow_destroy: true, update_only: true
 
-  # TODO Decide Room types
-  enum room_type: {single: 1, 
-                   double: 2,
-                  }
-  # TODO Decide Room class
-  enum room_class: {high_class: 1, 
-                    low_class: 2,
-                   }
+  # TODO: Decide Room types
+  enum room_type: { single: 1,
+                    double: 2 }
+  # TODO: Decide Room class
+  enum room_class: { high_class: 1,
+                     low_class: 2 }
 end

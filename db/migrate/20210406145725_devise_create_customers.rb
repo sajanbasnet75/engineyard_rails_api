@@ -10,8 +10,8 @@ class DeviseCreateCustomers < ActiveRecord::Migration[6.1]
       t.date :dob
       t.string :gender
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
+      t.string :email,              null: false, default: ''
+      t.string :encrypted_password, null: false, default: ''
 
       ## Recoverable
       # t.string   :reset_password_token
@@ -38,11 +38,10 @@ class DeviseCreateCustomers < ActiveRecord::Migration[6.1]
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-
       t.timestamps null: false
     end
 
-    add_index :customers, :email,                unique: true
+    add_index :customers, :email, unique: true
     # add_index :customers, :reset_password_token, unique: true
     # add_index :customers, :confirmation_token,   unique: true
     # add_index :customers, :unlock_token,         unique: true

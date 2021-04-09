@@ -11,10 +11,10 @@ RSpec.describe Api::V1::RoomsController, type: :api do
   let!(:amenity) { FactoryBot.create(:amenity, room: room) }
   let!(:room_rate) { FactoryBot.create(:room_rate, room: room) }
 
-  resource 'Rooms list' do 
+  resource 'Rooms list' do
     header 'Content-Type', 'application/json'
     get '/api/v1/rooms' do
-      context 'Customer views the room list' do 
+      context 'Customer views the room list' do
         example 'Gets all the list of rooms' do
           room.amenities << amenity
           room.room_rates << room_rate
@@ -27,10 +27,10 @@ RSpec.describe Api::V1::RoomsController, type: :api do
     end
   end
 
-  resource 'Room Details' do 
+  resource 'Room Details' do
     header 'Content-Type', 'application/json'
     get '/api/v1/rooms/:id' do
-      context 'Customer views the details of room' do 
+      context 'Customer views the details of room' do
         example 'gets the details of a room' do
           token = JsonWebToken.encode(customer_id: customer.id, password: customer.password)
           header 'Authorization', token
@@ -53,11 +53,12 @@ RSpec.describe Api::V1::RoomsController, type: :api do
       parameter :name, 'Amenities name', scope: %i[room amenities_attributes]
       parameter :description, 'Amenities description', scope: %i[room amenities_attributes 0], required: true
       parameter :is_available, 'Amenities available? true or false', scope: %i[room amenities_attributes 0]
-      parameter :rate_type, 'can be standart rate, premium rate',  scope: %i[room room_rates_attributes 0], required: true
+      parameter :rate_type, 'can be standart rate, premium rate', scope: %i[room room_rates_attributes 0],
+                                                                  required: true
       parameter :min_price, 'min price of room',  scope: %i[room room_rates_attributes 0], required: true
-      parameter :max_price, 'max price of room',  scope: %i[room room_rates_attributes 0 ], required: true
-      parameter :is_active, 'rate active or not? can be true or false',  scope: %i[room room_rates_attributes 0], required: true
-
+      parameter :max_price, 'max price of room',  scope: %i[room room_rates_attributes 0], required: true
+      parameter :is_active, 'rate active or not? can be true or false', scope: %i[room room_rates_attributes 0],
+                                                                        required: true
 
       let(:raw_post) { params.to_json }
       example 'Creates a new room for the hotel successfully' do
@@ -71,26 +72,22 @@ RSpec.describe Api::V1::RoomsController, type: :api do
             room_class: 2,
             total_quantity: 10,
             amenities_attributes: {
-              '0': {name: 'Towel',
-                    description: 'Soft towel for wiping your',
-                    is_available: true
-                  },
-              '1': {name: 'TV',
-                    description: 'Netflix and chill',
-                    is_available: true
-                   }
+              '0': { name: 'Towel',
+                     description: 'Soft towel for wiping your',
+                     is_available: true },
+              '1': { name: 'TV',
+                     description: 'Netflix and chill',
+                     is_available: true }
             },
             room_rates_attributes: {
-              '0': {rate_type: 1,
-                    max_price: 30000,
-                    min_price: 20000,
-                    is_active: true
-                   },
-              '1': {rate_type: 2,
-                    max_price: 50000,
-                    min_price: 30000,
-                    is_active: true
-                   }
+              '0': { rate_type: 1,
+                     max_price: 30_000,
+                     min_price: 20_000,
+                     is_active: true },
+              '1': { rate_type: 2,
+                     max_price: 50_000,
+                     min_price: 30_000,
+                     is_active: true }
             }
           }
         }

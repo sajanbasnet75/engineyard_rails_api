@@ -7,7 +7,6 @@ require 'rspec_api_documentation/dsl'
 RSpec.describe Api::V1::CustomersController, type: :api do
   let!(:customer) { FactoryBot.create(:customer) }
 
-
   resource 'Create new customer' do
     header 'Content-Type', 'application/json'
     post '/api/v1/customers' do
@@ -32,7 +31,7 @@ RSpec.describe Api::V1::CustomersController, type: :api do
             phone: '977-9843773129',
             password: 'password',
             dob: Date.today,
-            gender: 'Male',
+            gender: 'Male'
           }
         }
         do_request(request)
