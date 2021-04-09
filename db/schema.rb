@@ -30,13 +30,13 @@ ActiveRecord::Schema.define(version: 2021_04_09_041144) do
     t.integer "customer_id"
     t.integer "room_id"
     t.integer "room_rate_id"
-    t.string "arrival_date"
-    t.string "departure_date"
-    t.string "booked_check_in"
-    t.string "booked_check_out"
+    t.datetime "arrival_date"
+    t.datetime "departure_date"
+    t.datetime "booked_check_in"
+    t.datetime "booked_check_out"
     t.integer "no_of_rooms"
     t.integer "no_of_adults"
-    t.integer "no_of_child"
+    t.integer "no_of_child", default: 0
     t.integer "reservation_type"
     t.integer "book_status"
     t.datetime "created_at", precision: 6, null: false
