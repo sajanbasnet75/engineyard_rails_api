@@ -9,7 +9,6 @@ module Api
       # POST /api/v1/hotels
       def create
         hotel = Hotel.new(hotel_create_params)
-
         if hotel.save
           render jsonapi: [], code: '200', status: :ok
         else
@@ -21,7 +20,7 @@ module Api
       private
 
       def hotel_create_params
-        params.require(:hotel).permit(:name, :description)
+        params.require(:hotel).permit(:name, :description, :images)
       end
     end
   end
