@@ -5,6 +5,8 @@
 #  id               :bigint           not null, primary key
 #  hotel_id         :integer
 #  customer_id      :integer
+#  room_id          :integer
+#  room_rate_id     :integer
 #  arrival_date     :string
 #  departure_date   :string
 #  booked_check_in  :string
@@ -14,9 +16,18 @@
 #  no_of_child      :integer
 #  reservation_type :integer
 #  book_status      :integer
-#  total_rate       :float
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #
 class Booking < ApplicationRecord
+  belongs_to :hotel
+  belongs_to :customer
+  belongs_to :room
+  belongs_to :room_rate
+  validates :booked_check_in, :booked_check_out,
+            :no_of_adults, :no_of_child,
+            :reservation_type, 
+            :book_status, 
+            :total_rate, 
+            presence: true
 end

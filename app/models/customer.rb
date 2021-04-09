@@ -19,4 +19,5 @@ class Customer < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :validatable
   validates :first_name, :last_name, presence: true
+  has_many :bookings
 end

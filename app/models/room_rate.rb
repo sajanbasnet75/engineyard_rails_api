@@ -13,6 +13,7 @@
 #
 class RoomRate < ApplicationRecord
   belongs_to :room
+  has_many :bookings
 
   # TODO: Decide Room rates
   enum rate_type: { standard: 1,

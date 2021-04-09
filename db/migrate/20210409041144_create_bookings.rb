@@ -3,6 +3,8 @@ class CreateBookings < ActiveRecord::Migration[6.1]
     create_table :bookings do |t|
       t.integer :hotel_id, index: true
       t.integer :customer_id, index: true
+      t.integer :room_id, index: true
+      t.integer :room_rate_id, index: true
       t.string :arrival_date
       t.string :departure_date
       t.string :booked_check_in
@@ -12,8 +14,7 @@ class CreateBookings < ActiveRecord::Migration[6.1]
       t.integer :no_of_child
       t.integer :reservation_type
       t.integer :book_status
-      t.float :total_rate
-
+      
       t.timestamps
     end
   end
