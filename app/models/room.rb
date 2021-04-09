@@ -26,6 +26,6 @@ class Room < ApplicationRecord
   enum room_type: { single: 1,
                     double: 2 }
   # TODO: Decide Room class
-  enum room_class: { high_class: 1,
-                     low_class: 2 }
+  enum room_class: { standard: 1,
+                     deluxe: 2 }
 end

@@ -27,7 +27,7 @@ module Api
       private
 
       def booking_params
-        prams.require(:booking).permit(:hotel_id,
+        params.require(:booking).permit(:hotel_id,
                                        :room_id,
                                        :room_rate_id,
                                        :booked_check_in,
@@ -36,6 +36,7 @@ module Api
                                        :no_of_child,
                                        :no_of_rooms,
                                        payment_attributes: %i[total_amt
+                                                              card_number
                                                               card_exp_date
                                                               type
                                                               pay_status
