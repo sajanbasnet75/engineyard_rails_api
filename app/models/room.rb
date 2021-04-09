@@ -10,6 +10,7 @@
 #  room_class     :integer
 #  total_quantity :integer          default(0)
 #  total_booked   :integer          default(0)
+#  capacity       :integer          default(0)
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #

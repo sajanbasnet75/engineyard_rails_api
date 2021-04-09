@@ -3,6 +3,7 @@
 # Table name: room_rates
 #
 #  id         :bigint           not null, primary key
+#  room_id    :integer
 #  rate_type  :integer
 #  min_price  :float            default(0.0)
 #  max_price  :float            default(0.0)
