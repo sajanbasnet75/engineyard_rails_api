@@ -27,7 +27,7 @@ class Booking < ApplicationRecord
   belongs_to :room_rate
   has_one :payment
   accepts_nested_attributes_for :payment, update_only: true, reject_if: :all_blank
-  validates :booked_check_in, 
+  validates :booked_check_in,
             :booked_check_out,
             :no_of_adults,
             :no_of_rooms,

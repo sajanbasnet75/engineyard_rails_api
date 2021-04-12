@@ -28,23 +28,23 @@ module Api
 
       def booking_params
         params.require(:booking).permit(:hotel_id,
-                                       :room_id,
-                                       :room_rate_id,
-                                       :booked_check_in,
-                                       :booked_check_out,
-                                       :no_of_adults,
-                                       :no_of_child,
-                                       :no_of_rooms,
-                                       payment_attributes: %i[total_amt
-                                                              card_number
-                                                              card_exp_date
-                                                              pay_type
-                                                              pay_status
-                                                              billing_name
-                                                              billing_street
-                                                              billing_country
-                                                              billing_state
-                                                              billing_city])
+                                        :room_id,
+                                        :room_rate_id,
+                                        :booked_check_in,
+                                        :booked_check_out,
+                                        :no_of_adults,
+                                        :no_of_child,
+                                        :no_of_rooms,
+                                        payment_attributes: %i[total_amt
+                                                               card_number
+                                                               card_exp_date
+                                                               pay_type
+                                                               pay_status
+                                                               billing_name
+                                                               billing_street
+                                                               billing_country
+                                                               billing_state
+                                                               billing_city])
       end
     end
   end

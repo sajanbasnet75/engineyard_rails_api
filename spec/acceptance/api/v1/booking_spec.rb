@@ -51,7 +51,7 @@ RSpec.describe Api::V1::BookingsController, type: :api do
               pay_status: 'paid',
               billing_name: 'Ram bahadur',
               billing_country: 'Nepal',
-              billing_city:'Pokhara',
+              billing_city: 'Pokhara',
               billing_state: 'Kapan',
               billing_street: '101 gau'
             }
@@ -66,4 +66,3 @@ RSpec.describe Api::V1::BookingsController, type: :api do
     end
   end
 end
-
