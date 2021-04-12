@@ -11,6 +11,9 @@ Rails.application.routes.draw do
       # Customer login
       post 'customer_login', to: 'sessions#customer_login'
 
+      # Admin login
+      post 'admin_login', to: 'sessions#admin_login'
+
       # hotels
       resources :hotels, only: [:create]
 
@@ -19,6 +22,7 @@ Rails.application.routes.draw do
 
       # bookings
       resources :bookings
+      
     end
   end
 end

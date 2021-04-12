@@ -9,7 +9,7 @@
 #  card_number     :string
 #  card_exp_date   :date
 #  invoice_id      :string
-#  type            :integer
+#  pay_type        :integer
 #  pay_status      :integer
 #  billing_name    :string
 #  billing_street  :string
