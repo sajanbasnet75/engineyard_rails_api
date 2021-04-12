@@ -4,12 +4,19 @@ module Api
   module V1
     class BookingsController < Api::V1::BaseController
       before_action :authorize_request!
-      # POST /api/v1/room/:room_id/bookings
+
+      # POST /api/v1/bookings
+      def index
+        bookings = @current_customer.bookings
+        render jsonapi: bookings, status: :ok, code: '200'
+      end
+
+      # POST /api/v1/bookings
       def create
-        room = Room.find(booking_params[:room_id])
+        booked_room = get_booked_room
 
         # TODO: check if room is available & exception handler
-        return unless room.present?
+        return unless booked_room.present?
 
         @booking = @current_customer.bookings.new(booking_params)
         if @booking.save
@@ -25,6 +32,10 @@ module Api
       end
 
       private
+
+      def get_booked_room
+        Room.find(booking_params[:room_id])
+      end
 
       def booking_params
         params.require(:booking).permit(:hotel_id,

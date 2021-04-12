@@ -2,12 +2,19 @@ require 'spec_helper'
 require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
+#  id               :bigint           not null, primary key
+#  hotel_id         :integer
+#  customer_id      :integer
+#  room_id          :integer
+#  room_rate_id     :integer
+
 RSpec.describe Api::V1::BookingsController, type: :api do
   let!(:hotel) { FactoryBot.create(:hotel) }
   let!(:customer) { FactoryBot.create(:customer) }
   let!(:room) { FactoryBot.create(:room, hotel: hotel) }
   let!(:amenity) { FactoryBot.create(:amenity, room: room) }
   let!(:room_rate) { FactoryBot.create(:room_rate, room: room) }
+  let!(:booking) {FactoryBot.create(:booking, customer: customer, hotel: hotel, room: room, room_rate: room_rate)}
 
   resource 'Create new bookings' do
     header 'Content-Type', 'application/json'
@@ -61,6 +68,19 @@ RSpec.describe Api::V1::BookingsController, type: :api do
         header 'Authorization', token
         do_request(request)
         # expect(Room.count).to eq(total_room + 1)
+        expect(status).to eq(200)
+      end
+    end
+  end
+
+  resource 'Booking list' do
+    header 'Content-Type', 'application/json'
+    get '/api/v1/bookings' do
+      let(:raw_post) { params.to_json }
+      example 'Creates a booking of the room successfully' do
+        token = JsonWebToken.encode(customer_id: customer.id, password: customer.password)
+        header 'Authorization', token
+        do_request
         expect(status).to eq(200)
       end
     end

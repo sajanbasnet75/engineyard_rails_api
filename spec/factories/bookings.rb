@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :booking do
-    arrival_date { 'MyString' }
-    departure_date { 'MyString' }
-    booked_check_in { 'MyString' }
-    booked_check_out { 'MyString' }
+    arrival_date { Date.today }
+    departure_date { Date.tomorrow }
+    booked_check_in { Date.today }
+    booked_check_out { Date.tomorrow }
     no_of_rooms { 1 }
     no_of_adults { 1 }
     no_of_child { 1 }
