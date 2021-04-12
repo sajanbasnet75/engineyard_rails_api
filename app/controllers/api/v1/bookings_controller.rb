@@ -31,10 +31,27 @@ module Api
         end
       end
 
+       # PATCH /api/v1/bookings/:id
+      def update
+        # TODO: before update must hit api to check if booked room is available
+        booking = @current_customer.bookings.find(params[:id])
+        if booking.update(booking_update_params)
+          # TODO: after update also update the payment details, room quantity
+          render jsonapi: [], status: :ok, code: '200'
+        else
+          render jsonapi_errors: booking.errors,
+                 code: '422', status: :unprocessable_entity
+        end
+      end
+
       private
 
       def get_booked_room
         Room.find(booking_params[:room_id])
+      end
+
+      def booking_update_params
+        params.require(:booking).permit(:booked_check_in, :booked_check_out)
       end
 
       def booking_params

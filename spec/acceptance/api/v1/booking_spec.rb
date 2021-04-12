@@ -73,6 +73,38 @@ RSpec.describe Api::V1::BookingsController, type: :api do
     end
   end
 
+
+
+  resource 'Update bookings' do
+    header 'Content-Type', 'application/json'
+    patch '/api/v1/bookings/:id' do
+      parameter :booked_check_in, 'Booked check in date', required: true
+      parameter :booked_check_out, 'Booked check out date', required: true
+      parameter :no_of_rooms, 'No of rooms', required: true
+      parameter :no_of_child, 'No of child', required: true
+      parameter :no_of_adults, 'No of adults', required: true
+
+      let(:raw_post) { params.to_json }
+      example 'Updates the upcoming current booking of the room successfully' do
+        # total_room = hotel.rooms.count
+        request = {
+          id: booking.id,
+          booking: {
+            booked_check_in: Date.today,
+            booked_check_out: Date.tomorrow,
+            no_of_child: 1,
+            no_of_adults: 2,
+            no_of_rooms: 1
+          }
+        }
+        token = JsonWebToken.encode(customer_id: customer.id, password: customer.password)
+        header 'Authorization', token
+        do_request(request)
+        expect(status).to eq(200)
+      end
+    end
+  end
+
   resource 'Booking list' do
     header 'Content-Type', 'application/json'
     get '/api/v1/bookings' do
