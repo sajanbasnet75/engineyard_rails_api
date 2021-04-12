@@ -31,7 +31,7 @@ module Api
         end
       end
 
-       # PATCH /api/v1/bookings/:id
+      # PATCH /api/v1/bookings/:id
       def update
         # TODO: before update must hit api to check if booked room is available
         booking = @current_customer.bookings.find(params[:id])
