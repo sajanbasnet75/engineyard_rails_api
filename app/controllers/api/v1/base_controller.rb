@@ -3,6 +3,8 @@
 module Api
   module V1
     class BaseController < ApplicationController
+      include ExceptionHandler
+      
       def authorize_request!
         @decoded = JsonWebToken.decode(auth_token).deep_symbolize_keys
         @current_customer = Customer.find(@decoded[:customer_id])
