@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   # API routes
   devise_for :customers, path: 'customers', controllers: {
     sessions: 'customers/sessions'
