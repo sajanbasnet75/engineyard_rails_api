@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 2021_04_09_080302) do
     t.string "card_number"
     t.date "card_exp_date"
     t.string "invoice_id"
-    t.integer "type"
+    t.integer "pay_type"
     t.integer "pay_status"
     t.string "billing_name"
     t.string "billing_street"

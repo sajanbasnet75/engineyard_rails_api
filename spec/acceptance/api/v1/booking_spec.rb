@@ -22,6 +22,7 @@ RSpec.describe Api::V1::BookingsController, type: :api do
       parameter :no_of_adults, 'No of adults', required: true
       parameter :total_amt, 'Total amount of bookings', scope: %i[booking payment_attributes], required: true
       parameter :card_number, 'Credit Card Number', scope: %i[booking payment_attributes], required: true
+      parameter :pay_type, 'what is used to pay? can be card: 1', scope: %i[booking payment_attributes], required: true
       parameter :total_amt, 'Total amount of bookings', scope: %i[booking payment_attributes], required: true
       parameter :card_exp_date, 'Expiry date of card', scope: %i[booking payment_attributes], required: true
       parameter :billing_street, 'Billing street', scope: %i[booking payment_attributes], required: true
@@ -46,7 +47,7 @@ RSpec.describe Api::V1::BookingsController, type: :api do
               total_amt: 1000.00,
               card_number: '4242424242424242',
               card_exp_date: Date.tomorrow,
-              type: 'card',
+              pay_type: 'card',
               pay_status: 'paid',
               billing_name: 'Ram bahadur',
               billing_country: 'Nepal',

@@ -22,7 +22,6 @@
 class Payment < ApplicationRecord
   belongs_to :booking
   validates :total_amt, 
-            :deposit_amt,
             :card_number,
             :card_exp_date,
             :billing_name,
@@ -30,11 +29,11 @@ class Payment < ApplicationRecord
             :billing_state,
             :billing_street,
             :billing_city,
-            :type,
+            :pay_type,
             presence: true
 
   # TODO: Decide Payment Types
-enum type: { card: 1 }
+enum pay_type: { card: 1 }
 
 # TODO: Decide Payment Status
 enum pay_status: {paid: 1, unpaid: 2}

@@ -7,7 +7,7 @@ class CreatePayments < ActiveRecord::Migration[6.1]
       t.string :card_number
       t.date :card_exp_date
       t.string :invoice_id
-      t.integer :type
+      t.integer :pay_type
       t.integer :pay_status
       t.string :billing_name
       t.string :billing_street

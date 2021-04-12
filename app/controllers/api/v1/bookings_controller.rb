@@ -38,7 +38,7 @@ module Api
                                        payment_attributes: %i[total_amt
                                                               card_number
                                                               card_exp_date
-                                                              type
+                                                              pay_type
                                                               pay_status
                                                               billing_name
                                                               billing_street
