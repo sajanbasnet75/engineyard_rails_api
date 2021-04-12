@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_08_044426) do
+ActiveRecord::Schema.define(version: 2021_04_09_080302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,29 @@ ActiveRecord::Schema.define(version: 2021_04_08_044426) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["room_id"], name: "index_amenities_on_room_id"
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "hotel_id"
+    t.integer "customer_id"
+    t.integer "room_id"
+    t.integer "room_rate_id"
+    t.datetime "arrival_date"
+    t.datetime "departure_date"
+    t.datetime "booked_check_in"
+    t.datetime "booked_check_out"
+    t.integer "no_of_rooms"
+    t.integer "no_of_adults"
+    t.integer "no_of_child", default: 0
+    t.integer "reservation_type"
+    t.integer "book_status"
+    t.string "booking_code"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_bookings_on_customer_id"
+    t.index ["hotel_id"], name: "index_bookings_on_hotel_id"
+    t.index ["room_id"], name: "index_bookings_on_room_id"
+    t.index ["room_rate_id"], name: "index_bookings_on_room_rate_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -44,6 +67,25 @@ ActiveRecord::Schema.define(version: 2021_04_08_044426) do
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.integer "booking_id"
+    t.float "total_amt"
+    t.float "deposit_amt"
+    t.string "card_number"
+    t.date "card_exp_date"
+    t.string "invoice_id"
+    t.integer "pay_type"
+    t.integer "pay_status"
+    t.string "billing_name"
+    t.string "billing_street"
+    t.string "billing_country"
+    t.string "billing_state"
+    t.string "billing_city"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["booking_id"], name: "index_payments_on_booking_id"
   end
 
   create_table "room_rates", force: :cascade do |t|

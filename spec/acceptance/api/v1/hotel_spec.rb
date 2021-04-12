@@ -5,7 +5,6 @@ require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
 RSpec.describe Api::V1::HotelsController, type: :api do
-
   resource 'Create new customer' do
     header 'Content-Type', 'application/json'
     post '/api/v1/hotels' do

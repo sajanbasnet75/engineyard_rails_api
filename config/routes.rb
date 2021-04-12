@@ -13,8 +13,11 @@ Rails.application.routes.draw do
       # hotels
       resources :hotels, only: [:create]
 
-      #rooms
+      # rooms
       resources :rooms
+
+      #bookings
+      resources :bookings
     end
   end
 end
