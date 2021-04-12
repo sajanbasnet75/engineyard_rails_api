@@ -14,7 +14,7 @@ RSpec.describe Api::V1::BookingsController, type: :api do
   let!(:room) { FactoryBot.create(:room, hotel: hotel) }
   let!(:amenity) { FactoryBot.create(:amenity, room: room) }
   let!(:room_rate) { FactoryBot.create(:room_rate, room: room) }
-  let!(:booking) {FactoryBot.create(:booking, customer: customer, hotel: hotel, room: room, room_rate: room_rate)}
+  let!(:booking) { FactoryBot.create(:booking, customer: customer, hotel: hotel, room: room, room_rate: room_rate) }
 
   resource 'Create new bookings' do
     header 'Content-Type', 'application/json'
@@ -72,8 +72,6 @@ RSpec.describe Api::V1::BookingsController, type: :api do
       end
     end
   end
-
-
 
   resource 'Update bookings' do
     header 'Content-Type', 'application/json'
