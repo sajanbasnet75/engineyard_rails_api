@@ -5,6 +5,7 @@ require 'rails_helper'
 require 'rspec_api_documentation/dsl'
 
 RSpec.describe Api::V1::HotelsController, type: :api do
+  let!(:admin) { FactoryBot.create(:admin) }
   resource 'Create new customer' do
     header 'Content-Type', 'application/json'
     post '/api/v1/hotels' do
@@ -14,6 +15,8 @@ RSpec.describe Api::V1::HotelsController, type: :api do
       let(:raw_post) { params.to_json }
       example 'Creates a new hotel successfully' do
         total_hotel = Hotel.count
+        token = JsonWebToken.encode(admin_id: admin.id, password: admin.password)
+        header 'Authorization', token
         request = {
           hotel: {
             name: 'Sunseeker Resort',
@@ -26,6 +29,8 @@ RSpec.describe Api::V1::HotelsController, type: :api do
       end
 
       example 'Cant create hotel without name' do
+        token = JsonWebToken.encode(admin_id: admin.id, password: admin.password)
+        header 'Authorization', token
         request = {
           hotel: {
             description: 'this is awesome place'

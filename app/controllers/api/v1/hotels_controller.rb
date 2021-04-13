@@ -4,7 +4,7 @@ module Api
   module V1
     # Hotel Class
     class HotelsController < Api::V1::BaseController
-      # before_action :authorize_admin!
+      before_action :authorize_request!
 
       # POST /api/v1/hotels
       def create

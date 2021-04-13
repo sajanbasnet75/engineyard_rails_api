@@ -7,11 +7,19 @@ module Api
 
       def authorize_request!
         @decoded = JsonWebToken.decode(auth_token).deep_symbolize_keys
-        @current_customer = Customer.find(@decoded[:customer_id])
+        set_current_users
       rescue JWT::ExpiredSignature
         render jsonapi_errors: [{ title: e.message }], code: '401', status: :unauthorized
       rescue JWT::DecodeError => e
         render jsonapi_errors: [{ title: e.message }], code: '401', status: :unauthorized
+      end
+
+      def set_current_users
+        if @decoded[:customer_id].present?
+          @current_customer = Customer.find(@decoded[:customer_id])
+        else
+          @current_admin = Admin.find(@decoded[:admin_id])
+        end
       end
 
       def auth_token
