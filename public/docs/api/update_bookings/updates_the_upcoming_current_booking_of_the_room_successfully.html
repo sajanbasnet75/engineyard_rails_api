@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Create new customer API</title>
+    <title>Update bookings API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,11 +106,11 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Create new customer API</h1>
+      <h1>Update bookings API</h1>
 
       <div class="article">
-        <h2>Cant create customer without email</h2>
-        <h3>POST /api/v1/customers</h3>
+        <h2>Updates the upcoming current booking of the room successfully</h2>
+        <h3>PATCH /api/v1/bookings/:id</h3>
 
           <h3>Parameters</h3>
           <table class="parameters table table-striped table-bordered table-condensed">
@@ -123,66 +123,42 @@ table th, table td {
             <tbody>
               <tr>
                 <td class="required">
-                    <span class="name">first_name</span>
+                    <span class="name">booked_check_in</span>
                 </td>
                 <td>
-                  <span class="description">First name of customer</span>
+                  <span class="description">Booked check in date</span>
                 </td>
               </tr>
               <tr>
                 <td class="required">
-                    <span class="name">last_name</span>
+                    <span class="name">booked_check_out</span>
                 </td>
                 <td>
-                  <span class="description">Last name of customer</span>
+                  <span class="description">Booked check out date</span>
                 </td>
               </tr>
               <tr>
                 <td class="required">
-                    <span class="name">title</span>
+                    <span class="name">no_of_rooms</span>
                 </td>
                 <td>
-                  <span class="description">Mr, Mrs</span>
+                  <span class="description">No of rooms</span>
                 </td>
               </tr>
               <tr>
                 <td class="required">
-                    <span class="name">email</span>
+                    <span class="name">no_of_child</span>
                 </td>
                 <td>
-                  <span class="description"> email</span>
+                  <span class="description">No of child</span>
                 </td>
               </tr>
               <tr>
                 <td class="required">
-                    <span class="name">password</span>
+                    <span class="name">no_of_adults</span>
                 </td>
                 <td>
-                  <span class="description"> password</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">phone</span>
-                </td>
-                <td>
-                  <span class="description">countrycode-number</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">dob</span>
-                </td>
-                <td>
-                  <span class="description">Date of birth</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">gender</span>
-                </td>
-                <td>
-                  <span class="description">male, female, other</span>
+                  <span class="description">No of adults</span>
                 </td>
               </tr>
             </tbody>
@@ -193,15 +169,16 @@ table th, table td {
 
             <h4>Headers</h4>
             <pre class="request headers">Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQxLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjYzfQ.4Gr9kWw1ENZCgPSPf5VGQpAwXcu3j6WGOW_rhIyapEM
 Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">POST /api/v1/customers</pre>
+          <pre class="request route highlight">PATCH /api/v1/bookings/50</pre>
 
 
             <h4>Body</h4>
-            <pre class="request body">{"customer":{"first_name":"Sajan","last_name":"Sajan","dob":"2021-04-15","gender":"Male","type":"Customer","password":"password"}}</pre>
+            <pre class="request body">{"booking":{"booked_check_in":"2021-04-15","booked_check_out":"2021-04-16","no_of_child":1,"no_of_adults":2,"no_of_rooms":1}}</pre>
 
 
             <h3>Response</h3>
@@ -213,24 +190,17 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/vnd.api+json; charset=utf-8
-Cache-Control: no-cache
-X-Request-Id: 38264d07-2023-4d50-8855-36e66714eaea
-X-Runtime: 0.035325
-Content-Length: 153</pre>
+ETag: W/&quot;8fe32e407a1038ee38753b70e5374b3a&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: b12b18ca-5979-413f-8635-b9998e1534df
+X-Runtime: 0.016904
+Content-Length: 11</pre>
             <h4>Status</h4>
-            <pre class="response status">422 Unprocessable Entity</pre>
+            <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
-  &quot;errors&quot;: [
-    {
-      &quot;status&quot;: &quot;422&quot;,
-      &quot;source&quot;: {
-        &quot;pointer&quot;: &quot;/data/attributes/email&quot;
-      },
-      &quot;title&quot;: &quot;Unprocessable Entity&quot;,
-      &quot;detail&quot;: &quot;Email can&#39;t be blank&quot;,
-      &quot;code&quot;: &quot;blank&quot;
-    }
+  &quot;data&quot;: [
+
   ]
 }</pre>
       </div>

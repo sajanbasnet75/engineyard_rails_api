@@ -2,45 +2,45 @@ gets the details of a room
 --------------------------
 
 Request:
-  GET /api/v1/rooms/54?hotel_id=70
-  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6OTksInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTg0ODY5NTl9.bHrtDAYxb2Xq17vCa0kQ2fjWiS9JtPqhAlhYHwarO80
+  GET /api/v1/rooms/85?hotel_id=86
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQ4LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjY0fQ.aMMTqgcWb86tA8UbKSGXLWIzBGA-YSewsMDgMfJS3jY
   Content-Type: application/json
   Cookie: 
   Host: example.org
 
-  hotel_id=70
+  hotel_id=86
 
 Response:
   Status: 200 OK
   Cache-Control: max-age=0, private, must-revalidate
-  Content-Length: 551
+  Content-Length: 549
   Content-Type: application/vnd.api+json; charset=utf-8
-  ETag: W/"107e06b113f2a88522b129cdd5f1f0ab"
+  ETag: W/"53a16bd7f68609078d815e642cbe235a"
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: b1452080-c89d-4748-901a-695355d6e792
-  X-Runtime: 0.008980
+  X-Request-Id: 7060b2d4-2127-4358-b270-2130ebc063d1
+  X-Runtime: 0.020198
   X-XSS-Protection: 1; mode=block
 
   {
     "data": {
-      "id": "54",
+      "id": "85",
       "type": "room",
       "attributes": {
         "name": "Room101",
         "description": "guest room,  awesome room",
         "room_type": "single",
-        "room_class": "high_class",
+        "room_class": "standard",
         "total_quantity": 1
       },
       "relationships": {
         "amenities": {
           "data": [
             {
-              "id": "58",
+              "id": "95",
               "type": "amenity"
             }
           ]
@@ -48,7 +48,7 @@ Response:
         "room_rates": {
           "data": [
             {
-              "id": "58",
+              "id": "95",
               "type": "room_rate"
             }
           ]
@@ -57,7 +57,7 @@ Response:
     },
     "included": [
       {
-        "id": "58",
+        "id": "95",
         "type": "amenity",
         "attributes": {
           "name": "Towel",
@@ -66,7 +66,7 @@ Response:
         }
       },
       {
-        "id": "58",
+        "id": "95",
         "type": "room_rate",
         "attributes": {
           "rate_type": "standard",

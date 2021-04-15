@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Create new customer API</title>
+    <title>Login for Admins API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,11 +106,11 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Create new customer API</h1>
+      <h1>Login for Admins API</h1>
 
       <div class="article">
-        <h2>Cant create customer without email</h2>
-        <h3>POST /api/v1/customers</h3>
+        <h2>Admin successfully logs in</h2>
+        <h3>POST /api/v1/admin_login</h3>
 
           <h3>Parameters</h3>
           <table class="parameters table table-striped table-bordered table-condensed">
@@ -123,34 +123,10 @@ table th, table td {
             <tbody>
               <tr>
                 <td class="required">
-                    <span class="name">first_name</span>
-                </td>
-                <td>
-                  <span class="description">First name of customer</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">last_name</span>
-                </td>
-                <td>
-                  <span class="description">Last name of customer</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">title</span>
-                </td>
-                <td>
-                  <span class="description">Mr, Mrs</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
                     <span class="name">email</span>
                 </td>
                 <td>
-                  <span class="description"> email</span>
+                  <span class="description">Admins email </span>
                 </td>
               </tr>
               <tr>
@@ -158,31 +134,7 @@ table th, table td {
                     <span class="name">password</span>
                 </td>
                 <td>
-                  <span class="description"> password</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">phone</span>
-                </td>
-                <td>
-                  <span class="description">countrycode-number</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">dob</span>
-                </td>
-                <td>
-                  <span class="description">Date of birth</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">gender</span>
-                </td>
-                <td>
-                  <span class="description">male, female, other</span>
+                  <span class="description">Admins password</span>
                 </td>
               </tr>
             </tbody>
@@ -197,11 +149,11 @@ Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">POST /api/v1/customers</pre>
+          <pre class="request route highlight">POST /api/v1/admin_login</pre>
 
 
             <h4>Body</h4>
-            <pre class="request body">{"customer":{"first_name":"Sajan","last_name":"Sajan","dob":"2021-04-15","gender":"Male","type":"Customer","password":"password"}}</pre>
+            <pre class="request body">{"admin":{"email":"sajan@gurzu.com","password":"password"}}</pre>
 
 
             <h3>Response</h3>
@@ -213,25 +165,26 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/vnd.api+json; charset=utf-8
-Cache-Control: no-cache
-X-Request-Id: 38264d07-2023-4d50-8855-36e66714eaea
-X-Runtime: 0.035325
-Content-Length: 153</pre>
+ETag: W/&quot;686b8d8af6d222a6b2f6c2712842a9cb&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: c945bc19-ec9a-4bad-a67e-e83f0211ae08
+X-Runtime: 0.010246
+Content-Length: 261</pre>
             <h4>Status</h4>
-            <pre class="response status">422 Unprocessable Entity</pre>
+            <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
-  &quot;errors&quot;: [
-    {
-      &quot;status&quot;: &quot;422&quot;,
-      &quot;source&quot;: {
-        &quot;pointer&quot;: &quot;/data/attributes/email&quot;
-      },
-      &quot;title&quot;: &quot;Unprocessable Entity&quot;,
-      &quot;detail&quot;: &quot;Email can&#39;t be blank&quot;,
-      &quot;code&quot;: &quot;blank&quot;
+  &quot;data&quot;: {
+    &quot;id&quot;: &quot;65&quot;,
+    &quot;type&quot;: &quot;admin&quot;,
+    &quot;attributes&quot;: {
+      &quot;first_name&quot;: &quot;&quot;,
+      &quot;last_name&quot;: &quot;&quot;,
+      &quot;email&quot;: &quot;sajan@gurzu.com&quot;,
+      &quot;phone&quot;: null,
+      &quot;auth_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6NjUsImFkbWluIjpudWxsLCJleHAiOjE2MTkwODMyNjR9.BnFpSPwfq3aKQFZp-YzD66LsPmAxeU7r74_zlFyCepk&quot;
     }
-  ]
+  }
 }</pre>
       </div>
     </div>

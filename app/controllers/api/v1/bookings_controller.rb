@@ -43,6 +43,18 @@ module Api
         end
       end
 
+
+      # PATCH /api/v1/bookings/:id/check_in
+      def check_in
+        booking = @current_customer.bookings.find(params[:id])
+        if booking.update(arrival_date: DateTime.now)
+          render jsonapi: [], status: :ok, code: '200'
+        else
+          render jsonapi_errors: booking.errors,
+                  code: '422', status: :unprocessable_entity
+        end
+      end
+
       private
 
       def get_booked_room

@@ -1,20 +1,20 @@
 {
-  "resource": "Login for Customers",
+  "resource": "Login for Admins",
   "resource_explanation": null,
   "http_method": "POST",
-  "route": "/api/v1/customer_login",
-  "description": "Customer successfully logs in",
+  "route": "/api/v1/admin_login",
+  "description": "Admin successfully logs in",
   "explanation": null,
   "parameters": [
     {
       "required": true,
       "name": "email",
-      "description": "Customers email "
+      "description": "Admins email "
     },
     {
       "required": true,
       "name": "password",
-      "description": "Customers password"
+      "description": "Admins password"
     }
   ],
   "response_fields": [
@@ -23,8 +23,8 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/customer_login",
-      "request_body": "{\"customer\":{\"email\":\"sajan@gurzu.com\",\"password\":\"password\"}}",
+      "request_path": "/api/v1/admin_login",
+      "request_body": "{\"admin\":{\"email\":\"sajan@gurzu.com\",\"password\":\"password\"}}",
       "request_headers": {
         "Content-Type": "application/json",
         "Host": "example.org",
@@ -35,7 +35,7 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": \"150\",\n    \"type\": \"customer\",\n    \"attributes\": {\n      \"first_name\": \"Sajan\",\n      \"last_name\": \"Basnet\",\n      \"email\": \"sajan@gurzu.com\",\n      \"phone\": null,\n      \"gender\": \"Male\",\n      \"dob\": \"2000-09-09\",\n      \"auth_token\": \"eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTUwLCJwYXNzd29yZCI6bnVsbCwiZXhwIjoxNjE5MDgzMjY0fQ.WNj10fHnREEC0OTBJlcaxQSYIb5ppWRkycQ-CHj1TXs\"\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"65\",\n    \"type\": \"admin\",\n    \"attributes\": {\n      \"first_name\": \"\",\n      \"last_name\": \"\",\n      \"email\": \"sajan@gurzu.com\",\n      \"phone\": null,\n      \"auth_token\": \"eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6NjUsImFkbWluIjpudWxsLCJleHAiOjE2MTkwODMyNjR9.BnFpSPwfq3aKQFZp-YzD66LsPmAxeU7r74_zlFyCepk\"\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -44,11 +44,11 @@
         "X-Permitted-Cross-Domain-Policies": "none",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/vnd.api+json; charset=utf-8",
-        "ETag": "W/\"98f40e5b5b6aa5834f23d075818bc260\"",
+        "ETag": "W/\"686b8d8af6d222a6b2f6c2712842a9cb\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "ff8f2186-92fa-452e-bb83-4941c743909a",
-        "X-Runtime": "0.012727",
-        "Content-Length": "321"
+        "X-Request-Id": "c945bc19-ec9a-4bad-a67e-e83f0211ae08",
+        "X-Runtime": "0.010246",
+        "Content-Length": "261"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",
       "curl": null

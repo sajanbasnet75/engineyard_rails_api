@@ -118,15 +118,15 @@ table th, table td {
 
             <h4>Headers</h4>
             <pre class="request headers">Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6OTksInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTg0ODY5NTl9.bHrtDAYxb2Xq17vCa0kQ2fjWiS9JtPqhAlhYHwarO80
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQ4LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjY0fQ.aMMTqgcWb86tA8UbKSGXLWIzBGA-YSewsMDgMfJS3jY
 Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">GET /api/v1/rooms/54?hotel_id=70</pre>
+          <pre class="request route highlight">GET /api/v1/rooms/85?hotel_id=86</pre>
 
             <h4>Query Parameters</h4>
-            <pre class="request query_parameters highlight">hotel_id: 70</pre>
+            <pre class="request query_parameters highlight">hotel_id: 86</pre>
 
 
 
@@ -139,30 +139,30 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/vnd.api+json; charset=utf-8
-ETag: W/&quot;107e06b113f2a88522b129cdd5f1f0ab&quot;
+ETag: W/&quot;53a16bd7f68609078d815e642cbe235a&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: b1452080-c89d-4748-901a-695355d6e792
-X-Runtime: 0.008980
-Content-Length: 551</pre>
+X-Request-Id: 7060b2d4-2127-4358-b270-2130ebc063d1
+X-Runtime: 0.020198
+Content-Length: 549</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
   &quot;data&quot;: {
-    &quot;id&quot;: &quot;54&quot;,
+    &quot;id&quot;: &quot;85&quot;,
     &quot;type&quot;: &quot;room&quot;,
     &quot;attributes&quot;: {
       &quot;name&quot;: &quot;Room101&quot;,
       &quot;description&quot;: &quot;guest room,  awesome room&quot;,
       &quot;room_type&quot;: &quot;single&quot;,
-      &quot;room_class&quot;: &quot;high_class&quot;,
+      &quot;room_class&quot;: &quot;standard&quot;,
       &quot;total_quantity&quot;: 1
     },
     &quot;relationships&quot;: {
       &quot;amenities&quot;: {
         &quot;data&quot;: [
           {
-            &quot;id&quot;: &quot;58&quot;,
+            &quot;id&quot;: &quot;95&quot;,
             &quot;type&quot;: &quot;amenity&quot;
           }
         ]
@@ -170,7 +170,7 @@ Content-Length: 551</pre>
       &quot;room_rates&quot;: {
         &quot;data&quot;: [
           {
-            &quot;id&quot;: &quot;58&quot;,
+            &quot;id&quot;: &quot;95&quot;,
             &quot;type&quot;: &quot;room_rate&quot;
           }
         ]
@@ -179,7 +179,7 @@ Content-Length: 551</pre>
   },
   &quot;included&quot;: [
     {
-      &quot;id&quot;: &quot;58&quot;,
+      &quot;id&quot;: &quot;95&quot;,
       &quot;type&quot;: &quot;amenity&quot;,
       &quot;attributes&quot;: {
         &quot;name&quot;: &quot;Towel&quot;,
@@ -188,7 +188,7 @@ Content-Length: 551</pre>
       }
     },
     {
-      &quot;id&quot;: &quot;58&quot;,
+      &quot;id&quot;: &quot;95&quot;,
       &quot;type&quot;: &quot;room_rate&quot;,
       &quot;attributes&quot;: {
         &quot;rate_type&quot;: &quot;standard&quot;,

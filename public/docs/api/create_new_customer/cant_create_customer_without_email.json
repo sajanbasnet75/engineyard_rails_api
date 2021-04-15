@@ -54,7 +54,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/customers",
-      "request_body": "{\"customer\":{\"first_name\":\"Sajan\",\"last_name\":\"Sajan\",\"dob\":\"2021-04-08\",\"gender\":\"Male\",\"type\":\"Customer\",\"password\":\"password\"}}",
+      "request_body": "{\"customer\":{\"first_name\":\"Sajan\",\"last_name\":\"Sajan\",\"dob\":\"2021-04-15\",\"gender\":\"Male\",\"type\":\"Customer\",\"password\":\"password\"}}",
       "request_headers": {
         "Content-Type": "application/json",
         "Host": "example.org",
@@ -75,8 +75,8 @@
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/vnd.api+json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "4a6fd48c-890e-4df6-9f68-aee39ee36faa",
-        "X-Runtime": "0.018329",
+        "X-Request-Id": "38264d07-2023-4d50-8855-36e66714eaea",
+        "X-Runtime": "0.035325",
         "Content-Length": "153"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",

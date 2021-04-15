@@ -1,50 +1,35 @@
 {
-  "resource": "Create new customer",
+  "resource": "Update bookings",
   "resource_explanation": null,
-  "http_method": "POST",
-  "route": "/api/v1/customers",
-  "description": "Creates a new customer successfully",
+  "http_method": "PATCH",
+  "route": "/api/v1/bookings/:id",
+  "description": "Updates the upcoming current booking of the room successfully",
   "explanation": null,
   "parameters": [
     {
       "required": true,
-      "name": "first_name",
-      "description": "First name of customer"
+      "name": "booked_check_in",
+      "description": "Booked check in date"
     },
     {
       "required": true,
-      "name": "last_name",
-      "description": "Last name of customer"
+      "name": "booked_check_out",
+      "description": "Booked check out date"
     },
     {
       "required": true,
-      "name": "title",
-      "description": "Mr, Mrs"
+      "name": "no_of_rooms",
+      "description": "No of rooms"
     },
     {
       "required": true,
-      "name": "email",
-      "description": " email"
+      "name": "no_of_child",
+      "description": "No of child"
     },
     {
       "required": true,
-      "name": "password",
-      "description": " password"
-    },
-    {
-      "required": true,
-      "name": "phone",
-      "description": "countrycode-number"
-    },
-    {
-      "required": true,
-      "name": "dob",
-      "description": "Date of birth"
-    },
-    {
-      "required": true,
-      "name": "gender",
-      "description": "male, female, other"
+      "name": "no_of_adults",
+      "description": "No of adults"
     }
   ],
   "response_fields": [
@@ -52,11 +37,12 @@
   ],
   "requests": [
     {
-      "request_method": "POST",
-      "request_path": "/api/v1/customers",
-      "request_body": "{\"customer\":{\"first_name\":\"Sajan\",\"last_name\":\"Basnet\",\"title\":\"Mr\",\"email\":\"saja@gurzu.com\",\"phone\":\"977-9843773129\",\"password\":\"password\",\"dob\":\"2021-04-15\",\"gender\":\"Male\"}}",
+      "request_method": "PATCH",
+      "request_path": "/api/v1/bookings/50",
+      "request_body": "{\"booking\":{\"booked_check_in\":\"2021-04-15\",\"booked_check_out\":\"2021-04-16\",\"no_of_child\":1,\"no_of_adults\":2,\"no_of_rooms\":1}}",
       "request_headers": {
         "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQxLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjYzfQ.4Gr9kWw1ENZCgPSPf5VGQpAwXcu3j6WGOW_rhIyapEM",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -76,8 +62,8 @@
         "Content-Type": "application/vnd.api+json; charset=utf-8",
         "ETag": "W/\"8fe32e407a1038ee38753b70e5374b3a\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "86b0ef5b-4c2c-4170-86bd-1c79064d4e45",
-        "X-Runtime": "0.014479",
+        "X-Request-Id": "b12b18ca-5979-413f-8635-b9998e1534df",
+        "X-Runtime": "0.016904",
         "Content-Length": "11"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",

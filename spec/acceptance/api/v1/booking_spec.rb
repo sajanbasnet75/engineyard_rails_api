@@ -103,6 +103,23 @@ RSpec.describe Api::V1::BookingsController, type: :api do
     end
   end
 
+
+  resource 'Customers Check in' do
+    header 'Content-Type', 'application/json'
+    patch '/api/v1/bookings/:id/check_in' do
+      let(:raw_post) { params.to_json }
+      example 'Updates the booking arrival date' do
+        request = {
+          id: booking.id
+        }
+        token = JsonWebToken.encode(customer_id: customer.id, password: customer.password)
+        header 'Authorization', token
+        do_request(request)
+        expect(status).to eq(200)
+      end
+    end
+  end
+
   resource 'Booking list' do
     header 'Content-Type', 'application/json'
     get '/api/v1/bookings' do

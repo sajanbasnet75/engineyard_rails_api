@@ -1,0 +1,71 @@
+Creates a booking of the room successfully
+------------------------------------------
+
+Request:
+  GET /api/v1/bookings
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQzLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjYzfQ.r_PLQ4hetrsPaB40IjikeAM-rj5T4J0PrZ5a6w8C8Zg
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {}=
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 512
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"da1f0e8387bac37ccb44cbcd3f4e3cdd"
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: 84f33961-d13e-4250-aea9-054a3256c34b
+  X-Runtime: 0.020300
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": [
+      {
+        "id": "52",
+        "type": "booking",
+        "attributes": {
+          "booked_check_in": "2021-04-15T00:00:00.000Z",
+          "booked_check_out": "2021-04-16T00:00:00.000Z",
+          "no_of_rooms": 1,
+          "no_of_adults": 1,
+          "no_of_child": 1,
+          "book_status": "reserved",
+          "booking_code": null,
+          "arrival_date": "2021-04-15T00:00:00.000Z",
+          "departure_date": "2021-04-16T00:00:00.000Z"
+        },
+        "relationships": {
+          "payment": {
+            "data": null
+          },
+          "customer": {
+            "data": {
+              "id": "143",
+              "type": "customer"
+            }
+          },
+          "room": {
+            "data": {
+              "id": "83",
+              "type": "room"
+            }
+          },
+          "room_rate": {
+            "data": {
+              "id": "93",
+              "type": "room_rate"
+            }
+          }
+        }
+      }
+    ]
+  }
+
+

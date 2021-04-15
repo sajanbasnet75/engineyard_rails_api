@@ -17,7 +17,7 @@ Request:
   Cookie: 
   Host: example.org
 
-  {"customer":{"first_name":"Sajan","last_name":"Basnet","title":"Mr","email":"saja@gurzu.com","phone":"977-9843773129","password":"password","dob":"2021-04-08","gender":"Male"}}
+  {"customer":{"first_name":"Sajan","last_name":"Basnet","title":"Mr","email":"saja@gurzu.com","phone":"977-9843773129","password":"password","dob":"2021-04-15","gender":"Male"}}
 
 Response:
   Status: 200 OK
@@ -30,8 +30,8 @@ Response:
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: 449205a7-4369-4df5-b894-d2d290034e49
-  X-Runtime: 0.014305
+  X-Request-Id: 86b0ef5b-4c2c-4170-86bd-1c79064d4e45
+  X-Runtime: 0.014479
   X-XSS-Protection: 1; mode=block
 
   {
@@ -60,7 +60,7 @@ Request:
   Cookie: 
   Host: example.org
 
-  {"customer":{"first_name":"Sajan","last_name":"Sajan","dob":"2021-04-08","gender":"Male","type":"Customer","password":"password"}}
+  {"customer":{"first_name":"Sajan","last_name":"Sajan","dob":"2021-04-15","gender":"Male","type":"Customer","password":"password"}}
 
 Response:
   Status: 422 Unprocessable Entity
@@ -72,8 +72,8 @@ Response:
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: 4a6fd48c-890e-4df6-9f68-aee39ee36faa
-  X-Runtime: 0.018329
+  X-Request-Id: 38264d07-2023-4d50-8855-36e66714eaea
+  X-Runtime: 0.035325
   X-XSS-Protection: 1; mode=block
 
   {
@@ -100,6 +100,7 @@ Parameters:
 
 Request:
   POST /api/v1/hotels
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6NjEsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTkwODMyNjN9.QTQk0JxgLN06mZXYMsKbxRH2GAry-QS9Gyx8BLWBVFE
   Content-Type: application/json
   Cookie: 
   Host: example.org
@@ -117,8 +118,8 @@ Response:
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: beabf107-49bb-4f43-b578-be88955f9aa9
-  X-Runtime: 0.009081
+  X-Request-Id: d102d631-554b-4c60-820f-e3de0f1f2647
+  X-Runtime: 0.013948
   X-XSS-Protection: 1; mode=block
 
   {
@@ -137,6 +138,7 @@ Parameters:
 
 Request:
   POST /api/v1/hotels
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6NjIsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTkwODMyNjN9.KqU9fJh9FZXL_RFhAyIVXVDmdqsC3kiIszHvgTxcPrE
   Content-Type: application/json
   Cookie: 
   Host: example.org
@@ -153,8 +155,8 @@ Response:
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: 29b64042-5c1d-430a-a257-e533f39ad8e0
-  X-Runtime: 0.004004
+  X-Request-Id: 38979f0d-f0d1-4277-973f-e5d8a7c7734a
+  X-Runtime: 0.011234
   X-XSS-Protection: 1; mode=block
 
   {

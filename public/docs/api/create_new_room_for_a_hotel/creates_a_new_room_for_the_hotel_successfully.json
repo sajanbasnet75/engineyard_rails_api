@@ -111,7 +111,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/rooms",
-      "request_body": "{\"hotel_id\":71,\"room\":{\"name\":\"Room 101\",\"description\":\"description of room\",\"room_type\":1,\"room_class\":2,\"total_quantity\":10,\"amenities_attributes\":{\"0\":{\"name\":\"Towel\",\"description\":\"Soft towel for wiping your\",\"is_available\":true},\"1\":{\"name\":\"TV\",\"description\":\"Netflix and chill\",\"is_available\":true}},\"room_rates_attributes\":{\"0\":{\"rate_type\":1,\"max_price\":30000,\"min_price\":20000,\"is_active\":true},\"1\":{\"rate_type\":2,\"max_price\":50000,\"min_price\":30000,\"is_active\":true}}}}",
+      "request_body": "{\"hotel_id\":87,\"room\":{\"name\":\"Room 101\",\"description\":\"description of room\",\"room_type\":1,\"room_class\":2,\"total_quantity\":10,\"amenities_attributes\":{\"0\":{\"name\":\"Towel\",\"description\":\"Soft towel for wiping your\",\"is_available\":true},\"1\":{\"name\":\"TV\",\"description\":\"Netflix and chill\",\"is_available\":true}},\"room_rates_attributes\":{\"0\":{\"rate_type\":1,\"max_price\":30000,\"min_price\":20000,\"is_active\":true},\"1\":{\"rate_type\":2,\"max_price\":50000,\"min_price\":30000,\"is_active\":true}}}}",
       "request_headers": {
         "Content-Type": "application/json",
         "Host": "example.org",
@@ -133,8 +133,8 @@
         "Content-Type": "application/vnd.api+json; charset=utf-8",
         "ETag": "W/\"8fe32e407a1038ee38753b70e5374b3a\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "6f0cbd80-863e-4739-b8dc-1ec44dc6a974",
-        "X-Runtime": "0.012615",
+        "X-Request-Id": "00d1efce-2994-4b2f-8837-46cce2ce5f53",
+        "X-Runtime": "0.024066",
         "Content-Length": "11"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",
