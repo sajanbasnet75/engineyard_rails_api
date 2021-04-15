@@ -38,6 +38,9 @@ gem 'jsonapi-serializer'
 # for authentication
 gem 'jwt'
 
+# For handling Cross-Origin Resource Sharing (CORS)
+gem 'rack-cors', '~> 1.1'
+
 group :development, :test do
   # for viewing attributes of a model
   gem 'annotate'
