@@ -1,9 +1,9 @@
-Creates a booking of the room successfully
-------------------------------------------
+Get the booking list of the customer
+------------------------------------
 
 Request:
   GET /api/v1/bookings
-  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQzLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjYzfQ.r_PLQ4hetrsPaB40IjikeAM-rj5T4J0PrZ5a6w8C8Zg
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTk5LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDk2ODk4fQ.JCBcZD9H5uO3GJa0QvDj-uU54GOLRVkPmzSZwMbD8dM
   Content-Type: application/json
   Cookie: 
   Host: example.org
@@ -13,22 +13,23 @@ Request:
 Response:
   Status: 200 OK
   Cache-Control: max-age=0, private, must-revalidate
-  Content-Length: 512
+  Content-Length: 514
   Content-Type: application/vnd.api+json; charset=utf-8
-  ETag: W/"da1f0e8387bac37ccb44cbcd3f4e3cdd"
+  ETag: W/"150f916dc316f5d46ac56dfde0a4714c"
   Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
   X-Content-Type-Options: nosniff
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: 84f33961-d13e-4250-aea9-054a3256c34b
-  X-Runtime: 0.020300
+  X-Request-Id: 8661ea1a-c86e-4663-a7ac-b707feec75a8
+  X-Runtime: 0.018982
   X-XSS-Protection: 1; mode=block
 
   {
     "data": [
       {
-        "id": "52",
+        "id": "72",
         "type": "booking",
         "attributes": {
           "booked_check_in": "2021-04-15T00:00:00.000Z",
@@ -47,19 +48,19 @@ Response:
           },
           "customer": {
             "data": {
-              "id": "143",
+              "id": "199",
               "type": "customer"
             }
           },
           "room": {
             "data": {
-              "id": "83",
+              "id": "115",
               "type": "room"
             }
           },
           "room_rate": {
             "data": {
-              "id": "93",
+              "id": "129",
               "type": "room_rate"
             }
           }

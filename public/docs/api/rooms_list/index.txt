@@ -2,33 +2,34 @@ Gets all the list of rooms
 --------------------------
 
 Request:
-  GET /api/v1/rooms?hotel_id=85
-  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQ3LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjYzfQ.jzJ1x5i_81u5Zfi4UeiK_g5skS5deY1AK3zKvxYlj9Y
+  GET /api/v1/rooms?hotel_id=117
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjAzLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDk2ODk4fQ.PTf0sVTCmkNU4dQ3fO0uKJloeox3OnJ2OABGaL_CNSM
   Content-Type: application/json
   Cookie: 
   Host: example.org
 
-  hotel_id=85
+  hotel_id=117
 
 Response:
   Status: 200 OK
   Cache-Control: max-age=0, private, must-revalidate
-  Content-Length: 551
+  Content-Length: 556
   Content-Type: application/vnd.api+json; charset=utf-8
-  ETag: W/"db78d4e1911be9847bebffbb5420e914"
+  ETag: W/"b2538c4cac94add9afa4dbed7d0f1c8f"
   Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
   X-Content-Type-Options: nosniff
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: cb8c2c6f-d558-4fc5-8ec1-feae513acf35
-  X-Runtime: 0.031294
+  X-Request-Id: 9fc7e6c2-d183-4830-b5d7-4937af815f9e
+  X-Runtime: 0.025246
   X-XSS-Protection: 1; mode=block
 
   {
     "data": [
       {
-        "id": "84",
+        "id": "116",
         "type": "room",
         "attributes": {
           "name": "Room101",
@@ -41,7 +42,7 @@ Response:
           "amenities": {
             "data": [
               {
-                "id": "94",
+                "id": "130",
                 "type": "amenity"
               }
             ]
@@ -49,7 +50,7 @@ Response:
           "room_rates": {
             "data": [
               {
-                "id": "94",
+                "id": "130",
                 "type": "room_rate"
               }
             ]
@@ -59,7 +60,7 @@ Response:
     ],
     "included": [
       {
-        "id": "94",
+        "id": "130",
         "type": "amenity",
         "attributes": {
           "name": "Towel",
@@ -68,7 +69,7 @@ Response:
         }
       },
       {
-        "id": "94",
+        "id": "130",
         "type": "room_rate",
         "attributes": {
           "rate_type": "standard",

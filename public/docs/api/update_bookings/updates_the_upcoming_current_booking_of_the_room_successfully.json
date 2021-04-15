@@ -38,11 +38,11 @@
   "requests": [
     {
       "request_method": "PATCH",
-      "request_path": "/api/v1/bookings/50",
+      "request_path": "/api/v1/bookings/70",
       "request_body": "{\"booking\":{\"booked_check_in\":\"2021-04-15\",\"booked_check_out\":\"2021-04-16\",\"no_of_child\":1,\"no_of_adults\":2,\"no_of_rooms\":1}}",
       "request_headers": {
         "Content-Type": "application/json",
-        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQxLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjYzfQ.4Gr9kWw1ENZCgPSPf5VGQpAwXcu3j6WGOW_rhIyapEM",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTk3LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDk2ODk4fQ.Si9E-4Qk8N7gs8YuCDfE9yhN753aSR0rghTkTxZXV6M",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -62,8 +62,9 @@
         "Content-Type": "application/vnd.api+json; charset=utf-8",
         "ETag": "W/\"8fe32e407a1038ee38753b70e5374b3a\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "b12b18ca-5979-413f-8635-b9998e1534df",
-        "X-Runtime": "0.016904",
+        "X-Request-Id": "578e13e1-d0da-42d3-bc4d-0df3d67c27ce",
+        "X-Runtime": "0.016063",
+        "Vary": "Origin",
         "Content-Length": "11"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",

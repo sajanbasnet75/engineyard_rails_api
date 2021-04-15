@@ -18,26 +18,27 @@ Response:
   Cache-Control: max-age=0, private, must-revalidate
   Content-Length: 261
   Content-Type: application/vnd.api+json; charset=utf-8
-  ETag: W/"686b8d8af6d222a6b2f6c2712842a9cb"
+  ETag: W/"ae544f9b4465fcae16416db6729f9d5c"
   Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
   X-Content-Type-Options: nosniff
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: c945bc19-ec9a-4bad-a67e-e83f0211ae08
-  X-Runtime: 0.010246
+  X-Request-Id: 17ade735-f76f-4325-91a0-d1ae5afa3262
+  X-Runtime: 0.012141
   X-XSS-Protection: 1; mode=block
 
   {
     "data": {
-      "id": "65",
+      "id": "89",
       "type": "admin",
       "attributes": {
         "first_name": "",
         "last_name": "",
         "email": "sajan@gurzu.com",
         "phone": null,
-        "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6NjUsImFkbWluIjpudWxsLCJleHAiOjE2MTkwODMyNjR9.BnFpSPwfq3aKQFZp-YzD66LsPmAxeU7r74_zlFyCepk"
+        "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6ODksImFkbWluIjpudWxsLCJleHAiOjE2MTkwOTY4OTl9.jlX9Wq7kUV1wLJAck-kqRW54RBuv6QCvPy6LORJ3Los"
       }
     }
   }
@@ -64,12 +65,13 @@ Response:
   Content-Length: 95
   Content-Type: application/vnd.api+json; charset=utf-8
   Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
   X-Content-Type-Options: nosniff
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: 88a678e4-a4e5-4eae-b9ec-542ff34d3c0f
-  X-Runtime: 0.008590
+  X-Request-Id: e16f7e1e-efb9-4b7f-a9a8-dac295134fbc
+  X-Runtime: 0.008816
   X-XSS-Protection: 1; mode=block
 
   {

@@ -5,8 +5,8 @@
       "explanation": null,
       "examples": [
         {
-          "description": "Creates a booking of the room successfully",
-          "link": "booking_list/creates_a_booking_of_the_room_successfully.json",
+          "description": "Get the booking list of the customer",
+          "link": "booking_list/get_the_booking_list_of_the_customer.json",
           "groups": "all",
           "route": "/api/v1/bookings",
           "method": "get"

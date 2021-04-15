@@ -124,7 +124,7 @@ RSpec.describe Api::V1::BookingsController, type: :api do
     header 'Content-Type', 'application/json'
     get '/api/v1/bookings' do
       let(:raw_post) { params.to_json }
-      example 'Creates a booking of the room successfully' do
+      example 'Get the booking list of the customer' do
         token = JsonWebToken.encode(customer_id: customer.id, password: customer.password)
         header 'Authorization', token
         do_request

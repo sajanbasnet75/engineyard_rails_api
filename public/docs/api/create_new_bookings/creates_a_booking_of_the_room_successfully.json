@@ -135,10 +135,10 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/bookings",
-      "request_body": "{\"booking\":{\"hotel_id\":80,\"room_id\":80,\"room_rate_id\":90,\"booked_check_in\":\"2021-04-15\",\"booked_check_out\":\"2021-04-16\",\"no_of_child\":1,\"no_of_adults\":2,\"no_of_rooms\":1,\"payment_attributes\":{\"total_amt\":1000.0,\"card_number\":\"4242424242424242\",\"card_exp_date\":\"2021-04-16\",\"pay_type\":\"card\",\"pay_status\":\"paid\",\"billing_name\":\"Ram bahadur\",\"billing_country\":\"Nepal\",\"billing_city\":\"Pokhara\",\"billing_state\":\"Kapan\",\"billing_street\":\"101 gau\"}}}",
+      "request_body": "{\"booking\":{\"hotel_id\":112,\"room_id\":112,\"room_rate_id\":126,\"booked_check_in\":\"2021-04-15\",\"booked_check_out\":\"2021-04-16\",\"no_of_child\":1,\"no_of_adults\":2,\"no_of_rooms\":1,\"payment_attributes\":{\"total_amt\":1000.0,\"card_number\":\"4242424242424242\",\"card_exp_date\":\"2021-04-16\",\"pay_type\":\"card\",\"pay_status\":\"paid\",\"billing_name\":\"Ram bahadur\",\"billing_country\":\"Nepal\",\"billing_city\":\"Pokhara\",\"billing_state\":\"Kapan\",\"billing_street\":\"101 gau\"}}}",
       "request_headers": {
         "Content-Type": "application/json",
-        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQwLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjYzfQ.W1bx_Hqq4YZLG9_b7jaQe7wck6u2tGj7dy5ytnd9iLo",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTk2LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDk2ODk4fQ.BXMXPtqVYAQmqIWe_rUM2AdIiZko9IRiXgd7SfH1-0c",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -158,8 +158,9 @@
         "Content-Type": "application/vnd.api+json; charset=utf-8",
         "ETag": "W/\"8fe32e407a1038ee38753b70e5374b3a\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "8cddedb8-adf1-4f9c-bfac-cd88669f85da",
-        "X-Runtime": "0.068428",
+        "X-Request-Id": "ab0f1afe-4372-4370-b61d-4c3c57301dff",
+        "X-Runtime": "0.070800",
+        "Vary": "Origin",
         "Content-Length": "11"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",

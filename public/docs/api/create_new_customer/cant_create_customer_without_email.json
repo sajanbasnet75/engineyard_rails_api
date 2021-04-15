@@ -75,8 +75,9 @@
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/vnd.api+json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "38264d07-2023-4d50-8855-36e66714eaea",
-        "X-Runtime": "0.035325",
+        "X-Request-Id": "1ef70d18-49a5-4f69-a5f4-520c16ad871d",
+        "X-Runtime": "0.033331",
+        "Vary": "Origin",
         "Content-Length": "153"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",
