@@ -11,7 +11,9 @@ module Api
         customer = Customer.new(customer_create_params)
 
         if customer.save
-          render jsonapi: [], code: '200', status: :ok
+          token = JsonWebToken.encode(customer_id: customer.id, customer: customer.password)
+          render jsonapi: customer, params: { auth_token: token },
+                 code: '200', status: :ok
         else
           render jsonapi_errors: customer.errors,
                  code: '422', status: :unprocessable_entity
