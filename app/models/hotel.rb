@@ -11,5 +11,5 @@
 class Hotel < ApplicationRecord
   validates :name, :description, presence: true
   has_many :rooms, dependent: :destroy
-  has_many_attached :images
+  has_many_attached :hotel_images
 end
