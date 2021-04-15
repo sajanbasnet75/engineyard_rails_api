@@ -38,4 +38,18 @@ class Booking < ApplicationRecord
                       confirmed: 2,
                       completed: 3,
                       cancelled: 4 }
+
+  after_create :generate_booking_code_and_invoice_id
+
+  private 
+
+  def generate_booking_code_and_invoice_id
+    date = created_at.strftime('%m.%y.%d')
+    booking_code = "SR" + id.to_s + date + customer_id.to_s
+    update(booking_code: booking_code)
+
+    invoice_id = payment.pay_type.upcase + payment.id.to_s + date + customer_id.to_s
+    payment.update(invoice_no: invoice_id)
+  end
 end
+
