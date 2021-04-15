@@ -39,12 +39,12 @@ class Booking < ApplicationRecord
                       completed: 3,
                       cancelled: 4 }
 
-  after_create :generate_booking_code_and_invoice_id
+  after_create :generate_booking_code_and_invoice_id unless Rails.env.test?
 
   private 
 
   def generate_booking_code_and_invoice_id
-    date = created_at.strftime('%m.%y.%d')
+    date = created_at.strftime('%m%y%d')
     booking_code = "SR" + id.to_s + date + customer_id.to_s
     update(booking_code: booking_code)
 
