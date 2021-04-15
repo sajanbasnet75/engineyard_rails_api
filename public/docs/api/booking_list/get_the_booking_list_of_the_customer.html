@@ -109,7 +109,7 @@ table th, table td {
       <h1>Booking list API</h1>
 
       <div class="article">
-        <h2>Creates a booking of the room successfully</h2>
+        <h2>Get the booking list of the customer</h2>
         <h3>GET /api/v1/bookings</h3>
 
 
@@ -118,7 +118,7 @@ table th, table td {
 
             <h4>Headers</h4>
             <pre class="request headers">Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQzLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjYzfQ.r_PLQ4hetrsPaB40IjikeAM-rj5T4J0PrZ5a6w8C8Zg
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTk5LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDk2ODk4fQ.JCBcZD9H5uO3GJa0QvDj-uU54GOLRVkPmzSZwMbD8dM
 Host: example.org
 Cookie: </pre>
 
@@ -139,18 +139,19 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/vnd.api+json; charset=utf-8
-ETag: W/&quot;da1f0e8387bac37ccb44cbcd3f4e3cdd&quot;
+ETag: W/&quot;150f916dc316f5d46ac56dfde0a4714c&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: 84f33961-d13e-4250-aea9-054a3256c34b
-X-Runtime: 0.020300
-Content-Length: 512</pre>
+X-Request-Id: 8661ea1a-c86e-4663-a7ac-b707feec75a8
+X-Runtime: 0.018982
+Vary: Origin
+Content-Length: 514</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
   &quot;data&quot;: [
     {
-      &quot;id&quot;: &quot;52&quot;,
+      &quot;id&quot;: &quot;72&quot;,
       &quot;type&quot;: &quot;booking&quot;,
       &quot;attributes&quot;: {
         &quot;booked_check_in&quot;: &quot;2021-04-15T00:00:00.000Z&quot;,
@@ -169,19 +170,19 @@ Content-Length: 512</pre>
         },
         &quot;customer&quot;: {
           &quot;data&quot;: {
-            &quot;id&quot;: &quot;143&quot;,
+            &quot;id&quot;: &quot;199&quot;,
             &quot;type&quot;: &quot;customer&quot;
           }
         },
         &quot;room&quot;: {
           &quot;data&quot;: {
-            &quot;id&quot;: &quot;83&quot;,
+            &quot;id&quot;: &quot;115&quot;,
             &quot;type&quot;: &quot;room&quot;
           }
         },
         &quot;room_rate&quot;: {
           &quot;data&quot;: {
-            &quot;id&quot;: &quot;93&quot;,
+            &quot;id&quot;: &quot;129&quot;,
             &quot;type&quot;: &quot;room_rate&quot;
           }
         }

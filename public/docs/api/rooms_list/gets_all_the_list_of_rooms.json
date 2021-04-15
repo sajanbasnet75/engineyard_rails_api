@@ -14,21 +14,21 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/rooms?hotel_id=85",
+      "request_path": "/api/v1/rooms?hotel_id=117",
       "request_body": null,
       "request_headers": {
         "Content-Type": "application/json",
-        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQ3LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjYzfQ.jzJ1x5i_81u5Zfi4UeiK_g5skS5deY1AK3zKvxYlj9Y",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjAzLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDk2ODk4fQ.PTf0sVTCmkNU4dQ3fO0uKJloeox3OnJ2OABGaL_CNSM",
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "hotel_id": "85"
+        "hotel_id": "117"
       },
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"84\",\n      \"type\": \"room\",\n      \"attributes\": {\n        \"name\": \"Room101\",\n        \"description\": \"guest room,  awesome room\",\n        \"room_type\": \"single\",\n        \"room_class\": \"standard\",\n        \"total_quantity\": 1\n      },\n      \"relationships\": {\n        \"amenities\": {\n          \"data\": [\n            {\n              \"id\": \"94\",\n              \"type\": \"amenity\"\n            }\n          ]\n        },\n        \"room_rates\": {\n          \"data\": [\n            {\n              \"id\": \"94\",\n              \"type\": \"room_rate\"\n            }\n          ]\n        }\n      }\n    }\n  ],\n  \"included\": [\n    {\n      \"id\": \"94\",\n      \"type\": \"amenity\",\n      \"attributes\": {\n        \"name\": \"Towel\",\n        \"description\": \"Towel to wipe your\",\n        \"is_available\": true\n      }\n    },\n    {\n      \"id\": \"94\",\n      \"type\": \"room_rate\",\n      \"attributes\": {\n        \"rate_type\": \"standard\",\n        \"min_price\": 10000.0,\n        \"max_price\": 1000.0,\n        \"is_active\": true\n      }\n    }\n  ]\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"116\",\n      \"type\": \"room\",\n      \"attributes\": {\n        \"name\": \"Room101\",\n        \"description\": \"guest room,  awesome room\",\n        \"room_type\": \"single\",\n        \"room_class\": \"standard\",\n        \"total_quantity\": 1\n      },\n      \"relationships\": {\n        \"amenities\": {\n          \"data\": [\n            {\n              \"id\": \"130\",\n              \"type\": \"amenity\"\n            }\n          ]\n        },\n        \"room_rates\": {\n          \"data\": [\n            {\n              \"id\": \"130\",\n              \"type\": \"room_rate\"\n            }\n          ]\n        }\n      }\n    }\n  ],\n  \"included\": [\n    {\n      \"id\": \"130\",\n      \"type\": \"amenity\",\n      \"attributes\": {\n        \"name\": \"Towel\",\n        \"description\": \"Towel to wipe your\",\n        \"is_available\": true\n      }\n    },\n    {\n      \"id\": \"130\",\n      \"type\": \"room_rate\",\n      \"attributes\": {\n        \"rate_type\": \"standard\",\n        \"min_price\": 10000.0,\n        \"max_price\": 1000.0,\n        \"is_active\": true\n      }\n    }\n  ]\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -37,11 +37,12 @@
         "X-Permitted-Cross-Domain-Policies": "none",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/vnd.api+json; charset=utf-8",
-        "ETag": "W/\"db78d4e1911be9847bebffbb5420e914\"",
+        "ETag": "W/\"b2538c4cac94add9afa4dbed7d0f1c8f\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "cb8c2c6f-d558-4fc5-8ec1-feae513acf35",
-        "X-Runtime": "0.031294",
-        "Content-Length": "551"
+        "X-Request-Id": "9fc7e6c2-d183-4830-b5d7-4937af815f9e",
+        "X-Runtime": "0.025246",
+        "Vary": "Origin",
+        "Content-Length": "556"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",
       "curl": null

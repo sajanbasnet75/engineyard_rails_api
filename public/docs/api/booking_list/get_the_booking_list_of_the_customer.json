@@ -1,0 +1,51 @@
+{
+  "resource": "Booking list",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/api/v1/bookings",
+  "description": "Get the booking list of the customer",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/bookings",
+      "request_body": null,
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTk5LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDk2ODk4fQ.JCBcZD9H5uO3GJa0QvDj-uU54GOLRVkPmzSZwMbD8dM",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "{}": null
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"72\",\n      \"type\": \"booking\",\n      \"attributes\": {\n        \"booked_check_in\": \"2021-04-15T00:00:00.000Z\",\n        \"booked_check_out\": \"2021-04-16T00:00:00.000Z\",\n        \"no_of_rooms\": 1,\n        \"no_of_adults\": 1,\n        \"no_of_child\": 1,\n        \"book_status\": \"reserved\",\n        \"booking_code\": null,\n        \"arrival_date\": \"2021-04-15T00:00:00.000Z\",\n        \"departure_date\": \"2021-04-16T00:00:00.000Z\"\n      },\n      \"relationships\": {\n        \"payment\": {\n          \"data\": null\n        },\n        \"customer\": {\n          \"data\": {\n            \"id\": \"199\",\n            \"type\": \"customer\"\n          }\n        },\n        \"room\": {\n          \"data\": {\n            \"id\": \"115\",\n            \"type\": \"room\"\n          }\n        },\n        \"room_rate\": {\n          \"data\": {\n            \"id\": \"129\",\n            \"type\": \"room_rate\"\n          }\n        }\n      }\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Type": "application/vnd.api+json; charset=utf-8",
+        "ETag": "W/\"150f916dc316f5d46ac56dfde0a4714c\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "8661ea1a-c86e-4663-a7ac-b707feec75a8",
+        "X-Runtime": "0.018982",
+        "Vary": "Origin",
+        "Content-Length": "514"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

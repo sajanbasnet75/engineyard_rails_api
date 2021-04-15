@@ -14,11 +14,11 @@
   "requests": [
     {
       "request_method": "PATCH",
-      "request_path": "/api/v1/bookings/51/check_in",
+      "request_path": "/api/v1/bookings/71/check_in",
       "request_body": "{}",
       "request_headers": {
         "Content-Type": "application/json",
-        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQyLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjYzfQ.emfeDuDJiHKjFAUGGH1hxzvM4tijhbr9cxbmdwNznXQ",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTk4LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDk2ODk4fQ.N3f9YjC0sdchIyaXL0aH8g_XUoDu_pEzOQf-OCd8YqI",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -38,8 +38,9 @@
         "Content-Type": "application/vnd.api+json; charset=utf-8",
         "ETag": "W/\"8fe32e407a1038ee38753b70e5374b3a\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "b735a6ca-cb52-41d3-9482-03c387e37212",
-        "X-Runtime": "0.016426",
+        "X-Request-Id": "7d88e20d-1fd0-4a7f-9b6c-1d00324ee1f9",
+        "X-Runtime": "0.015701",
+        "Vary": "Origin",
         "Content-Length": "11"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",

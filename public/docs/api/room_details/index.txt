@@ -2,32 +2,33 @@ gets the details of a room
 --------------------------
 
 Request:
-  GET /api/v1/rooms/85?hotel_id=86
-  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQ4LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjY0fQ.aMMTqgcWb86tA8UbKSGXLWIzBGA-YSewsMDgMfJS3jY
+  GET /api/v1/rooms/117?hotel_id=118
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjA0LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDk2ODk5fQ.4talCOPl5t_1jBLSewq9N5lAW4CHRW30GHF_Hd0RswM
   Content-Type: application/json
   Cookie: 
   Host: example.org
 
-  hotel_id=86
+  hotel_id=118
 
 Response:
   Status: 200 OK
   Cache-Control: max-age=0, private, must-revalidate
-  Content-Length: 549
+  Content-Length: 554
   Content-Type: application/vnd.api+json; charset=utf-8
-  ETag: W/"53a16bd7f68609078d815e642cbe235a"
+  ETag: W/"7a2cbbae8d6b1961982371933a15160f"
   Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
   X-Content-Type-Options: nosniff
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: 7060b2d4-2127-4358-b270-2130ebc063d1
-  X-Runtime: 0.020198
+  X-Request-Id: 7d6258a2-fdda-4f44-89bf-0ecaedfb9fa7
+  X-Runtime: 0.018253
   X-XSS-Protection: 1; mode=block
 
   {
     "data": {
-      "id": "85",
+      "id": "117",
       "type": "room",
       "attributes": {
         "name": "Room101",
@@ -40,7 +41,7 @@ Response:
         "amenities": {
           "data": [
             {
-              "id": "95",
+              "id": "131",
               "type": "amenity"
             }
           ]
@@ -48,7 +49,7 @@ Response:
         "room_rates": {
           "data": [
             {
-              "id": "95",
+              "id": "131",
               "type": "room_rate"
             }
           ]
@@ -57,7 +58,7 @@ Response:
     },
     "included": [
       {
-        "id": "95",
+        "id": "131",
         "type": "amenity",
         "attributes": {
           "name": "Towel",
@@ -66,7 +67,7 @@ Response:
         }
       },
       {
-        "id": "95",
+        "id": "131",
         "type": "room_rate",
         "attributes": {
           "rate_type": "standard",

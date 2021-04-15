@@ -14,21 +14,21 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/rooms/85?hotel_id=86",
+      "request_path": "/api/v1/rooms/117?hotel_id=118",
       "request_body": null,
       "request_headers": {
         "Content-Type": "application/json",
-        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MTQ4LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDgzMjY0fQ.aMMTqgcWb86tA8UbKSGXLWIzBGA-YSewsMDgMfJS3jY",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjA0LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MDk2ODk5fQ.4talCOPl5t_1jBLSewq9N5lAW4CHRW30GHF_Hd0RswM",
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "hotel_id": "86"
+        "hotel_id": "118"
       },
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": \"85\",\n    \"type\": \"room\",\n    \"attributes\": {\n      \"name\": \"Room101\",\n      \"description\": \"guest room,  awesome room\",\n      \"room_type\": \"single\",\n      \"room_class\": \"standard\",\n      \"total_quantity\": 1\n    },\n    \"relationships\": {\n      \"amenities\": {\n        \"data\": [\n          {\n            \"id\": \"95\",\n            \"type\": \"amenity\"\n          }\n        ]\n      },\n      \"room_rates\": {\n        \"data\": [\n          {\n            \"id\": \"95\",\n            \"type\": \"room_rate\"\n          }\n        ]\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"95\",\n      \"type\": \"amenity\",\n      \"attributes\": {\n        \"name\": \"Towel\",\n        \"description\": \"Towel to wipe your\",\n        \"is_available\": true\n      }\n    },\n    {\n      \"id\": \"95\",\n      \"type\": \"room_rate\",\n      \"attributes\": {\n        \"rate_type\": \"standard\",\n        \"min_price\": 10000.0,\n        \"max_price\": 1000.0,\n        \"is_active\": true\n      }\n    }\n  ]\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"117\",\n    \"type\": \"room\",\n    \"attributes\": {\n      \"name\": \"Room101\",\n      \"description\": \"guest room,  awesome room\",\n      \"room_type\": \"single\",\n      \"room_class\": \"standard\",\n      \"total_quantity\": 1\n    },\n    \"relationships\": {\n      \"amenities\": {\n        \"data\": [\n          {\n            \"id\": \"131\",\n            \"type\": \"amenity\"\n          }\n        ]\n      },\n      \"room_rates\": {\n        \"data\": [\n          {\n            \"id\": \"131\",\n            \"type\": \"room_rate\"\n          }\n        ]\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"131\",\n      \"type\": \"amenity\",\n      \"attributes\": {\n        \"name\": \"Towel\",\n        \"description\": \"Towel to wipe your\",\n        \"is_available\": true\n      }\n    },\n    {\n      \"id\": \"131\",\n      \"type\": \"room_rate\",\n      \"attributes\": {\n        \"rate_type\": \"standard\",\n        \"min_price\": 10000.0,\n        \"max_price\": 1000.0,\n        \"is_active\": true\n      }\n    }\n  ]\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -37,11 +37,12 @@
         "X-Permitted-Cross-Domain-Policies": "none",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/vnd.api+json; charset=utf-8",
-        "ETag": "W/\"53a16bd7f68609078d815e642cbe235a\"",
+        "ETag": "W/\"7a2cbbae8d6b1961982371933a15160f\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "7060b2d4-2127-4358-b270-2130ebc063d1",
-        "X-Runtime": "0.020198",
-        "Content-Length": "549"
+        "X-Request-Id": "7d6258a2-fdda-4f44-89bf-0ecaedfb9fa7",
+        "X-Runtime": "0.018253",
+        "Vary": "Origin",
+        "Content-Length": "554"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",
       "curl": null
