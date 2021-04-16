@@ -38,6 +38,9 @@ gem 'jsonapi-serializer'
 # for authentication
 gem 'jwt'
 
+gem 'pry'
+
+
 # For handling Cross-Origin Resource Sharing (CORS)
 gem 'rack-cors', '~> 1.1'
 
