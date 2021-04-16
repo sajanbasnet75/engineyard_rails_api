@@ -59,7 +59,7 @@ module Api
       def check_out
         # TODO authorize only admin, this might be done from admin app only
         booking = Booking.find(params[:id])
-        if booking.update(departure_date: DateTime.now)
+        if booking.update(departure_date: DateTime.now, book_status: 'completed')
           # TODO increase back the room qunatity and make it available
           # TODO check payment is done or not else raise error
           render jsonapi: [], status: :ok, code: '200'
