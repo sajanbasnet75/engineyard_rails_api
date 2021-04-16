@@ -2,8 +2,7 @@
 
 # class for authentication with jwt
 class JsonWebToken
-  JWT_SECRET_KEY = Rails.application.secrets.secret_key_base
-
+  JWT_SECRET_KEY = ENV['JWT_SECRET_KEY']
   class << self
     def encode(payload)
       expiration = 7.days.from_now.to_i
@@ -11,9 +10,6 @@ class JsonWebToken
     end
 
     def decode(token)
-      
-      binding.pry
-      
       JWT.decode(token, JWT_SECRET_KEY, true, algorithm: 'HS256').first
     end
   end
