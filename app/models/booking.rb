@@ -49,7 +49,7 @@ class Booking < ApplicationRecord
     update(booking_code: booking_code)
 
     invoice_id = payment.pay_type.upcase + payment.id.to_s + date + customer_id.to_s
-    payment.update(invoice_no: invoice_id)
+    payment.update(invoice_id: invoice_id)
   end
 end
 
