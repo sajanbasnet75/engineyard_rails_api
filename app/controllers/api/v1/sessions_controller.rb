@@ -9,6 +9,7 @@ module Api
         customer = Customer.find_for_authentication(email: customer_login_params[:email])
         if customer.present? && customer.valid_password?(customer_login_params[:password])
           token = JsonWebToken.encode(customer_id: customer.id, password: customer.password)
+          puts token
           render jsonapi: customer, params: { auth_token: token },
                  status: :ok, code: '200'
         else
