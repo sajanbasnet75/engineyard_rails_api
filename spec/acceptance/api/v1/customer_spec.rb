@@ -7,7 +7,7 @@ require 'rspec_api_documentation/dsl'
 RSpec.describe Api::V1::CustomersController, type: :api do
   let!(:customer) { FactoryBot.create(:customer) }
 
-  resource 'Create new customer' do
+  resource 'Customer App: Create new customer' do
     header 'Content-Type', 'application/json'
     post '/api/v1/customers' do
       parameter :first_name, 'First name of customer', required: true

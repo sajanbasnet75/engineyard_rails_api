@@ -11,7 +11,7 @@ RSpec.describe Api::V1::RoomsController, type: :api do
   let!(:amenity) { FactoryBot.create(:amenity, room: room) }
   let!(:room_rate) { FactoryBot.create(:room_rate, room: room) }
 
-  resource 'Rooms list' do
+  resource 'Customer App: Rooms list' do
     header 'Content-Type', 'application/json'
     get '/api/v1/rooms' do
       context 'Customer views the room list' do
@@ -27,7 +27,7 @@ RSpec.describe Api::V1::RoomsController, type: :api do
     end
   end
 
-  resource 'Room Details' do
+  resource 'Customer App: Room Details' do
     header 'Content-Type', 'application/json'
     get '/api/v1/rooms/:id' do
       context 'Customer views the details of room' do
@@ -41,7 +41,7 @@ RSpec.describe Api::V1::RoomsController, type: :api do
     end
   end
 
-  resource 'Create new Room for a hotel' do
+  resource 'Admin: Create new Room for a hotel' do
     header 'Content-Type', 'application/json'
     post '/api/v1/rooms' do
       parameter :hotel_id, 'Hotel id for which the room is added', required: true

@@ -1,0 +1,49 @@
+Creates a new room for the hotel successfully
+---------------------------------------------
+
+Parameters:
+  * hotel_id - Hotel id for which the room is added
+  * name - name of room
+  * description - Description of room
+  * room_type - can be Single Double Deluxe Guest
+  * room_class - can be High Low
+  * total_quantity - greater than 1
+  * name - Amenities name
+  * description - Amenities description
+  * is_available - Amenities available? true or false
+  * rate_type - can be standart rate, premium rate
+  * min_price - min price of room
+  * max_price - max price of room
+  * is_active - rate active or not? can be true or false
+
+Request:
+  POST /api/v1/rooms
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"hotel_id":127,"room":{"name":"Room 101","description":"description of room","room_type":1,"room_class":2,"total_quantity":10,"amenities_attributes":{"0":{"name":"Towel","description":"Soft towel for wiping your","is_available":true},"1":{"name":"TV","description":"Netflix and chill","is_available":true}},"room_rates_attributes":{"0":{"rate_type":1,"max_price":30000,"min_price":20000,"is_active":true},"1":{"rate_type":2,"max_price":50000,"min_price":30000,"is_active":true}}}}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 11
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"8fe32e407a1038ee38753b70e5374b3a"
+  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: c31d15e4-f9e6-41a8-bc2b-e8c6d517ec45
+  X-Runtime: 0.012315
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": [
+  
+    ]
+  }
+
+

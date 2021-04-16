@@ -1,0 +1,59 @@
+{
+  "resource": "Admin: Create new Hotel",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/api/v1/hotels",
+  "description": "Creates a new hotel successfully",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "name",
+      "description": "Name of hotel"
+    },
+    {
+      "required": true,
+      "name": "description",
+      "description": "Description of hotel"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/hotels",
+      "request_body": "{\"hotel\":{\"name\":\"Sunseeker Resort\",\"description\":\"this is an awesome place\"}}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6OTEsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTkxNDIxMzN9.pPuTuVvCWewIimN-IQkQQTpghgb74vnDOdg665_tY8k",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Type": "application/vnd.api+json; charset=utf-8",
+        "ETag": "W/\"8fe32e407a1038ee38753b70e5374b3a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "4c0f89af-238e-43ad-9e70-b89c94b43557",
+        "X-Runtime": "0.006145",
+        "Vary": "Origin",
+        "Content-Length": "11"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+Creates a new hotel successfully
+--------------------------------
+
+Parameters:
+  * name - Name of hotel
+  * description - Description of hotel
+
+Request:
+  POST /api/v1/hotels
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6OTEsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTkxNDIxMzN9.pPuTuVvCWewIimN-IQkQQTpghgb74vnDOdg665_tY8k
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"hotel":{"name":"Sunseeker Resort","description":"this is an awesome place"}}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 11
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"8fe32e407a1038ee38753b70e5374b3a"
+  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: 4c0f89af-238e-43ad-9e70-b89c94b43557
+  X-Runtime: 0.006145
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": [
+  
+    ]
+  }
+
+
+Cant create hotel without name
+------------------------------
+
+Parameters:
+  * name - Name of hotel
+  * description - Description of hotel
+
+Request:
+  POST /api/v1/hotels
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6OTIsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTkxNDIxMzN9.wPqU3WUqzzd9QQWBladpHFN9xSCe03FzkyQrcWxvRYg
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"hotel":{"description":"this is awesome place"}}
+
+Response:
+  Status: 422 Unprocessable Entity
+  Cache-Control: no-cache
+  Content-Length: 151
+  Content-Type: application/vnd.api+json; charset=utf-8
+  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: c8839556-4a01-47ce-be7b-8bb6338c40a3
+  X-Runtime: 0.005182
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "errors": [
+      {
+        "status": "422",
+        "source": {
+          "pointer": "/data/attributes/name"
+        },
+        "title": "Unprocessable Entity",
+        "detail": "Name can't be blank",
+        "code": "blank"
+      }
+    ]
+  }
+
+

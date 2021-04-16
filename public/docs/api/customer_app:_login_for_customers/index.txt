@@ -1,0 +1,90 @@
+Customer successfully logs in
+-----------------------------
+
+Parameters:
+  * email - Customers email 
+  * password - Customers password
+
+Request:
+  POST /api/v1/customer_login
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"customer":{"email":"sajan@gurzu.com","password":"password"}}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 321
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"240c643f7f636863db65031276c279e9"
+  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: 96930d15-7f40-4c8b-a595-6f1817cc1a92
+  X-Runtime: 0.008198
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": {
+      "id": "220",
+      "type": "customer",
+      "attributes": {
+        "first_name": "Sajan",
+        "last_name": "Basnet",
+        "email": "sajan@gurzu.com",
+        "phone": null,
+        "gender": "Male",
+        "dob": "2000-09-09",
+        "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjIwLCJwYXNzd29yZCI6bnVsbCwiZXhwIjoxNjE5MTQyMTMzfQ.-Fcz72nF9flSDlHY8wjTQhzduersUIacfY2EQCQUkxU"
+      }
+    }
+  }
+
+
+Customer cant login with invalid credentials
+--------------------------------------------
+
+Parameters:
+  * email - Customers email 
+  * password - Customers password
+
+Request:
+  POST /api/v1/customer_login
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"customer":{"email":"sajan@gurzu.com","password":"123"}}
+
+Response:
+  Status: 401 Unauthorized
+  Cache-Control: no-cache
+  Content-Length: 95
+  Content-Type: application/vnd.api+json; charset=utf-8
+  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: bdd3c8b6-4145-46eb-b536-a21f20f2b635
+  X-Runtime: 0.005168
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "errors": [
+      {
+        "status": null,
+        "source": null,
+        "title": "Invalid Username or Password",
+        "detail": null
+      }
+    ]
+  }
+
+

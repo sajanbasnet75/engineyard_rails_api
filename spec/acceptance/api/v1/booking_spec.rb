@@ -16,7 +16,7 @@ RSpec.describe Api::V1::BookingsController, type: :api do
   let!(:room_rate) { FactoryBot.create(:room_rate, room: room) }
   let!(:booking) { FactoryBot.create(:booking, customer: customer, hotel: hotel, room: room, room_rate: room_rate) }
 
-  resource 'Create new bookings' do
+  resource 'Customer App: Create new bookings' do
     header 'Content-Type', 'application/json'
     post '/api/v1/bookings' do
       parameter :hotel_id, 'Hotel id', required: true
@@ -73,7 +73,7 @@ RSpec.describe Api::V1::BookingsController, type: :api do
     end
   end
 
-  resource 'Update bookings' do
+  resource 'Customer App: Update bookings' do
     header 'Content-Type', 'application/json'
     patch '/api/v1/bookings/:id' do
       parameter :booked_check_in, 'Booked check in date', required: true
@@ -104,7 +104,7 @@ RSpec.describe Api::V1::BookingsController, type: :api do
   end
 
 
-  resource 'Customers Check in' do
+  resource 'Customer App: Customers Check in' do
     header 'Content-Type', 'application/json'
     patch '/api/v1/bookings/:id/check_in' do
       let(:raw_post) { params.to_json }
@@ -120,7 +120,7 @@ RSpec.describe Api::V1::BookingsController, type: :api do
     end
   end
 
-  resource 'Booking list' do
+  resource 'Customer App: Booking list' do
     header 'Content-Type', 'application/json'
     get '/api/v1/bookings' do
       let(:raw_post) { params.to_json }
