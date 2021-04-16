@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin: Login for Admins API</title>
+    <title>Customer App: 7. Update bookings API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,11 +106,11 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Admin: Login for Admins API</h1>
+      <h1>Customer App: 7. Update bookings API</h1>
 
       <div class="article">
-        <h2>Admin cant login with invalid credentials</h2>
-        <h3>POST /api/v1/admin_login</h3>
+        <h2>Updates the upcoming current booking of the room successfully</h2>
+        <h3>PATCH /api/v1/bookings/:id</h3>
 
           <h3>Parameters</h3>
           <table class="parameters table table-striped table-bordered table-condensed">
@@ -123,18 +123,42 @@ table th, table td {
             <tbody>
               <tr>
                 <td class="required">
-                    <span class="name">email</span>
+                    <span class="name">booked_check_in</span>
                 </td>
                 <td>
-                  <span class="description">Admins email </span>
+                  <span class="description">Booked check in date</span>
                 </td>
               </tr>
               <tr>
                 <td class="required">
-                    <span class="name">password</span>
+                    <span class="name">booked_check_out</span>
                 </td>
                 <td>
-                  <span class="description">Admins password</span>
+                  <span class="description">Booked check out date</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="required">
+                    <span class="name">no_of_rooms</span>
+                </td>
+                <td>
+                  <span class="description">No of rooms</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="required">
+                    <span class="name">no_of_child</span>
+                </td>
+                <td>
+                  <span class="description">No of child</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="required">
+                    <span class="name">no_of_adults</span>
+                </td>
+                <td>
+                  <span class="description">No of adults</span>
                 </td>
               </tr>
             </tbody>
@@ -145,15 +169,16 @@ table th, table td {
 
             <h4>Headers</h4>
             <pre class="request headers">Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjI1LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQyMzI5fQ.Xq4hozGCAgBcptZk6qNmQb4SZ7lvNr2JJFyliHl9x9Y
 Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">POST /api/v1/admin_login</pre>
+          <pre class="request route highlight">PATCH /api/v1/bookings/80</pre>
 
 
             <h4>Body</h4>
-            <pre class="request body">{"admin":{"email":"sajan@gurzu.com","password":"123"}}</pre>
+            <pre class="request body">{"booking":{"booked_check_in":"2021-04-16","booked_check_out":"2021-04-17","no_of_child":1,"no_of_adults":2,"no_of_rooms":1}}</pre>
 
 
             <h3>Response</h3>
@@ -165,22 +190,18 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/vnd.api+json; charset=utf-8
-Cache-Control: no-cache
-X-Request-Id: a799d978-96b4-4c8d-826a-66d22f15416b
-X-Runtime: 0.005202
+ETag: W/&quot;8fe32e407a1038ee38753b70e5374b3a&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 26fd44c3-0053-4a8b-91f1-7c4a7f8c0dbf
+X-Runtime: 0.012751
 Vary: Origin
-Content-Length: 95</pre>
+Content-Length: 11</pre>
             <h4>Status</h4>
-            <pre class="response status">401 Unauthorized</pre>
+            <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
-  &quot;errors&quot;: [
-    {
-      &quot;status&quot;: null,
-      &quot;source&quot;: null,
-      &quot;title&quot;: &quot;Invalid Username or Password&quot;,
-      &quot;detail&quot;: null
-    }
+  &quot;data&quot;: [
+
   ]
 }</pre>
       </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin: Login for Admins API</title>
+    <title>Customer App: 2. Login for Customers API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,11 +106,11 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Admin: Login for Admins API</h1>
+      <h1>Customer App: 2. Login for Customers API</h1>
 
       <div class="article">
-        <h2>Admin cant login with invalid credentials</h2>
-        <h3>POST /api/v1/admin_login</h3>
+        <h2>Customer successfully logs in</h2>
+        <h3>POST /api/v1/customer_login</h3>
 
           <h3>Parameters</h3>
           <table class="parameters table table-striped table-bordered table-condensed">
@@ -126,7 +126,7 @@ table th, table td {
                     <span class="name">email</span>
                 </td>
                 <td>
-                  <span class="description">Admins email </span>
+                  <span class="description">Customers email </span>
                 </td>
               </tr>
               <tr>
@@ -134,7 +134,7 @@ table th, table td {
                     <span class="name">password</span>
                 </td>
                 <td>
-                  <span class="description">Admins password</span>
+                  <span class="description">Customers password</span>
                 </td>
               </tr>
             </tbody>
@@ -149,11 +149,11 @@ Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">POST /api/v1/admin_login</pre>
+          <pre class="request route highlight">POST /api/v1/customer_login</pre>
 
 
             <h4>Body</h4>
-            <pre class="request body">{"admin":{"email":"sajan@gurzu.com","password":"123"}}</pre>
+            <pre class="request body">{"customer":{"email":"sajan@gurzu.com","password":"password"}}</pre>
 
 
             <h3>Response</h3>
@@ -165,23 +165,29 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/vnd.api+json; charset=utf-8
-Cache-Control: no-cache
-X-Request-Id: a799d978-96b4-4c8d-826a-66d22f15416b
-X-Runtime: 0.005202
+ETag: W/&quot;e788bc204d669c99a958e22aa1742774&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 84d2788e-ab54-4e19-8ee2-fd65ee2e9a84
+X-Runtime: 0.007553
 Vary: Origin
-Content-Length: 95</pre>
+Content-Length: 321</pre>
             <h4>Status</h4>
-            <pre class="response status">401 Unauthorized</pre>
+            <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
-  &quot;errors&quot;: [
-    {
-      &quot;status&quot;: null,
-      &quot;source&quot;: null,
-      &quot;title&quot;: &quot;Invalid Username or Password&quot;,
-      &quot;detail&quot;: null
+  &quot;data&quot;: {
+    &quot;id&quot;: &quot;234&quot;,
+    &quot;type&quot;: &quot;customer&quot;,
+    &quot;attributes&quot;: {
+      &quot;first_name&quot;: &quot;Sajan&quot;,
+      &quot;last_name&quot;: &quot;Basnet&quot;,
+      &quot;email&quot;: &quot;sajan@gurzu.com&quot;,
+      &quot;phone&quot;: null,
+      &quot;gender&quot;: &quot;Male&quot;,
+      &quot;dob&quot;: &quot;2000-09-09&quot;,
+      &quot;auth_token&quot;: &quot;eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjM0LCJwYXNzd29yZCI6bnVsbCwiZXhwIjoxNjE5MTQyMzI5fQ.znlSK_BSPOAgkdxlbFKdrRwGhVGM90BFTPj6qs6UlOI&quot;
     }
-  ]
+  }
 }</pre>
       </div>
     </div>

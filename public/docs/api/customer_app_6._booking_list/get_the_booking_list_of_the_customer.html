@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin: Login for Admins API</title>
+    <title>Customer App: 6. Booking list API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,54 +106,28 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Admin: Login for Admins API</h1>
+      <h1>Customer App: 6. Booking list API</h1>
 
       <div class="article">
-        <h2>Admin cant login with invalid credentials</h2>
-        <h3>POST /api/v1/admin_login</h3>
+        <h2>Get the booking list of the customer</h2>
+        <h3>GET /api/v1/bookings</h3>
 
-          <h3>Parameters</h3>
-          <table class="parameters table table-striped table-bordered table-condensed">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="required">
-                    <span class="name">email</span>
-                </td>
-                <td>
-                  <span class="description">Admins email </span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">password</span>
-                </td>
-                <td>
-                  <span class="description">Admins password</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
 
 
           <h3>Request</h3>
 
             <h4>Headers</h4>
             <pre class="request headers">Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjI3LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQyMzI5fQ.JxHJ8-OuwX2dTdtbIQpnUhWWgVaeAZ9JYseCRax6x98
 Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">POST /api/v1/admin_login</pre>
+          <pre class="request route highlight">GET /api/v1/bookings</pre>
 
+            <h4>Query Parameters</h4>
+            <pre class="request query_parameters highlight">{}: </pre>
 
-            <h4>Body</h4>
-            <pre class="request body">{"admin":{"email":"sajan@gurzu.com","password":"123"}}</pre>
 
 
             <h3>Response</h3>
@@ -165,21 +139,54 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/vnd.api+json; charset=utf-8
-Cache-Control: no-cache
-X-Request-Id: a799d978-96b4-4c8d-826a-66d22f15416b
-X-Runtime: 0.005202
+ETag: W/&quot;30127a4d468aba0718c5eabe6663f1a1&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 6c0f9dbe-47b7-42be-88fb-499957bca5a6
+X-Runtime: 0.014453
 Vary: Origin
-Content-Length: 95</pre>
+Content-Length: 514</pre>
             <h4>Status</h4>
-            <pre class="response status">401 Unauthorized</pre>
+            <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
-  &quot;errors&quot;: [
+  &quot;data&quot;: [
     {
-      &quot;status&quot;: null,
-      &quot;source&quot;: null,
-      &quot;title&quot;: &quot;Invalid Username or Password&quot;,
-      &quot;detail&quot;: null
+      &quot;id&quot;: &quot;82&quot;,
+      &quot;type&quot;: &quot;booking&quot;,
+      &quot;attributes&quot;: {
+        &quot;booked_check_in&quot;: &quot;2021-04-16T00:00:00.000Z&quot;,
+        &quot;booked_check_out&quot;: &quot;2021-04-17T00:00:00.000Z&quot;,
+        &quot;no_of_rooms&quot;: 1,
+        &quot;no_of_adults&quot;: 1,
+        &quot;no_of_child&quot;: 1,
+        &quot;book_status&quot;: &quot;reserved&quot;,
+        &quot;booking_code&quot;: null,
+        &quot;arrival_date&quot;: &quot;2021-04-16T00:00:00.000Z&quot;,
+        &quot;departure_date&quot;: &quot;2021-04-17T00:00:00.000Z&quot;
+      },
+      &quot;relationships&quot;: {
+        &quot;payment&quot;: {
+          &quot;data&quot;: null
+        },
+        &quot;customer&quot;: {
+          &quot;data&quot;: {
+            &quot;id&quot;: &quot;227&quot;,
+            &quot;type&quot;: &quot;customer&quot;
+          }
+        },
+        &quot;room&quot;: {
+          &quot;data&quot;: {
+            &quot;id&quot;: &quot;131&quot;,
+            &quot;type&quot;: &quot;room&quot;
+          }
+        },
+        &quot;room_rate&quot;: {
+          &quot;data&quot;: {
+            &quot;id&quot;: &quot;147&quot;,
+            &quot;type&quot;: &quot;room_rate&quot;
+          }
+        }
+      }
     }
   ]
 }</pre>

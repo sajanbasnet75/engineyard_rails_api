@@ -22,7 +22,7 @@ Request:
   Cookie: 
   Host: example.org
 
-  {"hotel_id":127,"room":{"name":"Room 101","description":"description of room","room_type":1,"room_class":2,"total_quantity":10,"amenities_attributes":{"0":{"name":"Towel","description":"Soft towel for wiping your","is_available":true},"1":{"name":"TV","description":"Netflix and chill","is_available":true}},"room_rates_attributes":{"0":{"rate_type":1,"max_price":30000,"min_price":20000,"is_active":true},"1":{"rate_type":2,"max_price":50000,"min_price":30000,"is_active":true}}}}
+  {"hotel_id":135,"room":{"name":"Room 101","description":"description of room","room_type":1,"room_class":2,"total_quantity":10,"amenities_attributes":{"0":{"name":"Towel","description":"Soft towel for wiping your","is_available":true},"1":{"name":"TV","description":"Netflix and chill","is_available":true}},"room_rates_attributes":{"0":{"rate_type":1,"max_price":30000,"min_price":20000,"is_active":true},"1":{"rate_type":2,"max_price":50000,"min_price":30000,"is_active":true}}}}
 
 Response:
   Status: 200 OK
@@ -36,8 +36,8 @@ Response:
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: c31d15e4-f9e6-41a8-bc2b-e8c6d517ec45
-  X-Runtime: 0.012315
+  X-Request-Id: 0dc0d98b-5fd2-4af5-9fb2-27b0a44a2f04
+  X-Runtime: 0.013314
   X-XSS-Protection: 1; mode=block
 
   {

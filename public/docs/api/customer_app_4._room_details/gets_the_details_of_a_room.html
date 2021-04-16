@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Admin: Login for Admins API</title>
+    <title>Customer App: 4. Room Details API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,54 +106,28 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Admin: Login for Admins API</h1>
+      <h1>Customer App: 4. Room Details API</h1>
 
       <div class="article">
-        <h2>Admin cant login with invalid credentials</h2>
-        <h3>POST /api/v1/admin_login</h3>
+        <h2>gets the details of a room</h2>
+        <h3>GET /api/v1/rooms/:id</h3>
 
-          <h3>Parameters</h3>
-          <table class="parameters table table-striped table-bordered table-condensed">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="required">
-                    <span class="name">email</span>
-                </td>
-                <td>
-                  <span class="description">Admins email </span>
-                </td>
-              </tr>
-              <tr>
-                <td class="required">
-                    <span class="name">password</span>
-                </td>
-                <td>
-                  <span class="description">Admins password</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
 
 
           <h3>Request</h3>
 
             <h4>Headers</h4>
             <pre class="request headers">Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjMyLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQyMzI5fQ.KxwmFuLz0HSs402NdehFL_PoCf4HsVlpEgzszpT1URc
 Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">POST /api/v1/admin_login</pre>
+          <pre class="request route highlight">GET /api/v1/rooms/133?hotel_id=134</pre>
 
+            <h4>Query Parameters</h4>
+            <pre class="request query_parameters highlight">hotel_id: 134</pre>
 
-            <h4>Body</h4>
-            <pre class="request body">{"admin":{"email":"sajan@gurzu.com","password":"123"}}</pre>
 
 
             <h3>Response</h3>
@@ -165,21 +139,64 @@ X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
 Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/vnd.api+json; charset=utf-8
-Cache-Control: no-cache
-X-Request-Id: a799d978-96b4-4c8d-826a-66d22f15416b
-X-Runtime: 0.005202
+ETag: W/&quot;7d88dd85f6f1183fc4a25451e3ea2121&quot;
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 719600a6-d8ba-4b6c-a5a7-ea7f68bd4d1c
+X-Runtime: 0.008809
 Vary: Origin
-Content-Length: 95</pre>
+Content-Length: 554</pre>
             <h4>Status</h4>
-            <pre class="response status">401 Unauthorized</pre>
+            <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
-  &quot;errors&quot;: [
+  &quot;data&quot;: {
+    &quot;id&quot;: &quot;133&quot;,
+    &quot;type&quot;: &quot;room&quot;,
+    &quot;attributes&quot;: {
+      &quot;name&quot;: &quot;Room101&quot;,
+      &quot;description&quot;: &quot;guest room,  awesome room&quot;,
+      &quot;room_type&quot;: &quot;single&quot;,
+      &quot;room_class&quot;: &quot;standard&quot;,
+      &quot;total_quantity&quot;: 1
+    },
+    &quot;relationships&quot;: {
+      &quot;amenities&quot;: {
+        &quot;data&quot;: [
+          {
+            &quot;id&quot;: &quot;149&quot;,
+            &quot;type&quot;: &quot;amenity&quot;
+          }
+        ]
+      },
+      &quot;room_rates&quot;: {
+        &quot;data&quot;: [
+          {
+            &quot;id&quot;: &quot;149&quot;,
+            &quot;type&quot;: &quot;room_rate&quot;
+          }
+        ]
+      }
+    }
+  },
+  &quot;included&quot;: [
     {
-      &quot;status&quot;: null,
-      &quot;source&quot;: null,
-      &quot;title&quot;: &quot;Invalid Username or Password&quot;,
-      &quot;detail&quot;: null
+      &quot;id&quot;: &quot;149&quot;,
+      &quot;type&quot;: &quot;amenity&quot;,
+      &quot;attributes&quot;: {
+        &quot;name&quot;: &quot;Towel&quot;,
+        &quot;description&quot;: &quot;Towel to wipe your&quot;,
+        &quot;is_available&quot;: true
+      }
+    },
+    {
+      &quot;id&quot;: &quot;149&quot;,
+      &quot;type&quot;: &quot;room_rate&quot;,
+      &quot;attributes&quot;: {
+        &quot;rate_type&quot;: &quot;standard&quot;,
+        &quot;min_price&quot;: 10000.0,
+        &quot;max_price&quot;: 1000.0,
+        &quot;is_active&quot;: true
+      }
     }
   ]
 }</pre>

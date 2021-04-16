@@ -27,7 +27,7 @@
       "request_body": "{\"hotel\":{\"description\":\"this is awesome place\"}}",
       "request_headers": {
         "Content-Type": "application/json",
-        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6OTIsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTkxNDIxMzN9.wPqU3WUqzzd9QQWBladpHFN9xSCe03FzkyQrcWxvRYg",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6OTgsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTkxNDIzMjl9.9MbSgMUevoxfowo_SSWy-a8lyLlhDu7i8AJLF6nk_KE",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -46,8 +46,8 @@
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/vnd.api+json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "c8839556-4a01-47ce-be7b-8bb6338c40a3",
-        "X-Runtime": "0.005182",
+        "X-Request-Id": "2a3c3853-5db0-4913-9886-ac06cb9e2de2",
+        "X-Runtime": "0.006392",
         "Vary": "Origin",
         "Content-Length": "151"
       },

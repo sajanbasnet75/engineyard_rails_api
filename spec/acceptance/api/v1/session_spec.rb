@@ -8,7 +8,7 @@ RSpec.describe Api::V1::SessionsController, type: :api do
   let!(:customer) { FactoryBot.create(:customer) }
   let!(:admin) { FactoryBot.create(:admin) }
 
-  resource 'Customer App: Login for Customers' do
+  resource 'Customer App: 2. Login for Customers' do
     header 'Content-Type', 'application/json'
     post '/api/v1/customer_login' do
       parameter :email, 'Customers email ', required: true

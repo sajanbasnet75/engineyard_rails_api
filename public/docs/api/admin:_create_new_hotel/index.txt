@@ -7,7 +7,7 @@ Parameters:
 
 Request:
   POST /api/v1/hotels
-  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6OTEsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTkxNDIxMzN9.pPuTuVvCWewIimN-IQkQQTpghgb74vnDOdg665_tY8k
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6OTcsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTkxNDIzMjl9.BNSGojzeKSiCXWPoYLQiHDcn7Ba7B0buC8FP3zCENFg
   Content-Type: application/json
   Cookie: 
   Host: example.org
@@ -26,8 +26,8 @@ Response:
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: 4c0f89af-238e-43ad-9e70-b89c94b43557
-  X-Runtime: 0.006145
+  X-Request-Id: 21331497-7015-47dd-8813-8a34b1f95fae
+  X-Runtime: 0.008578
   X-XSS-Protection: 1; mode=block
 
   {
@@ -46,7 +46,7 @@ Parameters:
 
 Request:
   POST /api/v1/hotels
-  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6OTIsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTkxNDIxMzN9.wPqU3WUqzzd9QQWBladpHFN9xSCe03FzkyQrcWxvRYg
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6OTgsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTkxNDIzMjl9.9MbSgMUevoxfowo_SSWy-a8lyLlhDu7i8AJLF6nk_KE
   Content-Type: application/json
   Cookie: 
   Host: example.org
@@ -64,8 +64,8 @@ Response:
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: c8839556-4a01-47ce-be7b-8bb6338c40a3
-  X-Runtime: 0.005182
+  X-Request-Id: 2a3c3853-5db0-4913-9886-ac06cb9e2de2
+  X-Runtime: 0.006392
   X-XSS-Protection: 1; mode=block
 
   {

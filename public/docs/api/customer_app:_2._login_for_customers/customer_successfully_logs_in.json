@@ -1,20 +1,20 @@
 {
-  "resource": "Admin: Create new Hotel",
+  "resource": "Customer App: 2. Login for Customers",
   "resource_explanation": null,
   "http_method": "POST",
-  "route": "/api/v1/hotels",
-  "description": "Creates a new hotel successfully",
+  "route": "/api/v1/customer_login",
+  "description": "Customer successfully logs in",
   "explanation": null,
   "parameters": [
     {
       "required": true,
-      "name": "name",
-      "description": "Name of hotel"
+      "name": "email",
+      "description": "Customers email "
     },
     {
       "required": true,
-      "name": "description",
-      "description": "Description of hotel"
+      "name": "password",
+      "description": "Customers password"
     }
   ],
   "response_fields": [
@@ -23,11 +23,10 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/hotels",
-      "request_body": "{\"hotel\":{\"name\":\"Sunseeker Resort\",\"description\":\"this is an awesome place\"}}",
+      "request_path": "/api/v1/customer_login",
+      "request_body": "{\"customer\":{\"email\":\"sajan@gurzu.com\",\"password\":\"password\"}}",
       "request_headers": {
         "Content-Type": "application/json",
-        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6OTcsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJleHAiOjE2MTkxNDIzMjl9.BNSGojzeKSiCXWPoYLQiHDcn7Ba7B0buC8FP3zCENFg",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -36,7 +35,7 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n\n  ]\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"234\",\n    \"type\": \"customer\",\n    \"attributes\": {\n      \"first_name\": \"Sajan\",\n      \"last_name\": \"Basnet\",\n      \"email\": \"sajan@gurzu.com\",\n      \"phone\": null,\n      \"gender\": \"Male\",\n      \"dob\": \"2000-09-09\",\n      \"auth_token\": \"eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjM0LCJwYXNzd29yZCI6bnVsbCwiZXhwIjoxNjE5MTQyMzI5fQ.znlSK_BSPOAgkdxlbFKdrRwGhVGM90BFTPj6qs6UlOI\"\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -45,12 +44,12 @@
         "X-Permitted-Cross-Domain-Policies": "none",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/vnd.api+json; charset=utf-8",
-        "ETag": "W/\"8fe32e407a1038ee38753b70e5374b3a\"",
+        "ETag": "W/\"e788bc204d669c99a958e22aa1742774\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "21331497-7015-47dd-8813-8a34b1f95fae",
-        "X-Runtime": "0.008578",
+        "X-Request-Id": "84d2788e-ab54-4e19-8ee2-fd65ee2e9a84",
+        "X-Runtime": "0.007553",
         "Vary": "Origin",
-        "Content-Length": "11"
+        "Content-Length": "321"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",
       "curl": null

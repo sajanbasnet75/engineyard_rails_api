@@ -1,0 +1,82 @@
+gets the details of a room
+--------------------------
+
+Request:
+  GET /api/v1/rooms/133?hotel_id=134
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjMyLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQyMzI5fQ.KxwmFuLz0HSs402NdehFL_PoCf4HsVlpEgzszpT1URc
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  hotel_id=134
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 554
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"7d88dd85f6f1183fc4a25451e3ea2121"
+  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: 719600a6-d8ba-4b6c-a5a7-ea7f68bd4d1c
+  X-Runtime: 0.008809
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": {
+      "id": "133",
+      "type": "room",
+      "attributes": {
+        "name": "Room101",
+        "description": "guest room,  awesome room",
+        "room_type": "single",
+        "room_class": "standard",
+        "total_quantity": 1
+      },
+      "relationships": {
+        "amenities": {
+          "data": [
+            {
+              "id": "149",
+              "type": "amenity"
+            }
+          ]
+        },
+        "room_rates": {
+          "data": [
+            {
+              "id": "149",
+              "type": "room_rate"
+            }
+          ]
+        }
+      }
+    },
+    "included": [
+      {
+        "id": "149",
+        "type": "amenity",
+        "attributes": {
+          "name": "Towel",
+          "description": "Towel to wipe your",
+          "is_available": true
+        }
+      },
+      {
+        "id": "149",
+        "type": "room_rate",
+        "attributes": {
+          "rate_type": "standard",
+          "min_price": 10000.0,
+          "max_price": 1000.0,
+          "is_active": true
+        }
+      }
+    ]
+  }
+
+

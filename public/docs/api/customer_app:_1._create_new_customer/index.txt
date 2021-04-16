@@ -1,0 +1,105 @@
+Creates a new customer successfully
+-----------------------------------
+
+Parameters:
+  * first_name - First name of customer
+  * last_name - Last name of customer
+  * title - Mr, Mrs
+  * email -  email
+  * password -  password
+  * phone - countrycode-number
+  * dob - Date of birth
+  * gender - male, female, other
+
+Request:
+  POST /api/v1/customers
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"customer":{"first_name":"Sajan","last_name":"Basnet","title":"Mr","email":"saja@gurzu.com","phone":"977-9843773129","password":"password","dob":"2021-04-16","gender":"Male"}}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 340
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"ac4c2aa538cd9c2e96633ddfd517fbaa"
+  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: 5f603e9d-44c4-4ac3-81af-38b51cc8cd7c
+  X-Runtime: 0.008630
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": {
+      "id": "229",
+      "type": "customer",
+      "attributes": {
+        "first_name": "Sajan",
+        "last_name": "Basnet",
+        "email": "saja@gurzu.com",
+        "phone": "977-9843773129",
+        "gender": "Male",
+        "dob": "2021-04-16",
+        "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjI5LCJjdXN0b21lciI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQyMzI5fQ.Ll3cnC86AA3FA_kGAy9Tmomtpz7kquBBD0SQtgdQMCk"
+      }
+    }
+  }
+
+
+Cant create customer without email
+----------------------------------
+
+Parameters:
+  * first_name - First name of customer
+  * last_name - Last name of customer
+  * title - Mr, Mrs
+  * email -  email
+  * password -  password
+  * phone - countrycode-number
+  * dob - Date of birth
+  * gender - male, female, other
+
+Request:
+  POST /api/v1/customers
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"customer":{"first_name":"Sajan","last_name":"Sajan","dob":"2021-04-16","gender":"Male","type":"Customer","password":"password"}}
+
+Response:
+  Status: 422 Unprocessable Entity
+  Cache-Control: no-cache
+  Content-Length: 153
+  Content-Type: application/vnd.api+json; charset=utf-8
+  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: e9b1ca03-9775-4353-93e1-13369064a52e
+  X-Runtime: 0.021535
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "errors": [
+      {
+        "status": "422",
+        "source": {
+          "pointer": "/data/attributes/email"
+        },
+        "title": "Unprocessable Entity",
+        "detail": "Email can't be blank",
+        "code": "blank"
+      }
+    ]
+  }
+
+

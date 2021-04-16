@@ -1,0 +1,88 @@
+{
+  "resource": "Customer App: 1. Create new customer",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/api/v1/customers",
+  "description": "Creates a new customer successfully",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "first_name",
+      "description": "First name of customer"
+    },
+    {
+      "required": true,
+      "name": "last_name",
+      "description": "Last name of customer"
+    },
+    {
+      "required": true,
+      "name": "title",
+      "description": "Mr, Mrs"
+    },
+    {
+      "required": true,
+      "name": "email",
+      "description": " email"
+    },
+    {
+      "required": true,
+      "name": "password",
+      "description": " password"
+    },
+    {
+      "required": true,
+      "name": "phone",
+      "description": "countrycode-number"
+    },
+    {
+      "required": true,
+      "name": "dob",
+      "description": "Date of birth"
+    },
+    {
+      "required": true,
+      "name": "gender",
+      "description": "male, female, other"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/customers",
+      "request_body": "{\"customer\":{\"first_name\":\"Sajan\",\"last_name\":\"Basnet\",\"title\":\"Mr\",\"email\":\"saja@gurzu.com\",\"phone\":\"977-9843773129\",\"password\":\"password\",\"dob\":\"2021-04-16\",\"gender\":\"Male\"}}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"229\",\n    \"type\": \"customer\",\n    \"attributes\": {\n      \"first_name\": \"Sajan\",\n      \"last_name\": \"Basnet\",\n      \"email\": \"saja@gurzu.com\",\n      \"phone\": \"977-9843773129\",\n      \"gender\": \"Male\",\n      \"dob\": \"2021-04-16\",\n      \"auth_token\": \"eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjI5LCJjdXN0b21lciI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQyMzI5fQ.Ll3cnC86AA3FA_kGAy9Tmomtpz7kquBBD0SQtgdQMCk\"\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Type": "application/vnd.api+json; charset=utf-8",
+        "ETag": "W/\"ac4c2aa538cd9c2e96633ddfd517fbaa\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "5f603e9d-44c4-4ac3-81af-38b51cc8cd7c",
+        "X-Runtime": "0.008630",
+        "Vary": "Origin",
+        "Content-Length": "340"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

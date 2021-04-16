@@ -1,63 +1,65 @@
-Admin successfully logs in
---------------------------
+Customer successfully logs in
+-----------------------------
 
 Parameters:
-  * email - Admins email 
-  * password - Admins password
+  * email - Customers email 
+  * password - Customers password
 
 Request:
-  POST /api/v1/admin_login
+  POST /api/v1/customer_login
   Content-Type: application/json
   Cookie: 
   Host: example.org
 
-  {"admin":{"email":"sajan@gurzu.com","password":"password"}}
+  {"customer":{"email":"sajan@gurzu.com","password":"password"}}
 
 Response:
   Status: 200 OK
   Cache-Control: max-age=0, private, must-revalidate
-  Content-Length: 264
+  Content-Length: 321
   Content-Type: application/vnd.api+json; charset=utf-8
-  ETag: W/"162baf4cf773420ef3050cbfab43b054"
+  ETag: W/"e788bc204d669c99a958e22aa1742774"
   Referrer-Policy: strict-origin-when-cross-origin
   Vary: Origin
   X-Content-Type-Options: nosniff
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: cbe483e0-4409-44a8-bc5e-1ae69d86c2ed
-  X-Runtime: 0.006187
+  X-Request-Id: 84d2788e-ab54-4e19-8ee2-fd65ee2e9a84
+  X-Runtime: 0.007553
   X-XSS-Protection: 1; mode=block
 
   {
     "data": {
-      "id": "101",
-      "type": "admin",
+      "id": "234",
+      "type": "customer",
       "attributes": {
-        "first_name": "",
-        "last_name": "",
+        "first_name": "Sajan",
+        "last_name": "Basnet",
         "email": "sajan@gurzu.com",
         "phone": null,
-        "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6MTAxLCJhZG1pbiI6bnVsbCwiZXhwIjoxNjE5MTQyMzI5fQ.tXUNn9qXtFdxPX1X1Zz69_mV7pvOnuW0BgCLEYTRpDg"
+        "gender": "Male",
+        "dob": "2000-09-09",
+        "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjM0LCJwYXNzd29yZCI6bnVsbCwiZXhwIjoxNjE5MTQyMzI5fQ.znlSK_BSPOAgkdxlbFKdrRwGhVGM90BFTPj6qs6UlOI"
       }
     }
   }
 
 
-Admin cant login with invalid credentials
------------------------------------------
+Customer cant login with invalid credentials
+--------------------------------------------
 
 Parameters:
-  * email - Admins email 
-  * password - Admins password
+  * email - Customers email 
+  * password - Customers password
 
 Request:
-  POST /api/v1/admin_login
+  POST /api/v1/customer_login
   Content-Type: application/json
   Cookie: 
   Host: example.org
 
-  {"admin":{"email":"sajan@gurzu.com","password":"123"}}
+  {"customer":{"email":"sajan@gurzu.com","password":"123"}}
 
 Response:
   Status: 401 Unauthorized
@@ -70,8 +72,8 @@ Response:
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: a799d978-96b4-4c8d-826a-66d22f15416b
-  X-Runtime: 0.005202
+  X-Request-Id: a1ab065c-01bf-4cba-901e-b9652709eb8b
+  X-Runtime: 0.007207
   X-XSS-Protection: 1; mode=block
 
   {
@@ -84,3 +86,5 @@ Response:
       }
     ]
   }
+
+
