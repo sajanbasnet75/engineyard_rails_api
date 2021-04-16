@@ -15,8 +15,10 @@ RSpec.describe Api::V1::BookingsController, type: :api do
   let!(:amenity) { FactoryBot.create(:amenity, room: room) }
   let!(:room_rate) { FactoryBot.create(:room_rate, room: room) }
   let!(:booking) { FactoryBot.create(:booking, customer: customer, hotel: hotel, room: room, room_rate: room_rate) }
+  let!(:admin) { FactoryBot.create(:admin) }
 
-  resource 'Create new bookings' do
+
+  resource 'Customer App: 5. Create new bookings' do
     header 'Content-Type', 'application/json'
     post '/api/v1/bookings' do
       parameter :hotel_id, 'Hotel id', required: true
@@ -73,7 +75,7 @@ RSpec.describe Api::V1::BookingsController, type: :api do
     end
   end
 
-  resource 'Update bookings' do
+  resource 'Customer App: 7. Update bookings' do
     header 'Content-Type', 'application/json'
     patch '/api/v1/bookings/:id' do
       parameter :booked_check_in, 'Booked check in date', required: true
@@ -104,7 +106,7 @@ RSpec.describe Api::V1::BookingsController, type: :api do
   end
 
 
-  resource 'Customers Check in' do
+  resource 'Customer App: 8. Customers Check in' do
     header 'Content-Type', 'application/json'
     patch '/api/v1/bookings/:id/check_in' do
       let(:raw_post) { params.to_json }
@@ -120,7 +122,23 @@ RSpec.describe Api::V1::BookingsController, type: :api do
     end
   end
 
-  resource 'Booking list' do
+  resource 'Admin: Customers Checks out' do
+    header 'Content-Type', 'application/json'
+    patch '/api/v1/bookings/:id/check_out' do
+      let(:raw_post) { params.to_json }
+      example 'Updates the booking departure date and other essential task' do
+        request = {
+          id: booking.id
+        }
+        token = JsonWebToken.encode(admin_id: admin.id, password: admin.password)
+        header 'Authorization', token
+        do_request(request)
+        expect(status).to eq(200)
+      end
+    end
+  end
+
+  resource 'Customer App: 6. Booking list' do
     header 'Content-Type', 'application/json'
     get '/api/v1/bookings' do
       let(:raw_post) { params.to_json }

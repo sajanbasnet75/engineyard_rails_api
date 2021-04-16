@@ -1,25 +1,32 @@
 {
   "resources": [
     {
-      "name": "Booking list",
+      "name": "Admin: Create new Hotel",
       "explanation": null,
       "examples": [
         {
-          "description": "Get the booking list of the customer",
-          "link": "booking_list/get_the_booking_list_of_the_customer.json",
+          "description": "Cant create hotel without name",
+          "link": "admin:_create_new_hotel/cant_create_hotel_without_name.json",
           "groups": "all",
-          "route": "/api/v1/bookings",
-          "method": "get"
+          "route": "/api/v1/hotels",
+          "method": "post"
+        },
+        {
+          "description": "Creates a new hotel successfully",
+          "link": "admin:_create_new_hotel/creates_a_new_hotel_successfully.json",
+          "groups": "all",
+          "route": "/api/v1/hotels",
+          "method": "post"
         }
       ]
     },
     {
-      "name": "Create new Room for a hotel",
+      "name": "Admin: Create new Room for a hotel",
       "explanation": null,
       "examples": [
         {
           "description": "Creates a new room for the hotel successfully",
-          "link": "create_new_room_for_a_hotel/creates_a_new_room_for_the_hotel_successfully.json",
+          "link": "admin:_create_new_room_for_a_hotel/creates_a_new_room_for_the_hotel_successfully.json",
           "groups": "all",
           "route": "/api/v1/rooms",
           "method": "post"
@@ -27,79 +34,32 @@
       ]
     },
     {
-      "name": "Create new bookings",
+      "name": "Admin: Customers Checks out",
       "explanation": null,
       "examples": [
         {
-          "description": "Creates a booking of the room successfully",
-          "link": "create_new_bookings/creates_a_booking_of_the_room_successfully.json",
+          "description": "Updates the booking departure date and other essential task",
+          "link": "admin:_customers_checks_out/updates_the_booking_departure_date_and_other_essential_task.json",
           "groups": "all",
-          "route": "/api/v1/bookings",
-          "method": "post"
-        }
-      ]
-    },
-    {
-      "name": "Create new customer",
-      "explanation": null,
-      "examples": [
-        {
-          "description": "Cant create customer without email",
-          "link": "create_new_customer/cant_create_customer_without_email.json",
-          "groups": "all",
-          "route": "/api/v1/customers",
-          "method": "post"
-        },
-        {
-          "description": "Cant create hotel without name",
-          "link": "create_new_customer/cant_create_hotel_without_name.json",
-          "groups": "all",
-          "route": "/api/v1/hotels",
-          "method": "post"
-        },
-        {
-          "description": "Creates a new customer successfully",
-          "link": "create_new_customer/creates_a_new_customer_successfully.json",
-          "groups": "all",
-          "route": "/api/v1/customers",
-          "method": "post"
-        },
-        {
-          "description": "Creates a new hotel successfully",
-          "link": "create_new_customer/creates_a_new_hotel_successfully.json",
-          "groups": "all",
-          "route": "/api/v1/hotels",
-          "method": "post"
-        }
-      ]
-    },
-    {
-      "name": "Customers Check in",
-      "explanation": null,
-      "examples": [
-        {
-          "description": "Updates the booking arrival date",
-          "link": "customers_check_in/updates_the_booking_arrival_date.json",
-          "groups": "all",
-          "route": "/api/v1/bookings/:id/check_in",
+          "route": "/api/v1/bookings/:id/check_out",
           "method": "patch"
         }
       ]
     },
     {
-      "name": "Login for Admins",
+      "name": "Admin: Login for Admins",
       "explanation": null,
       "examples": [
         {
           "description": "Admin cant login with invalid credentials",
-          "link": "login_for_admins/admin_cant_login_with_invalid_credentials.json",
+          "link": "admin:_login_for_admins/admin_cant_login_with_invalid_credentials.json",
           "groups": "all",
           "route": "/api/v1/admin_login",
           "method": "post"
         },
         {
           "description": "Admin successfully logs in",
-          "link": "login_for_admins/admin_successfully_logs_in.json",
+          "link": "admin:_login_for_admins/admin_successfully_logs_in.json",
           "groups": "all",
           "route": "/api/v1/admin_login",
           "method": "post"
@@ -107,19 +67,39 @@
       ]
     },
     {
-      "name": "Login for Customers",
+      "name": "Customer App: 1. Create new customer",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Cant create customer without email",
+          "link": "customer_app:_1._create_new_customer/cant_create_customer_without_email.json",
+          "groups": "all",
+          "route": "/api/v1/customers",
+          "method": "post"
+        },
+        {
+          "description": "Creates a new customer successfully",
+          "link": "customer_app:_1._create_new_customer/creates_a_new_customer_successfully.json",
+          "groups": "all",
+          "route": "/api/v1/customers",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Customer App: 2. Login for Customers",
       "explanation": null,
       "examples": [
         {
           "description": "Customer cant login with invalid credentials",
-          "link": "login_for_customers/customer_cant_login_with_invalid_credentials.json",
+          "link": "customer_app:_2._login_for_customers/customer_cant_login_with_invalid_credentials.json",
           "groups": "all",
           "route": "/api/v1/customer_login",
           "method": "post"
         },
         {
           "description": "Customer successfully logs in",
-          "link": "login_for_customers/customer_successfully_logs_in.json",
+          "link": "customer_app:_2._login_for_customers/customer_successfully_logs_in.json",
           "groups": "all",
           "route": "/api/v1/customer_login",
           "method": "post"
@@ -127,12 +107,25 @@
       ]
     },
     {
-      "name": "Room Details",
+      "name": "Customer App: 3. Rooms list",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Gets all the list of rooms",
+          "link": "customer_app:_3._rooms_list/gets_all_the_list_of_rooms.json",
+          "groups": "all",
+          "route": "/api/v1/rooms",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Customer App: 4. Room Details",
       "explanation": null,
       "examples": [
         {
           "description": "gets the details of a room",
-          "link": "room_details/gets_the_details_of_a_room.json",
+          "link": "customer_app:_4._room_details/gets_the_details_of_a_room.json",
           "groups": "all",
           "route": "/api/v1/rooms/:id",
           "method": "get"
@@ -140,27 +133,53 @@
       ]
     },
     {
-      "name": "Rooms list",
+      "name": "Customer App: 5. Create new bookings",
       "explanation": null,
       "examples": [
         {
-          "description": "Gets all the list of rooms",
-          "link": "rooms_list/gets_all_the_list_of_rooms.json",
+          "description": "Creates a booking of the room successfully",
+          "link": "customer_app:_5._create_new_bookings/creates_a_booking_of_the_room_successfully.json",
           "groups": "all",
-          "route": "/api/v1/rooms",
+          "route": "/api/v1/bookings",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Customer App: 6. Booking list",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get the booking list of the customer",
+          "link": "customer_app:_6._booking_list/get_the_booking_list_of_the_customer.json",
+          "groups": "all",
+          "route": "/api/v1/bookings",
           "method": "get"
         }
       ]
     },
     {
-      "name": "Update bookings",
+      "name": "Customer App: 7. Update bookings",
       "explanation": null,
       "examples": [
         {
           "description": "Updates the upcoming current booking of the room successfully",
-          "link": "update_bookings/updates_the_upcoming_current_booking_of_the_room_successfully.json",
+          "link": "customer_app:_7._update_bookings/updates_the_upcoming_current_booking_of_the_room_successfully.json",
           "groups": "all",
           "route": "/api/v1/bookings/:id",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "name": "Customer App: 8. Customers Check in",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Updates the booking arrival date",
+          "link": "customer_app:_8._customers_check_in/updates_the_booking_arrival_date.json",
+          "groups": "all",
+          "route": "/api/v1/bookings/:id/check_in",
           "method": "patch"
         }
       ]

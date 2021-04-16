@@ -6,7 +6,7 @@ require 'rspec_api_documentation/dsl'
 
 RSpec.describe Api::V1::HotelsController, type: :api do
   let!(:admin) { FactoryBot.create(:admin) }
-  resource 'Create new customer' do
+  resource 'Admin: Create new Hotel' do
     header 'Content-Type', 'application/json'
     post '/api/v1/hotels' do
       parameter :name, 'Name of hotel', required: true

@@ -1,0 +1,35 @@
+Updates the booking departure date and other essential task
+-----------------------------------------------------------
+
+Request:
+  PATCH /api/v1/bookings/99/check_out
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6MTIzLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQzMjI4fQ.iIcRtMga4bF_F143tlkuaKRsuNiMC8Er4y3v_YqfBDg
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 11
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"8fe32e407a1038ee38753b70e5374b3a"
+  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: c7a718f0-feb0-425c-b582-4e3d81cdd6d6
+  X-Runtime: 0.011246
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": [
+  
+    ]
+  }
+
+
