@@ -11,6 +11,9 @@ class JsonWebToken
     end
 
     def decode(token)
+      
+      binding.pry
+      
       JWT.decode(token, JWT_SECRET_KEY, true, algorithm: 'HS256').first
     end
   end
