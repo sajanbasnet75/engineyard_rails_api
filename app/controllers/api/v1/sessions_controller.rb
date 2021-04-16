@@ -8,8 +8,7 @@ module Api
       def customer_login
         customer = Customer.find_for_authentication(email: customer_login_params[:email])
         if customer.present? && customer.valid_password?(customer_login_params[:password])
-          token = JsonWebToken.encode(customer_id: customer.id, password: customer.password)
-          puts token
+          token = JsonWebToken.encode(customer_id: customer.id)
           render jsonapi: customer, params: { auth_token: token },
                  status: :ok, code: '200'
         else
@@ -23,7 +22,7 @@ module Api
       def admin_login
         admin = Admin.find_for_authentication(email: admin_login_params[:email])
         if admin.present? && admin.valid_password?(admin_login_params[:password])
-          token = JsonWebToken.encode(admin_id: admin.id, admin: admin.password)
+          token = JsonWebToken.encode(admin_id: admin.id)
           render jsonapi: admin, params: { auth_token: token },
                   status: :ok, code: '200'
         else
