@@ -1,33 +1,24 @@
 {
-  "resource": "Admin: Create new Hotel",
+  "resource": "Admin: Customers Checks out",
   "resource_explanation": null,
-  "http_method": "POST",
-  "route": "/api/v1/hotels",
-  "description": "Creates a new hotel successfully",
+  "http_method": "PATCH",
+  "route": "/api/v1/bookings/:id/check_out",
+  "description": "Updates the booking departure date and other essential task",
   "explanation": null,
   "parameters": [
-    {
-      "required": true,
-      "name": "name",
-      "description": "Name of hotel"
-    },
-    {
-      "required": true,
-      "name": "description",
-      "description": "Description of hotel"
-    }
+
   ],
   "response_fields": [
 
   ],
   "requests": [
     {
-      "request_method": "POST",
-      "request_path": "/api/v1/hotels",
-      "request_body": "{\"hotel\":{\"name\":\"Sunseeker Resort\",\"description\":\"this is an awesome place\"}}",
+      "request_method": "PATCH",
+      "request_path": "/api/v1/bookings/99/check_out",
+      "request_body": "{}",
       "request_headers": {
         "Content-Type": "application/json",
-        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6MTI1LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQzMjI4fQ.PTRFkKMbfL-VYqwh5aJRc64zDFfjTuM9sHo1d5X3_MM",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6MTIzLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQzMjI4fQ.iIcRtMga4bF_F143tlkuaKRsuNiMC8Er4y3v_YqfBDg",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -47,8 +38,8 @@
         "Content-Type": "application/vnd.api+json; charset=utf-8",
         "ETag": "W/\"8fe32e407a1038ee38753b70e5374b3a\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "aa1d3dc0-2001-4ee6-9ff7-95745776834b",
-        "X-Runtime": "0.006157",
+        "X-Request-Id": "c7a718f0-feb0-425c-b582-4e3d81cdd6d6",
+        "X-Runtime": "0.011246",
         "Vary": "Origin",
         "Content-Length": "11"
       },

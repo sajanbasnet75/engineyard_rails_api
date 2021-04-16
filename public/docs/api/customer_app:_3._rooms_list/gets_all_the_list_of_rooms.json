@@ -14,21 +14,21 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/rooms?hotel_id=133",
+      "request_path": "/api/v1/rooms?hotel_id=160",
       "request_body": null,
       "request_headers": {
         "Content-Type": "application/json",
-        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjMxLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQyMzI5fQ.wknFSn--1-HfGODunIU_wY5ThjuQQlA6lo9ptkmt4hg",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6Mjc2LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQzMjI4fQ.G6DqGsMvpQIu_oiAn7cO5qSN7QUi6kcWpDyyuIpJNd8",
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "hotel_id": "133"
+        "hotel_id": "160"
       },
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"132\",\n      \"type\": \"room\",\n      \"attributes\": {\n        \"name\": \"Room101\",\n        \"description\": \"guest room,  awesome room\",\n        \"room_type\": \"single\",\n        \"room_class\": \"standard\",\n        \"total_quantity\": 1\n      },\n      \"relationships\": {\n        \"amenities\": {\n          \"data\": [\n            {\n              \"id\": \"148\",\n              \"type\": \"amenity\"\n            }\n          ]\n        },\n        \"room_rates\": {\n          \"data\": [\n            {\n              \"id\": \"148\",\n              \"type\": \"room_rate\"\n            }\n          ]\n        }\n      }\n    }\n  ],\n  \"included\": [\n    {\n      \"id\": \"148\",\n      \"type\": \"amenity\",\n      \"attributes\": {\n        \"name\": \"Towel\",\n        \"description\": \"Towel to wipe your\",\n        \"is_available\": true\n      }\n    },\n    {\n      \"id\": \"148\",\n      \"type\": \"room_rate\",\n      \"attributes\": {\n        \"rate_type\": \"standard\",\n        \"min_price\": 10000.0,\n        \"max_price\": 1000.0,\n        \"is_active\": true\n      }\n    }\n  ]\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"159\",\n      \"type\": \"room\",\n      \"attributes\": {\n        \"name\": \"Room101\",\n        \"description\": \"guest room,  awesome room\",\n        \"room_type\": \"single\",\n        \"room_class\": \"standard\",\n        \"total_quantity\": 1\n      },\n      \"relationships\": {\n        \"amenities\": {\n          \"data\": [\n            {\n              \"id\": \"178\",\n              \"type\": \"amenity\"\n            }\n          ]\n        },\n        \"room_rates\": {\n          \"data\": [\n            {\n              \"id\": \"178\",\n              \"type\": \"room_rate\"\n            }\n          ]\n        }\n      }\n    }\n  ],\n  \"included\": [\n    {\n      \"id\": \"178\",\n      \"type\": \"amenity\",\n      \"attributes\": {\n        \"name\": \"Towel\",\n        \"description\": \"Towel to wipe your\",\n        \"is_available\": true\n      }\n    },\n    {\n      \"id\": \"178\",\n      \"type\": \"room_rate\",\n      \"attributes\": {\n        \"rate_type\": \"standard\",\n        \"min_price\": 10000.0,\n        \"max_price\": 1000.0,\n        \"is_active\": true\n      }\n    }\n  ]\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -37,10 +37,10 @@
         "X-Permitted-Cross-Domain-Policies": "none",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/vnd.api+json; charset=utf-8",
-        "ETag": "W/\"7e0f1b5397f7ab8ddbc959383439f2e8\"",
+        "ETag": "W/\"c1aa911b8f39693a7bc92814bee92cb7\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "fe1cf496-3004-4246-bfe7-9ca4e1656dd5",
-        "X-Runtime": "0.015291",
+        "X-Request-Id": "dd488c69-ea6f-45d0-b049-bb16b92048e7",
+        "X-Runtime": "0.016987",
         "Vary": "Origin",
         "Content-Length": "556"
       },

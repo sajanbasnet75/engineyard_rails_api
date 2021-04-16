@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Customer App: 8. Customers Check in API</title>
+    <title>Admin: Customers Checks out API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,11 +106,11 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>Customer App: 8. Customers Check in API</h1>
+      <h1>Admin: Customers Checks out API</h1>
 
       <div class="article">
-        <h2>Updates the booking arrival date</h2>
-        <h3>PATCH /api/v1/bookings/:id/check_in</h3>
+        <h2>Updates the booking departure date and other essential task</h2>
+        <h3>PATCH /api/v1/bookings/:id/check_out</h3>
 
 
 
@@ -118,12 +118,12 @@ table th, table td {
 
             <h4>Headers</h4>
             <pre class="request headers">Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjcwLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQzMjI4fQ.JV_cKRXMxRL7Y3wR6RyD5nHKOk8mPBGR6SyK7-lVxGk
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6MTIzLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQzMjI4fQ.iIcRtMga4bF_F143tlkuaKRsuNiMC8Er4y3v_YqfBDg
 Host: example.org
 Cookie: </pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">PATCH /api/v1/bookings/98/check_in</pre>
+          <pre class="request route highlight">PATCH /api/v1/bookings/99/check_out</pre>
 
 
             <h4>Body</h4>
@@ -141,8 +141,8 @@ Referrer-Policy: strict-origin-when-cross-origin
 Content-Type: application/vnd.api+json; charset=utf-8
 ETag: W/&quot;8fe32e407a1038ee38753b70e5374b3a&quot;
 Cache-Control: max-age=0, private, must-revalidate
-X-Request-Id: bc517d12-5228-4944-a1e7-7694dccf5480
-X-Runtime: 0.011058
+X-Request-Id: c7a718f0-feb0-425c-b582-4e3d81cdd6d6
+X-Runtime: 0.011246
 Vary: Origin
 Content-Length: 11</pre>
             <h4>Status</h4>

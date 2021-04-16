@@ -18,7 +18,7 @@
       "request_body": null,
       "request_headers": {
         "Content-Type": "application/json",
-        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjI3LCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQyMzI5fQ.JxHJ8-OuwX2dTdtbIQpnUhWWgVaeAZ9JYseCRax6x98",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjcyLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQzMjI4fQ.J0hOhcffw21NF5vN-SCVuNXgepV1LOSntDVgWjT2sfs",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -28,7 +28,7 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"82\",\n      \"type\": \"booking\",\n      \"attributes\": {\n        \"booked_check_in\": \"2021-04-16T00:00:00.000Z\",\n        \"booked_check_out\": \"2021-04-17T00:00:00.000Z\",\n        \"no_of_rooms\": 1,\n        \"no_of_adults\": 1,\n        \"no_of_child\": 1,\n        \"book_status\": \"reserved\",\n        \"booking_code\": null,\n        \"arrival_date\": \"2021-04-16T00:00:00.000Z\",\n        \"departure_date\": \"2021-04-17T00:00:00.000Z\"\n      },\n      \"relationships\": {\n        \"payment\": {\n          \"data\": null\n        },\n        \"customer\": {\n          \"data\": {\n            \"id\": \"227\",\n            \"type\": \"customer\"\n          }\n        },\n        \"room\": {\n          \"data\": {\n            \"id\": \"131\",\n            \"type\": \"room\"\n          }\n        },\n        \"room_rate\": {\n          \"data\": {\n            \"id\": \"147\",\n            \"type\": \"room_rate\"\n          }\n        }\n      }\n    }\n  ]\n}",
+      "response_body": "{\n  \"data\": [\n    {\n      \"id\": \"100\",\n      \"type\": \"booking\",\n      \"attributes\": {\n        \"booked_check_in\": \"2021-04-16T00:00:00.000Z\",\n        \"booked_check_out\": \"2021-04-17T00:00:00.000Z\",\n        \"no_of_rooms\": 1,\n        \"no_of_adults\": 1,\n        \"no_of_child\": 1,\n        \"book_status\": \"reserved\",\n        \"booking_code\": null,\n        \"arrival_date\": \"2021-04-16T00:00:00.000Z\",\n        \"departure_date\": \"2021-04-17T00:00:00.000Z\"\n      },\n      \"relationships\": {\n        \"payment\": {\n          \"data\": null\n        },\n        \"customer\": {\n          \"data\": {\n            \"id\": \"272\",\n            \"type\": \"customer\"\n          }\n        },\n        \"room\": {\n          \"data\": {\n            \"id\": \"158\",\n            \"type\": \"room\"\n          }\n        },\n        \"room_rate\": {\n          \"data\": {\n            \"id\": \"177\",\n            \"type\": \"room_rate\"\n          }\n        }\n      }\n    }\n  ]\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -37,12 +37,12 @@
         "X-Permitted-Cross-Domain-Policies": "none",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/vnd.api+json; charset=utf-8",
-        "ETag": "W/\"30127a4d468aba0718c5eabe6663f1a1\"",
+        "ETag": "W/\"4d458805b5f209a3ca1589e5fc11524d\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "6c0f9dbe-47b7-42be-88fb-499957bca5a6",
-        "X-Runtime": "0.014453",
+        "X-Request-Id": "a5f33c33-52cd-46f4-996c-2d3123fdfaa9",
+        "X-Runtime": "0.012769",
         "Vary": "Origin",
-        "Content-Length": "514"
+        "Content-Length": "515"
       },
       "response_content_type": "application/vnd.api+json; charset=utf-8",
       "curl": null

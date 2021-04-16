@@ -35,7 +35,7 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\n  \"data\": {\n    \"id\": \"234\",\n    \"type\": \"customer\",\n    \"attributes\": {\n      \"first_name\": \"Sajan\",\n      \"last_name\": \"Basnet\",\n      \"email\": \"sajan@gurzu.com\",\n      \"phone\": null,\n      \"gender\": \"Male\",\n      \"dob\": \"2000-09-09\",\n      \"auth_token\": \"eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjM0LCJwYXNzd29yZCI6bnVsbCwiZXhwIjoxNjE5MTQyMzI5fQ.znlSK_BSPOAgkdxlbFKdrRwGhVGM90BFTPj6qs6UlOI\"\n    }\n  }\n}",
+      "response_body": "{\n  \"data\": {\n    \"id\": \"279\",\n    \"type\": \"customer\",\n    \"attributes\": {\n      \"first_name\": \"Sajan\",\n      \"last_name\": \"Basnet\",\n      \"email\": \"sajan@gurzu.com\",\n      \"phone\": null,\n      \"gender\": \"Male\",\n      \"dob\": \"2000-09-09\",\n      \"auth_token\": \"eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6Mjc5LCJwYXNzd29yZCI6bnVsbCwiZXhwIjoxNjE5MTQzMjI4fQ.YH-DZIWPLoKWtYtAMFj0Vb1jMeCPYrSN962162gsV0Y\"\n    }\n  }\n}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -44,10 +44,10 @@
         "X-Permitted-Cross-Domain-Policies": "none",
         "Referrer-Policy": "strict-origin-when-cross-origin",
         "Content-Type": "application/vnd.api+json; charset=utf-8",
-        "ETag": "W/\"e788bc204d669c99a958e22aa1742774\"",
+        "ETag": "W/\"578db57f359b736ea05eaa88aac6464a\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "84d2788e-ab54-4e19-8ee2-fd65ee2e9a84",
-        "X-Runtime": "0.007553",
+        "X-Request-Id": "f1bb5c34-efbc-48cf-8d9d-0b1450a790ba",
+        "X-Runtime": "0.007996",
         "Vary": "Origin",
         "Content-Length": "321"
       },

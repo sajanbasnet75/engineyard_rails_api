@@ -34,6 +34,19 @@
       ]
     },
     {
+      "name": "Admin: Customers Checks out",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Updates the booking departure date and other essential task",
+          "link": "admin:_customers_checks_out/updates_the_booking_departure_date_and_other_essential_task.json",
+          "groups": "all",
+          "route": "/api/v1/bookings/:id/check_out",
+          "method": "patch"
+        }
+      ]
+    },
+    {
       "name": "Admin: Login for Admins",
       "explanation": null,
       "examples": [

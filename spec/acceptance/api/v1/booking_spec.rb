@@ -15,6 +15,8 @@ RSpec.describe Api::V1::BookingsController, type: :api do
   let!(:amenity) { FactoryBot.create(:amenity, room: room) }
   let!(:room_rate) { FactoryBot.create(:room_rate, room: room) }
   let!(:booking) { FactoryBot.create(:booking, customer: customer, hotel: hotel, room: room, room_rate: room_rate) }
+  let!(:admin) { FactoryBot.create(:admin) }
+
 
   resource 'Customer App: 5. Create new bookings' do
     header 'Content-Type', 'application/json'
@@ -113,6 +115,22 @@ RSpec.describe Api::V1::BookingsController, type: :api do
           id: booking.id
         }
         token = JsonWebToken.encode(customer_id: customer.id, password: customer.password)
+        header 'Authorization', token
+        do_request(request)
+        expect(status).to eq(200)
+      end
+    end
+  end
+
+  resource 'Admin: Customers Checks out' do
+    header 'Content-Type', 'application/json'
+    patch '/api/v1/bookings/:id/check_out' do
+      let(:raw_post) { params.to_json }
+      example 'Updates the booking departure date and other essential task' do
+        request = {
+          id: booking.id
+        }
+        token = JsonWebToken.encode(admin_id: admin.id, password: admin.password)
         header 'Authorization', token
         do_request(request)
         expect(status).to eq(200)

@@ -18,20 +18,20 @@ Response:
   Cache-Control: max-age=0, private, must-revalidate
   Content-Length: 321
   Content-Type: application/vnd.api+json; charset=utf-8
-  ETag: W/"e788bc204d669c99a958e22aa1742774"
+  ETag: W/"578db57f359b736ea05eaa88aac6464a"
   Referrer-Policy: strict-origin-when-cross-origin
   Vary: Origin
   X-Content-Type-Options: nosniff
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: 84d2788e-ab54-4e19-8ee2-fd65ee2e9a84
-  X-Runtime: 0.007553
+  X-Request-Id: f1bb5c34-efbc-48cf-8d9d-0b1450a790ba
+  X-Runtime: 0.007996
   X-XSS-Protection: 1; mode=block
 
   {
     "data": {
-      "id": "234",
+      "id": "279",
       "type": "customer",
       "attributes": {
         "first_name": "Sajan",
@@ -40,7 +40,7 @@ Response:
         "phone": null,
         "gender": "Male",
         "dob": "2000-09-09",
-        "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjM0LCJwYXNzd29yZCI6bnVsbCwiZXhwIjoxNjE5MTQyMzI5fQ.znlSK_BSPOAgkdxlbFKdrRwGhVGM90BFTPj6qs6UlOI"
+        "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6Mjc5LCJwYXNzd29yZCI6bnVsbCwiZXhwIjoxNjE5MTQzMjI4fQ.YH-DZIWPLoKWtYtAMFj0Vb1jMeCPYrSN962162gsV0Y"
       }
     }
   }
@@ -72,8 +72,8 @@ Response:
   X-Download-Options: noopen
   X-Frame-Options: SAMEORIGIN
   X-Permitted-Cross-Domain-Policies: none
-  X-Request-Id: a1ab065c-01bf-4cba-901e-b9652709eb8b
-  X-Runtime: 0.007207
+  X-Request-Id: 08f273ea-cdfc-4885-9083-75aadb630f75
+  X-Runtime: 0.005029
   X-XSS-Protection: 1; mode=block
 
   {

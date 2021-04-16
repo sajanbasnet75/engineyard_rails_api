@@ -24,6 +24,7 @@ Rails.application.routes.draw do
       resources :bookings do
         member do
           patch 'check_in', to: 'bookings#check_in'
+          patch 'check_out', to: 'bookings#check_out'
         end
       end
       
