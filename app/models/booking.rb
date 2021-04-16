@@ -41,15 +41,14 @@ class Booking < ApplicationRecord
 
   after_create :generate_booking_code_and_invoice_id unless Rails.env.test?
 
-  private 
+  private
 
   def generate_booking_code_and_invoice_id
     date = created_at.strftime('%m%y%d')
-    booking_code = "SR" + id.to_s + date + customer_id.to_s
+    booking_code = 'SR' + id.to_s + date + customer_id.to_s
     update(booking_code: booking_code)
 
     invoice_id = payment.pay_type.upcase + payment.id.to_s + date + customer_id.to_s
     payment.update(invoice_id: invoice_id)
   end
 end
-

@@ -10,9 +10,6 @@ module Api
         if customer.present? && customer.valid_password?(customer_login_params[:password])
           token = JsonWebToken.encode(customer_id: customer.id)
           puts token
-          
-          binding.pry
-          
           render jsonapi: customer, params: { auth_token: token },
                  status: :ok, code: '200'
         else
@@ -21,17 +18,16 @@ module Api
         end
       end
 
-
       # POST /api/v1/admin_login
       def admin_login
         admin = Admin.find_for_authentication(email: admin_login_params[:email])
         if admin.present? && admin.valid_password?(admin_login_params[:password])
           token = JsonWebToken.encode(admin_id: admin.id)
           render jsonapi: admin, params: { auth_token: token },
-                  status: :ok, code: '200'
+                 status: :ok, code: '200'
         else
           render jsonapi_errors: [{ title: 'Invalid Username or Password' }],
-                  code: '401', status: :unauthorized
+                 code: '401', status: :unauthorized
         end
       end
 

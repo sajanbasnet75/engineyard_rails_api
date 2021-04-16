@@ -17,7 +17,6 @@ RSpec.describe Api::V1::BookingsController, type: :api do
   let!(:booking) { FactoryBot.create(:booking, customer: customer, hotel: hotel, room: room, room_rate: room_rate) }
   let!(:admin) { FactoryBot.create(:admin) }
 
-
   resource 'Customer App: 5. Create new bookings' do
     header 'Content-Type', 'application/json'
     post '/api/v1/bookings' do
@@ -104,7 +103,6 @@ RSpec.describe Api::V1::BookingsController, type: :api do
       end
     end
   end
-
 
   resource 'Customer App: 8. Customers Check in' do
     header 'Content-Type', 'application/json'

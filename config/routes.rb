@@ -27,7 +27,6 @@ Rails.application.routes.draw do
           patch 'check_out', to: 'bookings#check_out'
         end
       end
-      
     end
   end
 end

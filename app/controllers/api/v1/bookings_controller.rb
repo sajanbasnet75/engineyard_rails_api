@@ -23,7 +23,7 @@ module Api
           # TODO: decrese the room quantity
           # TODO make room unavailabe for particular datetime
           # TODO payment related task
-          render jsonapi: [], status: :ok, code: '200'
+          render jsonapi: @booking, status: :ok, code: '200'
         else
           render jsonapi_errors: @booking.errors,
                  code: '422', status: :unprocessable_entity
@@ -43,7 +43,6 @@ module Api
         end
       end
 
-
       # PATCH /api/v1/bookings/:id/check_in
       def check_in
         booking = @current_customer.bookings.find(params[:id])
@@ -51,21 +50,21 @@ module Api
           render jsonapi: [], status: :ok, code: '200'
         else
           render jsonapi_errors: booking.errors,
-                  code: '422', status: :unprocessable_entity
+                 code: '422', status: :unprocessable_entity
         end
       end
 
       # PATCH /api/v1/bookings/:id/check_out
       def check_out
-        # TODO authorize only admin, this might be done from admin app only
+        # TODO: authorize only admin, this might be done from admin app only
         booking = Booking.find(params[:id])
         if booking.update(departure_date: DateTime.now, book_status: 'completed')
-          # TODO increase back the room qunatity and make it available
+          # TODO: increase back the room qunatity and make it available
           # TODO check payment is done or not else raise error
           render jsonapi: [], status: :ok, code: '200'
         else
           render jsonapi_errors: booking.errors,
-                  code: '422', status: :unprocessable_entity
+                 code: '422', status: :unprocessable_entity
         end
       end
 
