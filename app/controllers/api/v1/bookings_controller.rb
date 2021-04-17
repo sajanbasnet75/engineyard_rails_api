@@ -9,7 +9,7 @@ module Api
       def index
         bookings = @current_customer.bookings
         render jsonapi: bookings,
-               include: %i[payment room room_rate], 
+               include: %i[payment room room_rate],
                status: :ok, code: '200'
       end
 
