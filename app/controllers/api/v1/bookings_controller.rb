@@ -8,7 +8,9 @@ module Api
       # POST /api/v1/bookings
       def index
         bookings = @current_customer.bookings
-        render jsonapi: bookings, status: :ok, code: '200'
+        render jsonapi: bookings,
+               include: %i[payment room room_rate], 
+               status: :ok, code: '200'
       end
 
       # POST /api/v1/bookings

@@ -7,7 +7,7 @@
 #  total_amt       :float
 #  deposit_amt     :float
 #  card_number     :string
-#  card_exp_date   :date
+#  card_exp_date   :string
 #  invoice_id      :string
 #  pay_type        :integer
 #  pay_status      :integer
