@@ -1,0 +1,86 @@
+Admin successfully logs in
+--------------------------
+
+Parameters:
+  * email - Admins email 
+  * password - Admins password
+
+Request:
+  POST /api/v1/admin_login
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"admin":{"email":"sajan@gurzu.com","password":"password"}}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 264
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"f666d37c0b56497c84f3e3942e91a1d1"
+  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: ac6cf015-f56d-4911-82c0-02b40d620581
+  X-Runtime: 0.007113
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": {
+      "id": "129",
+      "type": "admin",
+      "attributes": {
+        "first_name": "",
+        "last_name": "",
+        "email": "sajan@gurzu.com",
+        "phone": null,
+        "auth_token": "eyJhbGciOiJIUzI1NiJ9.eyJhZG1pbl9pZCI6MTI5LCJhZG1pbiI6bnVsbCwiZXhwIjoxNjE5MTQzMjI4fQ.yUa33feydYk0KtCuGXJz-AMckllcFXncK1LfpX-Xink"
+      }
+    }
+  }
+
+
+Admin cant login with invalid credentials
+-----------------------------------------
+
+Parameters:
+  * email - Admins email 
+  * password - Admins password
+
+Request:
+  POST /api/v1/admin_login
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {"admin":{"email":"sajan@gurzu.com","password":"123"}}
+
+Response:
+  Status: 401 Unauthorized
+  Cache-Control: no-cache
+  Content-Length: 95
+  Content-Type: application/vnd.api+json; charset=utf-8
+  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: 337d0b3b-86a7-4709-a926-affbd4b2b8e0
+  X-Runtime: 0.005323
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "errors": [
+      {
+        "status": null,
+        "source": null,
+        "title": "Invalid Username or Password",
+        "detail": null
+      }
+    ]
+  }

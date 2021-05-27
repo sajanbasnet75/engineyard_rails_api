@@ -1,0 +1,35 @@
+Updates the booking arrival date
+--------------------------------
+
+Request:
+  PATCH /api/v1/bookings/98/check_in
+  Authorization: eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjcwLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQzMjI4fQ.JV_cKRXMxRL7Y3wR6RyD5nHKOk8mPBGR6SyK7-lVxGk
+  Content-Type: application/json
+  Cookie: 
+  Host: example.org
+
+  {}
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 11
+  Content-Type: application/vnd.api+json; charset=utf-8
+  ETag: W/"8fe32e407a1038ee38753b70e5374b3a"
+  Referrer-Policy: strict-origin-when-cross-origin
+  Vary: Origin
+  X-Content-Type-Options: nosniff
+  X-Download-Options: noopen
+  X-Frame-Options: SAMEORIGIN
+  X-Permitted-Cross-Domain-Policies: none
+  X-Request-Id: bc517d12-5228-4944-a1e7-7694dccf5480
+  X-Runtime: 0.011058
+  X-XSS-Protection: 1; mode=block
+
+  {
+    "data": [
+  
+    ]
+  }
+
+

@@ -1,0 +1,145 @@
+{
+  "resource": "Admin: Create new Room for a hotel",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/api/v1/rooms",
+  "description": "Creates a new room for the hotel successfully",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "name": "hotel_id",
+      "description": "Hotel id for which the room is added"
+    },
+    {
+      "required": true,
+      "name": "name",
+      "description": "name of room"
+    },
+    {
+      "required": true,
+      "name": "description",
+      "description": "Description of room"
+    },
+    {
+      "required": true,
+      "name": "room_type",
+      "description": "can be Single Double Deluxe Guest"
+    },
+    {
+      "required": true,
+      "name": "room_class",
+      "description": "can be High Low"
+    },
+    {
+      "required": true,
+      "name": "total_quantity",
+      "description": "greater than 1"
+    },
+    {
+      "scope": [
+        "room",
+        "amenities_attributes"
+      ],
+      "name": "name",
+      "description": "Amenities name"
+    },
+    {
+      "scope": [
+        "room",
+        "amenities_attributes",
+        "0"
+      ],
+      "required": true,
+      "name": "description",
+      "description": "Amenities description"
+    },
+    {
+      "scope": [
+        "room",
+        "amenities_attributes",
+        "0"
+      ],
+      "name": "is_available",
+      "description": "Amenities available? true or false"
+    },
+    {
+      "scope": [
+        "room",
+        "room_rates_attributes",
+        "0"
+      ],
+      "required": true,
+      "name": "rate_type",
+      "description": "can be standart rate, premium rate"
+    },
+    {
+      "scope": [
+        "room",
+        "room_rates_attributes",
+        "0"
+      ],
+      "required": true,
+      "name": "min_price",
+      "description": "min price of room"
+    },
+    {
+      "scope": [
+        "room",
+        "room_rates_attributes",
+        "0"
+      ],
+      "required": true,
+      "name": "max_price",
+      "description": "max price of room"
+    },
+    {
+      "scope": [
+        "room",
+        "room_rates_attributes",
+        "0"
+      ],
+      "required": true,
+      "name": "is_active",
+      "description": "rate active or not? can be true or false"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/rooms",
+      "request_body": "{\"hotel_id\":162,\"room\":{\"name\":\"Room 101\",\"description\":\"description of room\",\"room_type\":1,\"room_class\":2,\"total_quantity\":10,\"amenities_attributes\":{\"0\":{\"name\":\"Towel\",\"description\":\"Soft towel for wiping your\",\"is_available\":true},\"1\":{\"name\":\"TV\",\"description\":\"Netflix and chill\",\"is_available\":true}},\"room_rates_attributes\":{\"0\":{\"rate_type\":1,\"max_price\":30000,\"min_price\":20000,\"is_active\":true},\"1\":{\"rate_type\":2,\"max_price\":50000,\"min_price\":30000,\"is_active\":true}}}}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Type": "application/vnd.api+json; charset=utf-8",
+        "ETag": "W/\"8fe32e407a1038ee38753b70e5374b3a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "9a8d2925-94ac-4cca-a603-a087944155ef",
+        "X-Runtime": "0.014789",
+        "Vary": "Origin",
+        "Content-Length": "11"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

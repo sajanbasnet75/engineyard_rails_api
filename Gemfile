@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '3.0.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
@@ -28,7 +28,22 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # environment varialbles
 gem 'dotenv-rails'
 
+# for authentication
+gem 'devise', '~> 4.7.3'
+
+# for jsonapi standard
+gem 'jsonapi.rb'
+# serilaizer gem
+gem 'jsonapi-serializer'
+# for authentication
+gem 'jwt'
+
+# For handling Cross-Origin Resource Sharing (CORS)
+gem 'rack-cors', '~> 1.1'
+
 group :development, :test do
+  # for viewing attributes of a model
+  gem 'annotate'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # linter

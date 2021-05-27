@@ -1,0 +1,50 @@
+{
+  "resource": "Customer App: 8. Customers Check in",
+  "resource_explanation": null,
+  "http_method": "PATCH",
+  "route": "/api/v1/bookings/:id/check_in",
+  "description": "Updates the booking arrival date",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PATCH",
+      "request_path": "/api/v1/bookings/98/check_in",
+      "request_body": "{}",
+      "request_headers": {
+        "Content-Type": "application/json",
+        "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjcwLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiZXhwIjoxNjE5MTQzMjI4fQ.JV_cKRXMxRL7Y3wR6RyD5nHKOk8mPBGR6SyK7-lVxGk",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"data\": [\n\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "X-Download-Options": "noopen",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Type": "application/vnd.api+json; charset=utf-8",
+        "ETag": "W/\"8fe32e407a1038ee38753b70e5374b3a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "bc517d12-5228-4944-a1e7-7694dccf5480",
+        "X-Runtime": "0.011058",
+        "Vary": "Origin",
+        "Content-Length": "11"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
