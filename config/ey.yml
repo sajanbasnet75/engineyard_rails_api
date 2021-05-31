@@ -17,6 +17,7 @@
 # https://github.com/engineyard/engineyard-serverside/blob/master/lib/engineyard-serverside/configuration.rb
 #
 defaults:
+  shared_tmp: false
   # Run migrations during deploy by default.
   #
   # When set to true, runs the migration_command (below) during deploy.
